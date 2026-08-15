@@ -5,8 +5,8 @@ const SITE = {
   email: "NPkhakadze@learnenglishonlinecourses.com",
   // ▼ შეავსე: WhatsApp ნომერი საერთაშორისო ფორმატით (მაგ. 995599123456) და FB გვერდის მისამართი
   whatsapp: "",
-  facebook: "https://www.facebook.com/",
-  messenger: "https://m.me/"
+  facebook: "https://www.facebook.com/profile.php?id=61565512782629",
+  messenger: "https://m.me/61565512782629"
 };
 const ROOT = (function(){
   // works both at /site/ and /site/blog/x.html
