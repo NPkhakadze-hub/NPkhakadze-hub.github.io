@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /m/
+Sitemap: https://npkhakadze-hub.github.io/sitemap.xml
