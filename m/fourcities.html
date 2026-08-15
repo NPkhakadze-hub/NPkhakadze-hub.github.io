@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="robots" content="noindex, nofollow">
+<title>Four Cities — A2 Reading</title>
+<style>
+  :root{
+    --bg:#faf6ef; --card:#ffffff; --ink:#2b2620; --sub:#6b6156;
+    --accent:#c05621; --accent-soft:#fdebd9; --green:#2f855a; --green-soft:#e6f4ea;
+    --red:#c53030; --red-soft:#fdecea; --blue:#2b6cb0; --blue-soft:#e8f0fa;
+    --gold:#b7791f; --border:#e8e0d4;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  html,body{margin:0; padding:0;}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:"Noto Sans Georgian","Sylfaen","Segoe UI",system-ui,sans-serif;
+    font-size:18px; line-height:1.65; min-height:100vh;
+  }
+  .slide{display:none; max-width:860px; margin:0 auto; padding:28px 22px 130px;}
+  .slide.active{display:block; animation:fadein .35s ease;}
+  @keyframes fadein{from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:none;}}
+
+  .kicker{color:var(--accent); font-weight:700; letter-spacing:.06em; font-size:14px; text-transform:uppercase;}
+  h1{font-size:clamp(30px,6vw,44px); line-height:1.2; margin:8px 0 6px;}
+  h2{font-size:clamp(24px,5vw,32px); margin:6px 0 4px;}
+  .sub{color:var(--sub); font-size:16px; margin-bottom:18px;}
+  .emoji-big{font-size:52px; line-height:1;}
+
+  .card{background:var(--card); border:1px solid var(--border); border-radius:18px; padding:20px 22px; margin:14px 0; box-shadow:0 2px 10px rgba(60,45,20,.05);}
+  .hint{background:var(--accent-soft); border:1px solid #f3d3ae; border-radius:14px; padding:12px 16px; font-size:16px; margin:12px 0;}
+
+  .reading{font-family:Georgia,"Times New Roman",serif; font-size:20px; line-height:1.9;}
+  .reading p{margin:0;}
+
+  .v{
+    color:var(--accent); font-weight:600; cursor:pointer; border-bottom:2px dotted var(--accent);
+    border-radius:4px; padding:0 2px; transition:background .15s;
+  }
+  .v:hover{background:var(--accent-soft);}
+  .v.seen{color:var(--green); border-bottom-color:var(--green); background:var(--green-soft);}
+
+  /* vocab popup */
+  #popup{
+    position:fixed; left:50%; transform:translateX(-50%); bottom:86px; z-index:50;
+    width:min(560px,calc(100% - 24px));
+    background:#fff; border:2px solid var(--accent); border-radius:18px;
+    padding:16px 20px; box-shadow:0 10px 30px rgba(60,30,0,.18); display:none;
+  }
+  #popup.show{display:block; animation:fadein .2s ease;}
+  #popup .pw{font-family:Georgia,serif; font-size:26px; font-weight:700;}
+  #popup .pipa{color:var(--blue); font-size:18px; margin-left:8px;}
+  #popup .pka{font-size:20px; margin-top:4px;}
+  #popup .pclose{position:absolute; top:8px; right:14px; border:none; background:none; font-size:22px; color:var(--sub); cursor:pointer;}
+  .speak{border:none; background:var(--blue-soft); color:var(--blue); border-radius:999px; font-size:16px; padding:6px 14px; cursor:pointer; margin-left:10px; font-family:inherit;}
+  .speak:active{transform:scale(.96);}
+
+  .counter{font-size:14px; color:var(--sub); margin-top:10px;}
+  .counter b{color:var(--green);}
+
+  .citymeta{display:flex; gap:10px; flex-wrap:wrap; margin:10px 0 4px;}
+  .chip{background:var(--blue-soft); color:var(--blue); border-radius:999px; padding:4px 12px; font-size:14px; font-weight:600;}
+
+  /* vocab list */
+  .vlist{padding-left:0; list-style:none; counter-reset:vnum; margin:0;}
+  .vlist li{padding:9px 4px; border-bottom:1px dashed var(--border); display:flex; align-items:baseline; gap:8px; flex-wrap:wrap;}
+  .vlist li::before{counter-increment:vnum; content:counter(vnum) "."; color:var(--sub); min-width:30px; font-size:15px;}
+  .vlist .en{font-family:Georgia,serif; font-weight:700; font-size:19px;}
+  .vlist .ipa{color:var(--blue); font-size:15px;}
+  .vlist .ka{color:var(--ink); font-size:17px;}
+  .vlist .eq{color:var(--sub);}
+  .sect{margin:22px 0 6px; font-size:20px; font-weight:800; color:var(--accent);}
+
+  /* quizzes */
+  .qitem{margin:14px 0; padding:14px 16px; background:#fff; border:1px solid var(--border); border-radius:14px;}
+  .qtext{font-size:18px; margin-bottom:10px;}
+  .qtext .num{color:var(--sub); margin-right:6px;}
+  .opts{display:flex; gap:8px; flex-wrap:wrap;}
+  .opt{
+    border:2px solid var(--border); background:#fff; border-radius:12px; padding:8px 16px;
+    font-size:16px; cursor:pointer; font-family:inherit; transition:all .15s;
+  }
+  .opt:hover{border-color:var(--accent);}
+  .opt.correct{background:var(--green-soft); border-color:var(--green); color:var(--green); font-weight:700;}
+  .opt.wrong{background:var(--red-soft); border-color:var(--red); color:var(--red);}
+  .opt:disabled{cursor:default; opacity:.75;}
+  .opt.correct:disabled,.opt.wrong:disabled{opacity:1;}
+
+  /* matching */
+  .match-grid{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+  .mbtn{
+    border:2px solid var(--border); background:#fff; border-radius:12px; padding:12px 10px;
+    font-size:17px; cursor:pointer; font-family:inherit; transition:all .15s; min-height:54px;
+  }
+  .mbtn.en-side{font-family:Georgia,serif; font-weight:700;}
+  .mbtn.sel{border-color:var(--gold); background:#fdf6e3;}
+  .mbtn.done{background:var(--green-soft); border-color:var(--green); color:var(--green); cursor:default;}
+  .mbtn.shake{animation:shake .3s;}
+  @keyframes shake{0%,100%{transform:none;}25%{transform:translateX(-5px);}75%{transform:translateX(5px);}}
+
+  .score{font-size:18px; font-weight:700; color:var(--green); margin-top:12px; min-height:26px;}
+
+  /* gap fill */
+  .gap-sel{
+    font-family:Georgia,serif; font-size:17px; padding:6px 10px; border-radius:10px;
+    border:2px solid var(--border); background:#fff; color:var(--ink); margin:0 4px;
+  }
+  .gap-sel.correct{border-color:var(--green); background:var(--green-soft); color:var(--green); font-weight:700;}
+  .gap-sel.wrong{border-color:var(--red); background:var(--red-soft); color:var(--red);}
+  .checkbtn{
+    border:none; background:var(--accent); color:#fff; font-size:17px; font-weight:700;
+    border-radius:12px; padding:12px 26px; cursor:pointer; font-family:inherit; margin-top:14px;
+  }
+  .checkbtn:active{transform:scale(.98);}
+
+  /* nav */
+  #nav{
+    position:fixed; bottom:0; left:0; right:0; z-index:40;
+    background:rgba(250,246,239,.95); backdrop-filter:blur(6px);
+    border-top:1px solid var(--border); padding:12px 16px;
+    display:flex; align-items:center; justify-content:space-between; gap:10px;
+  }
+  .navbtn{
+    border:none; background:var(--accent); color:#fff; font-size:16px; font-weight:700;
+    border-radius:12px; padding:11px 22px; cursor:pointer; font-family:inherit;
+  }
+  .navbtn:disabled{opacity:.35; cursor:default;}
+  #dots{display:flex; gap:6px; flex-wrap:wrap; justify-content:center;}
+  .dot{width:10px; height:10px; border-radius:50%; background:#ddd2c2; cursor:pointer;}
+  .dot.on{background:var(--accent); transform:scale(1.25);}
+
+  .bigfinish{text-align:center; padding-top:40px;}
+  .bigfinish .emoji-big{font-size:72px;}
+  table.results{width:100%; border-collapse:collapse; margin-top:16px;}
+  table.results td{padding:10px 8px; border-bottom:1px solid var(--border); font-size:17px;}
+  table.results td:last-child{text-align:right; font-weight:800; color:var(--green);}
+</style>
+</head>
+<body>
+
+<!-- ══════════ SLIDE 0 · TITLE / WARM-UP ══════════ -->
+<section class="slide" id="s0">
+  <div class="kicker">Reading · A2 ✦</div>
+  <h1>Four Cities 🌍<br>ოთხი ქალაქი</h1>
+  <p class="sub">Cairo · Barcelona · Edinburgh · Rio de Janeiro</p>
+
+  <div class="card">
+    <div class="emoji-big">🕌 🏛️ 🏰 🏖️</div>
+    <p style="margin-top:10px;"><b>სანამ წავიკითხავთ — მოდი, ვიფიქროთ:</b></p>
+    <p>Which city do you want to visit? — რომელი ქალაქის ნახვა გინდა ყველაზე მეტად? რატომ?</p>
+    <p style="color:var(--sub); font-size:16px;">უპასუხე ინგლისურად: <i>"I want to visit … because …"</i></p>
+  </div>
+
+  <div class="hint">
+    💡 <b>როგორ ვიმუშაოთ:</b> ტექსტში <span class="v" style="cursor:default;">ნარინჯისფერი სიტყვები</span> ახალი სიტყვებია.
+    დააჭირე სიტყვას — გამოჩნდება გამოთქმა და ქართული თარგმანი, 🔊 ღილაკით კი მოისმენ, როგორ ჟღერს.
+    ნანახი სიტყვები <span class="v seen" style="cursor:default;">გამწვანდება</span>.
+  </div>
+</section>
+
+<!-- ══════════ SLIDE 1 · CAIRO ══════════ -->
+<section class="slide" id="s1">
+  <div class="kicker">ტექსტი A</div>
+  <h2>🕌 Cairo</h2>
+  <div class="citymeta"><span class="chip">🇪🇬 Egypt</span><span class="chip">☀️ 17°C in March</span></div>
+  <div class="card reading"><p>
+    Cairo is <span class="v" data-i="w_fullof">full of</span> interesting old
+    <span class="v" data-i="w_monument">monuments</span>,
+    <span class="v" data-i="w_including">including</span>, of course, the
+    <span class="v" data-i="w_famous">famous</span> Great Pyramids at Giza.
+    The people are very <span class="v" data-i="w_friendly">friendly</span> and the
+    <span class="v" data-i="w_weather">weather</span> is
+    <span class="v" data-i="w_generally">generally</span>
+    <span class="v" data-i="p_warmsunny">warm and sunny</span> (17°C in March).
+    There are many <span class="v" data-i="w_opportunity">opportunities</span> for visiting
+    <span class="v" data-i="w_busy">busy</span>
+    <span class="v" data-i="w_market">markets</span> and getting some good
+    <span class="v" data-i="w_bargain">bargains</span>.
+    You can also <span class="v" data-i="p_boattour">take</span> interesting
+    <span class="v" data-i="p_boattour">boat tours</span> up the river Nile and see more of this
+    <span class="v" data-i="w_ancient">ancient</span> country.
+    It's not <span class="v" data-i="w_expensive">expensive</span> to
+    <span class="v" data-i="w_stay">stay</span> in Cairo and there are a lot of
+    <span class="v" data-i="w_cheap">cheap</span> restaurants with
+    <span class="v" data-i="w_delicious">delicious</span> food.
+  </p></div>
+  <div class="counter">👀 ნანახი სიტყვები: <b class="seencount">0</b> / <span class="seentotal"></span></div>
+</section>
+
+<!-- ══════════ SLIDE 2 · BARCELONA ══════════ -->
+<section class="slide" id="s2">
+  <div class="kicker">ტექსტი B</div>
+  <h2>🏛️ Barcelona</h2>
+  <div class="citymeta"><span class="chip">🇪🇸 Spain</span><span class="chip">🌤️ 12°C in March</span></div>
+  <div class="card reading"><p>
+    Barcelona has <span class="v" data-i="p_everyone">something for everyone</span>.
+    There are a lot of interesting <span class="v" data-i="w_museum">museums</span> and
+    <span class="v" data-i="p_artgallery">art galleries</span> and you can see some
+    <span class="v" data-i="w_amazing">amazing</span>
+    <span class="v" data-i="w_modern">modern</span>
+    <span class="v" data-i="w_architecture">architecture</span> by Antoni Gaudí, like the Casa Batlló.
+    There are also many beautiful parks,
+    <span class="v" data-i="p_aswellas">as well as</span>
+    <span class="v" data-i="w_beach">beaches</span> — in the city and all the way up the
+    <span class="v" data-i="w_coast">coast</span>.
+    The <span class="v" data-i="w_nightlife">nightlife</span> is good — with
+    <span class="v" data-i="p_hundreds">hundreds of</span> bars and cafés.
+    You can find some cheap <span class="v" data-i="p_placestay">places to stay</span> and the
+    <span class="v" data-i="w_climate">climate</span> is very
+    <span class="v" data-i="w_pleasant">pleasant</span>
+    <span class="v" data-i="p_yearround">all year round</span> (12°C in March).
+  </p></div>
+  <div class="counter">👀 ნანახი სიტყვები: <b class="seencount">0</b> / <span class="seentotal"></span></div>
+</section>
+
+<!-- ══════════ SLIDE 3 · EDINBURGH ══════════ -->
+<section class="slide" id="s3">
+  <div class="kicker">ტექსტი C</div>
+  <h2>🏰 Edinburgh</h2>
+  <div class="citymeta"><span class="chip">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</span><span class="chip">🌧️ 4°C in March</span></div>
+  <div class="card reading"><p>
+    Edinburgh is a very beautiful, old city,
+    <span class="v" data-i="p_fullhistory">full of history</span>.
+    The <span class="v" data-i="w_view">view</span> of the city from Edinburgh
+    <span class="v" data-i="w_castle">Castle</span> is
+    <span class="v" data-i="w_impressive">impressive</span> and there are many good museums and art galleries.
+    There are <span class="v" data-i="w_mountain">mountains</span> near the city where you can
+    <span class="v" data-i="p_gowalking">go walking</span> and the sea isn't
+    <span class="v" data-i="p_faraway">far away</span>.
+    It can be cold in Edinburgh (4°C in March), but there is
+    <span class="v" data-i="p_plentydo">plenty to do</span>, including
+    <span class="v" data-i="w_excellent">excellent</span> nightlife and
+    <span class="v" data-i="w_endless">endless</span>
+    <span class="v" data-i="p_shopping">shopping possibilities</span>.
+    There is a good <span class="v" data-i="w_choice">choice</span> of places to stay,
+    <span class="v" data-i="p_ranging">ranging from</span> cheaper to more expensive.
+  </p></div>
+  <div class="counter">👀 ნანახი სიტყვები: <b class="seencount">0</b> / <span class="seentotal"></span></div>
+</section>
+
+<!-- ══════════ SLIDE 4 · RIO ══════════ -->
+<section class="slide" id="s4">
+  <div class="kicker">ტექსტი D</div>
+  <h2>🏖️ Rio de Janeiro</h2>
+  <div class="citymeta"><span class="chip">🇧🇷 Brazil</span><span class="chip">🔥 26°C in March</span></div>
+  <div class="card reading"><p>
+    Rio de Janeiro is <span class="v" data-i="p_famousfor">famous for</span> beautiful beaches and
+    <span class="v" data-i="w_fantastic">fantastic</span> nightlife, with great
+    <span class="v" data-i="w_nightclub">nightclubs</span> and a lot of
+    <span class="v" data-i="p_livemusic">live music</span>.
+    It's <span class="v" data-i="p_almostalways">almost always</span> sunny (26°C in March)
+    and the people are very friendly.
+    There are some interesting <span class="v" data-i="w_site">sites</span>, including the famous
+    Sugar Loaf mountain and, of course, Ipanema Beach.
+    <span class="v" data-i="p_outside">Just outside the city</span>, the coast is beautiful and there are
+    <span class="v" data-i="w_forest">forests</span> and mountains.
+    There are a lot of cheap places to stay and
+    <span class="v" data-i="p_plentyof">plenty of</span> good bars and restaurants.
+  </p></div>
+  <div class="counter">👀 ნანახი სიტყვები: <b class="seencount">0</b> / <span class="seentotal"></span></div>
+</section>
+
+<!-- ══════════ SLIDE 5 · VOCAB LIST ══════════ -->
+<section class="slide" id="s5">
+  <div class="kicker">ლექსიკა</div>
+  <h2>📒 ახალი სიტყვები და ფრაზები</h2>
+  <p class="sub">დააჭირე 🔊-ს, მოისმინე და გაიმეორე ხმამაღლა — ასე უკეთ დაიმახსოვრებ!</p>
+  <div class="card">
+    <div class="sect">სიტყვები (Words)</div>
+    <ol class="vlist" id="wordlist"></ol>
+    <div class="sect">ფრაზები (Phrases)</div>
+    <ol class="vlist" id="phraselist" style="counter-reset:vnum 35;"></ol>
+  </div>
+</section>
+<!-- ══════════ SLIDE 6 · QUIZ 1 MATCHING ══════════ -->
+<section class="slide" id="s6">
+  <div class="kicker">ვარჯიში 1</div>
+  <h2>🧩 დააკავშირე წყვილები</h2>
+  <p class="sub">დააჭირე ინგლისურ სიტყვას, შემდეგ — მის ქართულ თარგმანს.</p>
+  <div class="card">
+    <div class="match-grid" id="matchgrid"></div>
+    <div class="score" id="matchscore"></div>
+  </div>
+</section>
+
+<!-- ══════════ SLIDE 7 · QUIZ 2 GAP-FILL ══════════ -->
+<section class="slide" id="s7">
+  <div class="kicker">ვარჯიში 2</div>
+  <h2>✏️ ჩასვი სწორი სიტყვა</h2>
+  <p class="sub">აირჩიე სწორი სიტყვა თითოეულ წინადადებაში, ბოლოს დააჭირე „შემოწმებას".</p>
+  <div id="gapbox"></div>
+  <button class="checkbtn" id="gapcheck">შემოწმება ✓</button>
+  <div class="score" id="gapscore"></div>
+</section>
+
+<!-- ══════════ SLIDE 8 · QUIZ 3 WHICH CITY ══════════ -->
+<section class="slide" id="s8">
+  <div class="kicker">ვარჯიში 3</div>
+  <h2>🗺️ რომელი ქალაქია?</h2>
+  <p class="sub">წაიკითხე წინადადება და აირჩიე ქალაქი. თუ დაგავიწყდა — დაბრუნდი ტექსტებთან!</p>
+  <div id="citybox"></div>
+  <div class="score" id="cityscore"></div>
+</section>
+
+<!-- ══════════ SLIDE 9 · FINISH ══════════ -->
+<section class="slide" id="s9">
+  <div class="bigfinish">
+    <div class="emoji-big">🎉</div>
+    <h1>Well done!</h1>
+    <p class="sub">ყოჩაღ — გაკვეთილი დასრულებულია!</p>
+  </div>
+  <div class="card">
+    <table class="results">
+      <tr><td>👀 ნანახი ახალი სიტყვა ტექსტებში</td><td id="r_seen">—</td></tr>
+      <tr><td>🧩 წყვილების დაკავშირება</td><td id="r_match">—</td></tr>
+      <tr><td>✏️ სიტყვის ჩასმა</td><td id="r_gap">—</td></tr>
+      <tr><td>🗺️ რომელი ქალაქია?</td><td id="r_city">—</td></tr>
+    </table>
+  </div>
+  <div class="hint">🏠 <b>საშინაო რჩევა:</b> ხვალ ისევ გახსენი ეს პრეზენტაცია, გადადი ლექსიკის გვერდზე (📒) და ხმამაღლა წაიკითხე 10 სიტყვა. გამეორება = დამახსოვრება!</div>
+</section>
+
+<div id="popup">
+  <button class="pclose" onclick="closePopup()">✕</button>
+  <span class="pw" id="pw"></span><span class="pipa" id="pipa"></span>
+  <button class="speak" id="pspeak">🔊 მოსმენა</button>
+  <div class="pka" id="pka"></div>
+</div>
+
+<nav id="nav">
+  <button class="navbtn" id="prev">← უკან</button>
+  <div id="dots"></div>
+  <button class="navbtn" id="next">შემდეგი →</button>
+</nav>
+
+<script>
+/* ─────────── VOCABULARY DATA ─────────── */
+const WORDS = [
+ ["w_monument","monument","ˈmɑːnjəmənt","ძეგლი"],
+ ["w_including","including","ɪnˈkluːdɪŋ","მათ შორის, ...-ის ჩათვლით"],
+ ["w_famous","famous","ˈfeɪməs","ცნობილი, სახელგანთქმული"],
+ ["w_friendly","friendly","ˈfrɛndli","მეგობრული"],
+ ["w_weather","weather","ˈwɛðər","ამინდი"],
+ ["w_generally","generally","ˈdʒɛnərəli","ზოგადად, ჩვეულებრივ"],
+ ["w_opportunity","opportunity","ˌɑːpərˈtuːnəti","შესაძლებლობა"],
+ ["w_busy","busy","ˈbɪzi","ხალხმრავალი (ამ ტექსტში); დაკავებული"],
+ ["w_market","market","ˈmɑːrkət","ბაზარი"],
+ ["w_bargain","bargain","ˈbɑːrɡən","ხელსაყრელი შენაძენი, იაფად ნაყიდი ნივთი"],
+ ["w_ancient","ancient","ˈeɪnʃənt","უძველესი"],
+ ["w_expensive","expensive","ɪkˈspɛnsɪv","ძვირი"],
+ ["w_stay","stay","steɪ","დარჩენა, დროებით ცხოვრება"],
+ ["w_cheap","cheap","tʃiːp","იაფი"],
+ ["w_delicious","delicious","dɪˈlɪʃəs","გემრიელი"],
+ ["w_museum","museum","mjuˈziːəm","მუზეუმი"],
+ ["w_amazing","amazing","əˈmeɪzɪŋ","საოცარი, გასაოცარი"],
+ ["w_modern","modern","ˈmɑːdərn","თანამედროვე"],
+ ["w_architecture","architecture","ˈɑːrkətɛktʃər","არქიტექტურა"],
+ ["w_beach","beach","biːtʃ","პლაჟი"],
+ ["w_coast","coast","koʊst","ზღვის სანაპირო"],
+ ["w_nightlife","nightlife","ˈnaɪtlaɪf","ღამის ცხოვრება"],
+ ["w_climate","climate","ˈklaɪmət","კლიმატი, ჰავა"],
+ ["w_pleasant","pleasant","ˈplɛzənt","სასიამოვნო"],
+ ["w_view","view","vjuː","ხედი"],
+ ["w_castle","castle","ˈkæsəl","ციხესიმაგრე"],
+ ["w_impressive","impressive","ɪmˈprɛsɪv","შთამბეჭდავი"],
+ ["w_mountain","mountain","ˈmaʊntən","მთა"],
+ ["w_excellent","excellent","ˈɛksələnt","შესანიშნავი"],
+ ["w_endless","endless","ˈɛndləs","უსასრულო, აურაცხელი"],
+ ["w_choice","choice","tʃɔɪs","არჩევანი"],
+ ["w_fantastic","fantastic","fænˈtæstɪk","ფანტასტიკური, არაჩვეულებრივი"],
+ ["w_nightclub","nightclub","ˈnaɪtklʌb","ღამის კლუბი"],
+ ["w_site","site","saɪt","ღირსშესანიშნავი ადგილი"],
+ ["w_forest","forest","ˈfɔːrəst","ტყე"]
+];
+const PHRASES = [
+ ["w_fullof","full of","fʊl əv","სავსე (რაღაცით)"],
+ ["p_warmsunny","warm and sunny","wɔːrm ən ˈsʌni","თბილი და მზიანი"],
+ ["p_bargain2","get a good bargain","ɡɛt ə ɡʊd ˈbɑːrɡən","ხელსაყრელ ფასად ყიდვა"],
+ ["p_boattour","take a boat tour","teɪk ə boʊt tʊr","ნავით/გემით ტურზე წასვლა"],
+ ["p_everyone","something for everyone","ˈsʌmθɪŋ fər ˈɛvriwʌn","რაღაც ყველასთვის"],
+ ["p_artgallery","art gallery","ˈɑːrt ˌɡæləri","სამხატვრო გალერეა"],
+ ["p_aswellas","as well as","əz wɛl əz","ასევე, აგრეთვე"],
+ ["p_hundreds","hundreds of","ˈhʌndrədz əv","ასობით"],
+ ["p_placestay","a place to stay","ə pleɪs tə steɪ","დასარჩენი ადგილი (სასტუმრო, ბინა)"],
+ ["p_yearround","all year round","ɔːl jɪr raʊnd","მთელი წლის განმავლობაში"],
+ ["p_fullhistory","full of history","fʊl əv ˈhɪstəri","ისტორიით სავსე"],
+ ["p_gowalking","go walking","ɡoʊ ˈwɔːkɪŋ","ფეხით სასეირნოდ წასვლა"],
+ ["p_faraway","far away","fɑːr əˈweɪ","შორს"],
+ ["p_plentydo","plenty to do","ˈplɛnti tə duː","ბევრი გასაკეთებელი"],
+ ["p_shopping","shopping possibilities","ˈʃɑːpɪŋ ˌpɑːsəˈbɪlətiz","შოპინგის შესაძლებლობები"],
+ ["p_ranging","ranging from ... to ...","ˈreɪndʒɪŋ frəm ... tə ...","დაწყებული ...-დან ...-მდე"],
+ ["p_famousfor","be famous for","bi ˈfeɪməs fɔːr","ცნობილი იყოს რაღაცით"],
+ ["p_livemusic","live music","laɪv ˈmjuːzɪk","ცოცხალი მუსიკა"],
+ ["p_almostalways","almost always","ˈɔːlmoʊst ˈɔːlweɪz","თითქმის ყოველთვის"],
+ ["p_outside","just outside the city","dʒʌst ˌaʊtˈsaɪd ðə ˈsɪti","ქალაქის მახლობლად, ქალაქგარეთ"],
+ ["p_plentyof","plenty of","ˈplɛnti əv","უამრავი, ბევრი"]
+];
+const DICT = {};
+[...WORDS, ...PHRASES].forEach(([id,en,ipa,ka]) => DICT[id] = {en, ipa, ka});
+
+/* ─────────── SPEECH ─────────── */
+function speak(text){
+  try{
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text.replace(/\.\.\./g,""));
+    u.lang = "en-US"; u.rate = 0.85;
+    speechSynthesis.speak(u);
+  }catch(e){}
+}
+
+/* ─────────── VOCAB POPUP + SEEN COUNTER ─────────── */
+const popup = document.getElementById("popup");
+const seen = new Set();
+let currentWord = "";
+function updateCounters(){
+  document.querySelectorAll(".seencount").forEach(el => el.textContent = seen.size);
+}
+const totalSpans = new Set([...document.querySelectorAll(".v[data-i]")].map(s => s.dataset.i)).size;
+document.querySelectorAll(".seentotal").forEach(el => el.textContent = totalSpans);
+
+document.querySelectorAll(".v[data-i]").forEach(sp => {
+  sp.addEventListener("click", () => {
+    const d = DICT[sp.dataset.i];
+    if(!d) return;
+    document.getElementById("pw").textContent = d.en;
+    document.getElementById("pipa").textContent = "/" + d.ipa + "/";
+    document.getElementById("pka").textContent = "🇬🇪 " + d.ka;
+    currentWord = d.en;
+    popup.classList.add("show");
+    seen.add(sp.dataset.i);
+    document.querySelectorAll(`.v[data-i="${sp.dataset.i}"]`).forEach(x => x.classList.add("seen"));
+    updateCounters();
+    speak(d.en);
+  });
+});
+document.getElementById("pspeak").addEventListener("click", () => speak(currentWord));
+function closePopup(){ popup.classList.remove("show"); }
+
+/* ─────────── VOCAB LIST SLIDE ─────────── */
+function fillList(elId, arr){
+  const ol = document.getElementById(elId);
+  arr.forEach(([id,en,ipa,ka]) => {
+    const li = document.createElement("li");
+    li.innerHTML = `<span class="en">${en}</span> <span class="ipa">(${ipa})</span>
+      <span class="eq">=</span> <span class="ka">${ka}</span>
+      <button class="speak" onclick="speak('${en.replace(/'/g,"\\'")}')">🔊</button>`;
+    ol.appendChild(li);
+  });
+}
+fillList("wordlist", WORDS);
+fillList("phraselist", PHRASES);
+
+/* ─────────── QUIZ 1 · MATCHING ─────────── */
+const PAIRS = [
+ ["bargain","ხელსაყრელი შენაძენი"],
+ ["ancient","უძველესი"],
+ ["delicious","გემრიელი"],
+ ["coast","ზღვის სანაპირო"],
+ ["impressive","შთამბეჭდავი"],
+ ["pleasant","სასიამოვნო"],
+ ["choice","არჩევანი"],
+ ["forest","ტყე"]
+];
+let matchDone = 0, matchErrors = 0, selEn = null;
+(function buildMatch(){
+  const grid = document.getElementById("matchgrid");
+  const shuffle = a => a.map(x=>[Math.sin(a.indexOf(x)*997+7),x]).sort((p,q)=>p[0]-q[0]).map(p=>p[1]);
+  const left = PAIRS.map(p=>p[0]);
+  const right = shuffle(PAIRS.map(p=>p[1]));
+  for(let i=0;i<PAIRS.length;i++){
+    const bEn = document.createElement("button");
+    bEn.className = "mbtn en-side"; bEn.textContent = left[i]; bEn.dataset.en = left[i];
+    const bKa = document.createElement("button");
+    bKa.className = "mbtn"; bKa.textContent = right[i]; bKa.dataset.ka = right[i];
+    grid.appendChild(bEn); grid.appendChild(bKa);
+  }
+  grid.addEventListener("click", e => {
+    const b = e.target.closest(".mbtn");
+    if(!b || b.classList.contains("done")) return;
+    if(b.dataset.en){
+      grid.querySelectorAll(".en-side").forEach(x=>x.classList.remove("sel"));
+      b.classList.add("sel"); selEn = b; speak(b.dataset.en);
+    } else if(selEn){
+      const pair = PAIRS.find(p => p[0] === selEn.dataset.en);
+      if(pair && pair[1] === b.dataset.ka){
+        selEn.classList.remove("sel");
+        selEn.classList.add("done"); b.classList.add("done");
+        selEn = null; matchDone++;
+        if(matchDone === PAIRS.length){
+          document.getElementById("matchscore").textContent =
+            matchErrors === 0 ? "🌟 ყოჩაღ! ყველა წყვილი უშეცდომოდ დააკავშირე!" :
+            `✅ დასრულდა! (შეცდომა: ${matchErrors})`;
+        }
+      } else {
+        matchErrors++;
+        b.classList.add("shake");
+        setTimeout(()=>b.classList.remove("shake"), 350);
+      }
+    }
+  });
+})();
+
+/* ─────────── QUIZ 2 · GAP-FILL ─────────── */
+const GAPS = [
+ ["This soup is", "! I want more, please.", "delicious"],
+ ["We visited an", "temple on holiday in Greece.", "ancient"],
+ ["This hotel is very", "— 300 euros for one night!", "expensive"],
+ ["It's", "today — let's go to the park!", "warm and sunny"],
+ ["The", "from our balcony is amazing — we can see the mountains.", "view"],
+ ["There are", "people at the concert tonight.", "hundreds of"],
+ ["Batumi is on the", ", so you can swim in the sea.", "coast"],
+ ["I bought these shoes for 20 lari — a real", "!", "bargain"]
+];
+(function buildGaps(){
+  const bank = GAPS.map(g=>g[2]).sort();
+  const box = document.getElementById("gapbox");
+  GAPS.forEach((g,i) => {
+    const div = document.createElement("div");
+    div.className = "qitem";
+    const opts = bank.map(w=>`<option value="${w}">${w}</option>`).join("");
+    div.innerHTML = `<div class="qtext" style="font-family:Georgia,serif;">
+      <span class="num">${i+1}.</span>${g[0]}
+      <select class="gap-sel" data-a="${g[2]}"><option value="">— აირჩიე —</option>${opts}</select>
+      ${g[1]}</div>`;
+    box.appendChild(div);
+  });
+  document.getElementById("gapcheck").addEventListener("click", () => {
+    let ok = 0;
+    document.querySelectorAll(".gap-sel").forEach(s => {
+      s.classList.remove("correct","wrong");
+      if(s.value === s.dataset.a){ s.classList.add("correct"); ok++; }
+      else if(s.value){ s.classList.add("wrong"); }
+    });
+    gapResult = `${ok} / ${GAPS.length}`;
+    document.getElementById("gapscore").textContent =
+      ok === GAPS.length ? `🌟 შესანიშნავია! ${ok} / ${GAPS.length}` :
+      `შედეგი: ${ok} / ${GAPS.length} — წითლები შეასწორე და ისევ სცადე!`;
+    updateResults();
+  });
+})();
+let gapResult = "—";
+
+/* ─────────── QUIZ 3 · WHICH CITY ─────────── */
+const CITIES = ["Cairo","Barcelona","Edinburgh","Rio"];
+const CQ = [
+ ["You can see amazing modern architecture by Gaudí.","Barcelona"],
+ ["You can take a boat tour up the river.","Cairo"],
+ ["It can be cold in March (4°C).","Edinburgh"],
+ ["It is famous for Sugar Loaf mountain.","Rio"],
+ ["The view from the castle is impressive.","Edinburgh"],
+ ["You can get good bargains at busy markets.","Cairo"],
+ ["The climate is pleasant all year round.","Barcelona"],
+ ["It's almost always sunny and there's a lot of live music.","Rio"]
+];
+let cityOk = 0, cityAnswered = 0;
+(function buildCity(){
+  const box = document.getElementById("citybox");
+  CQ.forEach((q,i) => {
+    const div = document.createElement("div");
+    div.className = "qitem";
+    div.innerHTML = `<div class="qtext"><span class="num">${i+1}.</span>
+      <span style="font-family:Georgia,serif;">${q[0]}</span></div>
+      <div class="opts">${CITIES.map(c=>`<button class="opt" data-c="${c}">${c}</button>`).join("")}</div>`;
+    div.querySelectorAll(".opt").forEach(b => {
+      b.addEventListener("click", () => {
+        if(div.dataset.done) return;
+        div.dataset.done = "1"; cityAnswered++;
+        if(b.dataset.c === q[1]){ b.classList.add("correct"); cityOk++; }
+        else {
+          b.classList.add("wrong");
+          div.querySelector(`.opt[data-c="${q[1]}"]`).classList.add("correct");
+        }
+        div.querySelectorAll(".opt").forEach(x=>x.disabled = true);
+        if(cityAnswered === CQ.length){
+          document.getElementById("cityscore").textContent =
+            cityOk === CQ.length ? `🌟 იდეალურია! ${cityOk} / ${CQ.length}` : `შედეგი: ${cityOk} / ${CQ.length}`;
+        }
+        updateResults();
+      });
+    });
+    box.appendChild(div);
+  });
+})();
+
+/* ─────────── RESULTS ─────────── */
+function updateResults(){
+  document.getElementById("r_seen").textContent = `${seen.size} / ${totalSpans}`;
+  document.getElementById("r_match").textContent =
+    matchDone === PAIRS.length ? (matchErrors === 0 ? "8 / 8 🌟" : `დასრულდა (${matchErrors} შეცდომა)`) : "—";
+  document.getElementById("r_gap").textContent = gapResult;
+  document.getElementById("r_city").textContent = cityAnswered ? `${cityOk} / ${CQ.length}` : "—";
+}
+
+/* ─────────── NAVIGATION ─────────── */
+const slides = [...document.querySelectorAll(".slide")];
+const dots = document.getElementById("dots");
+let cur = 0;
+slides.forEach((s,i) => {
+  const d = document.createElement("div");
+  d.className = "dot"; d.addEventListener("click", ()=>go(i));
+  dots.appendChild(d);
+});
+function go(i){
+  cur = Math.max(0, Math.min(slides.length-1, i));
+  slides.forEach((s,j)=>s.classList.toggle("active", j===cur));
+  [...dots.children].forEach((d,j)=>d.classList.toggle("on", j===cur));
+  document.getElementById("prev").disabled = cur===0;
+  document.getElementById("next").disabled = cur===slides.length-1;
+  closePopup();
+  if(cur === slides.length-1) updateResults();
+  window.scrollTo({top:0});
+}
+document.getElementById("prev").addEventListener("click", ()=>go(cur-1));
+document.getElementById("next").addEventListener("click", ()=>go(cur+1));
+document.addEventListener("keydown", e => {
+  if(e.key==="ArrowRight") go(cur+1);
+  if(e.key==="ArrowLeft") go(cur-1);
+  if(e.key==="Escape") closePopup();
+});
+go(0);
+</script>
+</body>
+</html>
