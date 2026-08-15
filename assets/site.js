@@ -4,7 +4,7 @@ const SITE = {
   tagline: "English Online Courses",
   email: "NPkhakadze@learnenglishonlinecourses.com",
   // ▼ შეავსე: WhatsApp ნომერი საერთაშორისო ფორმატით (მაგ. 995599123456) და FB გვერდის მისამართი
-  whatsapp: "",
+  whatsapp: "995571774414",
   facebook: "https://www.facebook.com/profile.php?id=61565512782629",
   messenger: "https://m.me/61565512782629"
 };
