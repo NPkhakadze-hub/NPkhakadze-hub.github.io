@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Too &amp; Enough — A2 Grammar Lesson</title>
+<style>
+  :root{
+    --bg:#faf6ef; --card:#ffffff; --ink:#2b2620; --sub:#6b6156;
+    --accent:#c05621; --accent-soft:#fdebd9; --green:#2f855a; --green-soft:#e6f4ea;
+    --red:#c53030; --red-soft:#fdecea; --blue:#2b6cb0; --blue-soft:#e8f0fa;
+    --gold:#b7791f; --border:#e8e0d4;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  html,body{margin:0; padding:0;}
+  body{background:var(--bg); color:var(--ink);
+    font-family:"Noto Sans Georgian","Sylfaen","Segoe UI",system-ui,sans-serif;
+    font-size:18px; line-height:1.65; min-height:100vh;}
+  .slide{display:none; max-width:860px; margin:0 auto; padding:28px 22px 130px;}
+  .slide.active{display:block; animation:fadein .35s ease;}
+  @keyframes fadein{from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:none;}}
+  .kicker{color:var(--accent); font-weight:700; letter-spacing:.06em; font-size:14px; text-transform:uppercase;}
+  h1{font-size:clamp(30px,6vw,44px); line-height:1.2; margin:8px 0 6px;}
+  h2{font-size:clamp(24px,5vw,32px); margin:6px 0 4px;}
+  .sub{color:var(--sub); font-size:16px; margin-bottom:18px;}
+  .emoji-big{font-size:52px; line-height:1;}
+  .card{background:var(--card); border:1px solid var(--border); border-radius:18px; padding:20px 22px; margin:14px 0; box-shadow:0 2px 10px rgba(60,45,20,.05);}
+  .hint{background:var(--accent-soft); border:1px solid #f3d3ae; border-radius:14px; padding:12px 16px; font-size:16px; margin:12px 0;}
+  .formula{background:var(--blue-soft); border:1px solid #cddff2; border-radius:14px; padding:14px 16px; font-size:19px; text-align:center; font-family:Georgia,serif; color:var(--blue); font-weight:700;}
+  .ex{font-family:Georgia,serif; font-size:18px;}
+  .ka{color:var(--sub); font-size:16px;}
+  .speak{border:none; background:var(--blue-soft); color:var(--blue); border-radius:999px; font-size:16px; padding:6px 14px; cursor:pointer; margin-left:8px; font-family:inherit;}
+  .speak:active{transform:scale(.96);}
+  table.irr{width:100%; border-collapse:collapse;}
+  table.irr td{padding:9px 6px; border-bottom:1px dashed var(--border); font-size:17px; vertical-align:top;}
+  table.irr td.inf{font-family:Georgia,serif; font-weight:700;}
+  table.irr td.ka{color:var(--sub); font-size:16px;}
+  table.irr td.btn{text-align:right; width:60px;}
+  .qitem{margin:14px 0; padding:14px 16px; background:#fff; border:1px solid var(--border); border-radius:14px;}
+  .qtext{font-size:18px; margin-bottom:10px;}
+  .qtext .num{color:var(--sub); margin-right:6px;}
+  .opts{display:flex; gap:8px; flex-wrap:wrap;}
+  .opt{border:2px solid var(--border); background:#fff; border-radius:12px; padding:8px 16px;
+    font-size:16px; cursor:pointer; font-family:inherit; transition:all .15s; text-align:left;}
+  .opt:hover{border-color:var(--accent);}
+  .opt.correct{background:var(--green-soft); border-color:var(--green); color:var(--green); font-weight:700;}
+  .opt.wrong{background:var(--red-soft); border-color:var(--red); color:var(--red);}
+  .opt:disabled{cursor:default; opacity:.75;}
+  .opt.correct:disabled,.opt.wrong:disabled{opacity:1;}
+  .opts.col{flex-direction:column; align-items:stretch;}
+  .why{display:none; margin-top:8px; font-size:15px; color:var(--sub); background:var(--blue-soft); border-radius:10px; padding:8px 12px;}
+  .qitem.done .why{display:block;}
+  .gap-sel{font-family:Georgia,serif; font-size:17px; padding:6px 10px; border-radius:10px;
+    border:2px solid var(--border); background:#fff; color:var(--ink); margin:0 4px;}
+  .gap-sel.correct{border-color:var(--green); background:var(--green-soft); color:var(--green); font-weight:700;}
+  .gap-sel.wrong{border-color:var(--red); background:var(--red-soft); color:var(--red);}
+  .checkbtn{border:none; background:var(--accent); color:#fff; font-size:17px; font-weight:700;
+    border-radius:12px; padding:12px 26px; cursor:pointer; font-family:inherit; margin-top:14px;}
+  .checkbtn:active{transform:scale(.98);}
+  .score{font-size:18px; font-weight:700; color:var(--green); margin-top:12px; min-height:26px;}
+  #nav{position:fixed; bottom:0; left:0; right:0; z-index:40;
+    background:rgba(250,246,239,.95); backdrop-filter:blur(6px);
+    border-top:1px solid var(--border); padding:12px 16px;
+    display:flex; align-items:center; justify-content:space-between; gap:10px;}
+  .navbtn{border:none; background:var(--accent); color:#fff; font-size:16px; font-weight:700;
+    border-radius:12px; padding:11px 22px; cursor:pointer; font-family:inherit;}
+  .navbtn:disabled{opacity:.35; cursor:default;}
+  #dots{display:flex; gap:6px; flex-wrap:wrap; justify-content:center;}
+  .dot{width:10px; height:10px; border-radius:50%; background:#ddd2c2; cursor:pointer;}
+  .dot.on{background:var(--accent); transform:scale(1.25);}
+  .bigfinish{text-align:center; padding-top:40px;}
+  .bigfinish .emoji-big{font-size:72px;}
+  table.results{width:100%; border-collapse:collapse; margin-top:16px;}
+  table.results td{padding:10px 8px; border-bottom:1px solid var(--border); font-size:17px;}
+  table.results td:last-child{text-align:right; font-weight:800; color:var(--green);}
+  .talkq{font-family:Georgia,serif; font-size:19px; margin:0 0 4px;}
+  .talkka{color:var(--sub); font-size:16px; margin:0 0 14px;}
+  .twocol{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+  @media (max-width:640px){.twocol{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 0 · TITLE -->
+<section class="slide" id="s0">
+  <div class="kicker">Grammar · A2 ✦</div>
+  <h1>Too &amp; Enough ⚖️</h1>
+  <p class="sub">„ზედმეტად" და „საკმარისად" — ერთი გაკვეთილი, შვიდი წესი, ბევრი ვარჯიში</p>
+  <div class="card">
+    <div class="emoji-big">☕🔥 💸 🛏️😴</div>
+    <p style="margin-top:10px;"><b>Warm-up — მოდი, ვიფიქროთ:</b></p>
+    <p class="ex">Finish the sentence: <i>"I can't … because I'm too …"</i></p>
+    <p class="ka">მაგ.: I can't run fast because I'm too tired. — თითოეულმა თქვი შენი ვარიანტი!</p>
+  </div>
+  <div class="hint">💡 <b>როგორ ვიმუშაოთ:</b> ჯერ წესებს გავიხსენებთ (2 სლაიდი), მერე — 5 სავარჯიშო. ყოველ პასუხს ახსნა მოჰყვება. ბოლოს შედეგების ცხრილი გელოდება!</div>
+</section>
+
+<!-- SLIDE 1 · GRAMMAR: TOO -->
+<section class="slide" id="s1">
+  <div class="kicker">წესები · 1/2</div>
+  <h2>🔥 too — „ზედმეტად" (და ეს პრობლემაა!)</h2>
+  <div class="formula">too + ზედსართავი &nbsp;·&nbsp; too much + უთვლადი &nbsp;·&nbsp; too many + თვლადი</div>
+  <div class="card">
+    <table class="irr" id="tootable"></table>
+  </div>
+  <div class="hint">⚠️ <b>too ≠ very!</b> very = ძალიან (ნეიტრალური), too = ზედმეტად (პრობლემა). კომპლიმენტში ყოველთვის very: <i>Tbilisi is <b>very</b> beautiful</i> (✗ too beautiful).</div>
+  <div class="hint">➕ <b>მეორე too:</b> წინადადების ბოლოში too = „ასევე / -ც": <i>I like this song. — Me <b>too</b>!</i></div>
+</section>
+
+<!-- SLIDE 2 · GRAMMAR: ENOUGH -->
+<section class="slide" id="s2">
+  <div class="kicker">წესები · 2/2</div>
+  <h2>✅ enough — ერთი სიტყვა, ორი პოზიცია</h2>
+  <div class="formula">ზედსართავი + enough &nbsp;·&nbsp; enough + სახელი &nbsp;·&nbsp; too / enough + to + ზმნა</div>
+  <div class="card">
+    <table class="irr" id="entable"></table>
+  </div>
+  <div class="hint">🔄 <b>ერთი მედლის ორი მხარე:</b> <i>The shoes are <b>too</b> small = The shoes aren't big <b>enough</b>.</i></div>
+  <div class="hint">🇬🇪 ქართული „რომ"-კონსტრუქცია ინგლისურში უბრალო <b>to</b>-თი გამოიხატება: <i>too tired <b>to</b> work</i> — ზედმეტად დაღლილი, <u>რომ</u> ვიმუშაო.</div>
+</section>
+
+<!-- SLIDE 3 · QUIZ 1 -->
+<section class="slide" id="s3">
+  <div class="kicker">ვარჯიში 1</div>
+  <h2>⚖️ too თუ enough?</h2>
+  <p class="sub">აირჩიე სწორი სიტყვა. ყურადღება: პრობლემაა თუ საკმარისობა?</p>
+  <div id="q1box"></div>
+  <div class="score" id="q1score"></div>
+</section>
+
+<!-- SLIDE 4 · QUIZ 2 -->
+<section class="slide" id="s4">
+  <div class="kicker">ვარჯიში 2</div>
+  <h2>🧮 too much თუ too many?</h2>
+  <p class="sub">უთვლადი თუ თვლადი? აირჩიე სწორი ფორმა.</p>
+  <div id="q2box"></div>
+  <div class="score" id="q2score"></div>
+</section>
+
+<!-- SLIDE 5 · QUIZ 3 -->
+<section class="slide" id="s5">
+  <div class="kicker">ვარჯიში 3</div>
+  <h2>🕵️ რომელია სწორი წინადადება?</h2>
+  <p class="sub">ორიდან ერთი სწორია — იპოვე! (სიტყვათა რიგი და ტიპური შეცდომები)</p>
+  <div id="q3box"></div>
+  <div class="score" id="q3score"></div>
+</section>
+
+<!-- SLIDE 6 · QUIZ 4 -->
+<section class="slide" id="s6">
+  <div class="kicker">ვარჯიში 4</div>
+  <h2>✏️ ჩასვი სწორი სიტყვა</h2>
+  <p class="sub">აირჩიე: too · enough · too much · too many · to — ბოლოს დააჭირე „შემოწმებას".</p>
+  <div id="q4box"></div>
+  <button class="checkbtn" id="q4check">შემოწმება ✓</button>
+  <div class="score" id="q4score"></div>
+</section>
+
+<!-- SLIDE 7 · QUIZ 5 -->
+<section class="slide" id="s7">
+  <div class="kicker">ვარჯიში 5</div>
+  <h2>🇬🇪→🇬🇧 თარგმანი</h2>
+  <p class="sub">როგორ ითქმის ეს ინგლისურად? აირჩიე სწორი ვარიანტი.</p>
+  <div id="q5box"></div>
+  <div class="score" id="q5score"></div>
+</section>
+
+<!-- SLIDE 8 · SPEAKING -->
+<section class="slide" id="s8">
+  <div class="kicker">საუბარი</div>
+  <h2>💬 Now you! Too or enough in your life</h2>
+  <p class="sub">უპასუხე სრული წინადადებებით — გამოიყენე too, enough, too much/many.</p>
+  <div class="card" id="talkbox"></div>
+  <div class="hint">🗣️ <b>სასარგებლო ფრაზები:</b> <i>… is too expensive these days · I don't sleep enough because … · There is too much … in my city · I'm old enough to … · Me too!</i></div>
+</section>
+
+<!-- SLIDE 9 · FINISH -->
+<section class="slide" id="s9">
+  <div class="bigfinish">
+    <div class="emoji-big">🎯</div>
+    <h1>Well done!</h1>
+    <p class="sub">ყოჩაღ — გაკვეთილი დასრულებულია!</p>
+  </div>
+  <div class="card">
+    <table class="results">
+      <tr><td>⚖️ too / enough</td><td id="r_q1">—</td></tr>
+      <tr><td>🧮 too much / too many</td><td id="r_q2">—</td></tr>
+      <tr><td>🕵️ სწორი წინადადება</td><td id="r_q3">—</td></tr>
+      <tr><td>✏️ სიტყვის ჩასმა</td><td id="r_q4">—</td></tr>
+      <tr><td>🇬🇧 თარგმანი</td><td id="r_q5">—</td></tr>
+    </table>
+  </div>
+  <div class="hint">🏠 <b>საშინაო რჩევა:</b> დაწერე 5 წინადადება შენს ცხოვრებაზე — ორი too-თი, ორი enough-ით და ერთი too much/too many-ით. მაგ.: <i>My neighbour plays music too loudly!</i></div>
+</section>
+
+<nav id="nav">
+  <button class="navbtn" id="prev">← უკან</button>
+  <div id="dots"></div>
+  <button class="navbtn" id="next">შემდეგი →</button>
+</nav>
+
+<script>
+function speak(text){
+  try{
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(String(text).replace(/…|\.\.\./g,"").replace(/\(|\)|\?|\/|·/g," "));
+    u.lang = "en-US"; u.rate = 0.85;
+    speechSynthesis.speak(u);
+  }catch(e){}
+}
+
+/* ─── GRAMMAR TABLES ─── */
+const TOO = [
+ ["This jacket is too small for me.","ეს ქურთუკი ჩემთვის ზედმეტად პატარაა."],
+ ["My brother talks too loudly on the phone.","ჩემი ძმა ტელეფონზე ზედმეტად ხმამაღლა ლაპარაკობს."],
+ ["I drank too much coffee last night.","წუხელ ზედმეტი ყავა დავლიე. (coffee — უთვლადი)"],
+ ["There are too many ads on this website.","ამ საიტზე ზედმეტად ბევრი რეკლამაა. (ads — თვლადი)"]
+];
+const EN = [
+ ["Is the water warm enough for the baby?","წყალი საკმარისად თბილია ბავშვისთვის? (ზედსართავი + enough)"],
+ ["We have enough eggs for breakfast.","საკმარისი კვერცხი გვაქვს საუზმისთვის. (enough + სახელი)"],
+ ["She doesn't rest enough at weekends.","ის შაბათ-კვირას საკმარისად არ ისვენებს. (ზმნა + enough)"],
+ ["I'm too sleepy to watch the film.","ზედმეტად მეძინება, რომ ფილმს ვუყურო. (too … to …)"],
+ ["He's old enough to travel alone.","ის საკმარისად დიდია, რომ მარტო იმოგზაუროს. (… enough to …)"]
+];
+function buildTable(id, rows){
+  const t = document.getElementById(id);
+  rows.forEach(([en,ka]) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td class="inf">${en}</td><td class="ka">${ka}</td><td class="btn"><button class="speak">🔊</button></td>`;
+    tr.querySelector("button").addEventListener("click", () => speak(en));
+    t.appendChild(tr);
+  });
+}
+buildTable("tootable", TOO);
+buildTable("entable", EN);
+
+/* ─── MC QUIZ BUILDER ─── */
+const scores = {};
+function buildMC(boxId, scoreId, key, items, colOpts){
+  scores[key] = {ok:0, done:0, total:items.length};
+  const box = document.getElementById(boxId);
+  items.forEach((q,i) => {
+    const div = document.createElement("div");
+    div.className = "qitem";
+    const btns = q.opts.map((o,j)=>`<button class="opt" data-j="${j}">${o}</button>`).join("");
+    div.innerHTML = `<div class="qtext"><span class="num">${i+1}.</span>
+      <span style="font-family:Georgia,serif;">${q.text}</span>
+      ${q.tts?'<button class="speak">🔊</button>':''}</div>
+      <div class="opts${colOpts?' col':''}">${btns}</div>
+      <div class="why">💡 ${q.why}</div>`;
+    if(q.tts) div.querySelector("button.speak").addEventListener("click", () => speak(q.tts));
+    div.querySelectorAll(".opt").forEach(b => {
+      b.addEventListener("click", () => {
+        if(div.dataset.done) return;
+        div.dataset.done = "1"; div.classList.add("done");
+        const s = scores[key]; s.done++;
+        if(Number(b.dataset.j) === q.a){ b.classList.add("correct"); s.ok++; }
+        else {
+          b.classList.add("wrong");
+          div.querySelector(`.opt[data-j="${q.a}"]`).classList.add("correct");
+        }
+        div.querySelectorAll(".opt").forEach(x=>x.disabled = true);
+        speak(q.say || q.opts[q.a]);
+        if(s.done === s.total){
+          document.getElementById(scoreId).textContent =
+            s.ok === s.total ? `🌟 იდეალურია! ${s.ok} / ${s.total}` : `შედეგი: ${s.ok} / ${s.total}`;
+        }
+        updateResults();
+      });
+    });
+    box.appendChild(div);
+  });
+}
+
+/* Q1: too / enough */
+buildMC("q1box","q1score","q1",[
+ {text:"This soup is ___ salty. I can't eat it.", opts:["too","enough"], a:0,
+  why:"„ვერ ვჭამ“ — პრობლემაა → too salty.", say:"This soup is too salty. I can't eat it."},
+ {text:"Is the water warm ___ for the baby?", opts:["too","enough"], a:1,
+  why:"საკმარისობაზე ვკითხულობთ → warm enough (ზედსართავის შემდეგ).", say:"Is the water warm enough for the baby?"},
+ {text:"We have ___ eggs to make breakfast.", opts:["too","enough"], a:1,
+  why:"საკმარისი რაოდენობა → enough + eggs (სახელის წინ).", say:"We have enough eggs to make breakfast."},
+ {text:"My phone is ___ old. It won't run new apps.", opts:["too","enough"], a:0,
+  why:"აპები აღარ ეშვება — პრობლემა → too old.", say:"My phone is too old."},
+ {text:"She isn't old ___ to watch that film.", opts:["too","enough"], a:1,
+  why:"not + ზედსართავი + enough + to → isn't old enough to watch.", say:"She isn't old enough to watch that film."},
+ {text:"He speaks ___ quickly. Nobody understands him.", opts:["too","enough"], a:0,
+  why:"ვერავინ იგებს — პრობლემა → too quickly (too + ზმნიზედა).", say:"He speaks too quickly."},
+ {text:"It's ___ cold to swim in the sea today.", opts:["too","enough"], a:0,
+  why:"too + ზედსართავი + to + ზმნა: ზედმეტად ცივა, რომ ვიცუროთ.", say:"It's too cold to swim in the sea today."},
+ {text:"This room isn't big ___ for the party.", opts:["too","enough"], a:1,
+  why:"not … enough = არასაკმარისად: isn't big enough.", say:"This room isn't big enough for the party."}
+]);
+
+/* Q2: too much / too many */
+buildMC("q2box","q2score","q2",[
+ {text:"I drank ___ coffee last night and couldn't sleep.", opts:["too much","too many"], a:0,
+  why:"coffee უთვლადია → too much.", say:"I drank too much coffee last night."},
+ {text:"There are ___ ads on this website.", opts:["too much","too many"], a:1,
+  why:"ads თვლადია (an ad, two ads) → too many.", say:"There are too many ads on this website."},
+ {text:"He spends ___ time on his phone.", opts:["too much","too many"], a:0,
+  why:"time უთვლადია → too much time.", say:"He spends too much time on his phone."},
+ {text:"We bought ___ tomatoes — they will go bad!", opts:["too much","too many"], a:1,
+  why:"tomatoes თვლადია → too many.", say:"We bought too many tomatoes."},
+ {text:"There was ___ noise in the café.", opts:["too much","too many"], a:0,
+  why:"noise უთვლადია → too much noise.", say:"There was too much noise in the café."},
+ {text:"I made ___ mistakes in the test.", opts:["too much","too many"], a:1,
+  why:"mistakes თვლადია → too many mistakes.", say:"I made too many mistakes in the test."},
+ {text:"___ sugar is bad for your teeth.", opts:["Too much","Too many"], a:0,
+  why:"sugar უთვლადია → too much sugar.", say:"Too much sugar is bad for your teeth."},
+ {text:"There were ___ questions in the exam.", opts:["too much","too many"], a:1,
+  why:"questions თვლადია → too many questions.", say:"There were too many questions in the exam."}
+]);
+
+/* Q3: choose the correct sentence */
+buildMC("q3box","q3score","q3",[
+ {text:"რომელია სწორი?", opts:["The tea is warm enough now.","The tea is enough warm now."], a:0,
+  why:"ზედსართავთან enough მის შემდეგ დგას: warm enough.", say:"The tea is warm enough now."},
+ {text:"რომელია სწორი?", opts:["We don't have chairs enough.","We don't have enough chairs."], a:1,
+  why:"არსებით სახელთან enough წინ დგას: enough chairs.", say:"We don't have enough chairs."},
+ {text:"რომელია სწორი?", opts:["This jacket is too much expensive.","This jacket is too expensive."], a:1,
+  why:"ზედსართავთან მხოლოდ too — much არ გვჭირდება.", say:"This jacket is too expensive."},
+ {text:"კომპლიმენტი გინდა თქვა:", opts:["Your garden is very beautiful!","Your garden is too beautiful!"], a:0,
+  why:"too პრობლემას ნიშნავს — კომპლიმენტში very!", say:"Your garden is very beautiful!"},
+ {text:"რომელია სწორი?", opts:["He is enough strong to lift the box.","He is strong enough to lift the box."], a:1,
+  why:"ზედსართავი + enough + to: strong enough to lift.", say:"He is strong enough to lift the box."},
+ {text:"რომელია სწორი?", opts:["There are too many people here.","There is too much people here."], a:0,
+  why:"people თვლადია (მრავლობითი) → too many people + are.", say:"There are too many people here."},
+ {text:"რომელია სწორი?", opts:["I'm too tired for cook tonight.","I'm too tired to cook tonight."], a:1,
+  why:"too + ზედსართავი + to + ზმნა: too tired to cook.", say:"I'm too tired to cook tonight."},
+ {text:"„ის ფრანგულადაც ლაპარაკობს“:", opts:["She speaks French too.","She speaks too French."], a:0,
+  why:"too = „ასევე“ წინადადების ბოლოში დგას.", say:"She speaks French too."}
+], true);
+
+/* Q4: gap-fill with select */
+const GAPS = [
+ ["The suitcase is", "heavy to carry.", "too"],
+ ["Do we have", "petrol for the trip?", "enough"],
+ ["She's old enough", "travel alone.", "to"],
+ ["There's", "traffic in the city centre.", "too much"],
+ ["I invited", "people — we need more pizza!", "too many"],
+ ["The bag is light", "to carry with one hand.", "enough"],
+ ["It's", "late to call grandma now.", "too"],
+ ["He doesn't drink", "water every day.", "enough"]
+];
+scores.q4 = {ok:0, done:0, total:GAPS.length};
+(function buildGaps(){
+  const bank = ["too","enough","too much","too many","to"];
+  const box = document.getElementById("q4box");
+  GAPS.forEach((g,i) => {
+    const div = document.createElement("div");
+    div.className = "qitem";
+    const opts = bank.map(w=>`<option value="${w}">${w}</option>`).join("");
+    div.innerHTML = `<div class="qtext" style="font-family:Georgia,serif;">
+      <span class="num">${i+1}.</span>${g[0]}
+      <select class="gap-sel" data-a="${g[2]}"><option value="">— აირჩიე —</option>${opts}</select>
+      ${g[1]}</div>`;
+    box.appendChild(div);
+  });
+  document.getElementById("q4check").addEventListener("click", () => {
+    let ok = 0;
+    document.querySelectorAll("#q4box .gap-sel").forEach(s => {
+      s.classList.remove("correct","wrong");
+      if(s.value === s.dataset.a){ s.classList.add("correct"); ok++; }
+      else if(s.value){ s.classList.add("wrong"); }
+    });
+    scores.q4.ok = ok; scores.q4.done = GAPS.length;
+    document.getElementById("q4score").textContent =
+      ok === GAPS.length ? `🌟 შესანიშნავია! ${ok} / ${GAPS.length}` :
+      `შედეგი: ${ok} / ${GAPS.length} — წითლები შეასწორე და ისევ სცადე!`;
+    updateResults();
+  });
+})();
+
+/* Q5: translation MC */
+buildMC("q5box","q5score","q5",[
+ {text:"„ეს ყავა ზედმეტად ცხელია.“", opts:["This coffee is too hot.","This coffee is very hot.","This coffee is hot enough."], a:0,
+  why:"„ზედმეტად“ = too (პრობლემა).", say:"This coffee is too hot."},
+ {text:"„საკმარისი დრო არ გვაქვს.“", opts:["We don't have time enough.","We don't have enough time.","We don't have too much time."], a:1,
+  why:"არსებით სახელთან enough წინ: enough time.", say:"We don't have enough time."},
+ {text:"„ის ზედმეტად პატარაა, რომ ველოსიპედი ატაროს.“", opts:["He is enough young to ride a bike.","He is too young for ride a bike.","He is too young to ride a bike."], a:2,
+  why:"too + ზედსართავი + to + ზმნა.", say:"He is too young to ride a bike."},
+ {text:"„მეც მშია!“", opts:["I'm too hungry!","I'm hungry too!","I'm very hungry too much!"], a:1,
+  why:"„-ც / ასევე“ = too წინადადების ბოლოში.", say:"I'm hungry too!"},
+ {text:"„ჩანთა საკმარისად დიდია.“", opts:["The bag is enough big.","The bag is too big.","The bag is big enough."], a:2,
+  why:"ზედსართავი + enough: big enough.", say:"The bag is big enough."},
+ {text:"„ზედმეტად ბევრი მარილი ჩავყარე.“", opts:["I added too much salt.","I added too many salt.","I added very salt."], a:0,
+  why:"salt უთვლადია → too much salt.", say:"I added too much salt."}
+], true);
+
+/* SPEAKING */
+const TALK = [
+ ["What is too expensive in Georgia these days?","რა არის ზედმეტად ძვირი საქართველოში ამ დღეებში?"],
+ ["Do you sleep enough? Why / why not?","საკმარისად გძინავს? რატომ?"],
+ ["Name something you are too old for — and something you are old enough for!","რისთვის ხარ უკვე „ზედმეტად დიდი“ — და რისთვის „საკმარისად დიდი“?"],
+ ["Is your city too noisy? Is it green enough?","შენი ქალაქი ზედმეტად ხმაურიანია? საკმარისად გამწვანებულია?"],
+ ["Game: say 'I love …' — your partner answers 'Me too!' or 'Not me!'","თამაში: თქვი „I love …“ — პარტნიორი გპასუხობს „Me too!“ ან „Not me!“"],
+ ["Finish the sentence: 'Yesterday I was too tired to …'","დაასრულე: „გუშინ ზედმეტად დაღლილი ვიყავი, რომ …“"]
+];
+(function buildTalk(){
+  const box = document.getElementById("talkbox");
+  TALK.forEach(([en,ka],i) => {
+    const d = document.createElement("div");
+    d.innerHTML = `<p class="talkq">${i+1}. ${en} <button class="speak">🔊</button></p><p class="talkka">🇬🇪 ${ka}</p>`;
+    d.querySelector("button").addEventListener("click", () => speak(en));
+    box.appendChild(d);
+  });
+})();
+
+/* RESULTS */
+function updateResults(){
+  const f = k => scores[k].done ? `${scores[k].ok} / ${scores[k].total}` : "—";
+  ["q1","q2","q3","q4","q5"].forEach(k => {
+    document.getElementById("r_"+k).textContent = f(k);
+  });
+}
+
+/* NAVIGATION */
+const slides = [...document.querySelectorAll(".slide")];
+const dots = document.getElementById("dots");
+let cur = 0;
+slides.forEach((s,i) => {
+  const d = document.createElement("div");
+  d.className = "dot"; d.addEventListener("click", ()=>go(i));
+  dots.appendChild(d);
+});
+function go(i){
+  cur = Math.max(0, Math.min(slides.length-1, i));
+  slides.forEach((s,j)=>s.classList.toggle("active", j===cur));
+  [...dots.children].forEach((d,j)=>d.classList.toggle("on", j===cur));
+  document.getElementById("prev").disabled = cur===0;
+  document.getElementById("next").disabled = cur===slides.length-1;
+  if(cur === slides.length-1) updateResults();
+  window.scrollTo({top:0});
+}
+document.getElementById("prev").addEventListener("click", ()=>go(cur-1));
+document.getElementById("next").addEventListener("click", ()=>go(cur+1));
+document.addEventListener("keydown", e => {
+  if(e.key==="ArrowRight") go(cur+1);
+  if(e.key==="ArrowLeft") go(cur-1);
+});
+go(0);
+</script>
+</body>
+</html>
