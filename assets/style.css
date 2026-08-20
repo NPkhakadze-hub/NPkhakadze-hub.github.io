@@ -131,6 +131,36 @@ header{position:sticky;top:0;z-index:40;background:rgba(250,246,239,.92);backdro
 /* testimonials */
 .tcard{position:relative;background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:24px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:12px}
 .stars{color:var(--gold);letter-spacing:2px;font-size:16px}
+
+/* ── რეიტინგის ჩიპი hero-ში ── */
+.ratechip{display:inline-flex;align-items:center;gap:9px;margin:4px 0 20px;padding:9px 15px;
+  background:var(--card);border:1px solid var(--border);border-radius:999px;
+  text-decoration:none;color:var(--ink);box-shadow:var(--shadow);transition:transform .18s,box-shadow .18s}
+.ratechip:hover{transform:translateY(-1px);box-shadow:0 6px 18px rgba(60,45,20,.12)}
+.ratechip .stars{font-size:14px}
+.ratechip b{font-size:14px;font-weight:700}
+
+/* ── შედეგების მუქი ზოლი ── */
+.proof{background:var(--ink);color:#efe6d8;padding:66px 0}
+.proof .kicker{color:#e8a860}
+.proof h2{color:#fff}
+.proof .sub{color:#bcae9c}
+.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px}
+.pcard{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.13);
+  border-radius:var(--r);padding:22px 20px;display:flex;flex-direction:column;gap:7px}
+.pcard .big{font-size:18px;font-weight:800;color:#fff;line-height:1.32}
+.pcard .small{font-size:14.5px;color:#c3b5a2;line-height:1.5;flex:1}
+.pcard .who{font-size:13px;color:#e8a860;font-weight:700;margin-top:6px}
+@media(max-width:900px){.proof-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.proof-grid{grid-template-columns:1fr}}
+
+/* ── ვიდეო-შეფასებები ── */
+.vcard{margin:0;background:var(--card);border:1px solid var(--border);border-radius:var(--r);
+  overflow:hidden;box-shadow:var(--shadow)}
+.vcard video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#000;display:block}
+.vcard figcaption{padding:14px 16px}
+.vcard figcaption b{display:block;font-size:15px}
+.vcard figcaption span{font-size:13px;color:var(--sub)}
 .revgrid{column-count:3;column-gap:18px}
 .revgrid .tcard{display:block;break-inside:avoid;margin:0 0 18px}
 .revgrid .tcard blockquote{margin:10px 0 14px}
