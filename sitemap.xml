@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://npkhakadze-hub.github.io/</loc></url>
-<url><loc>https://npkhakadze-hub.github.io/shop/</loc></url>
-<url><loc>https://npkhakadze-hub.github.io/blog/</loc></url>
-<url><loc>https://npkhakadze-hub.github.io/blog/im-agree.html</loc></url>
-<url><loc>https://npkhakadze-hub.github.io/blog/too-vs-very.html</loc></url>
+<urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url><loc>https://learnenglishonlinecourses.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority><xhtml:link rel="alternate" hreflang="ka" href="https://learnenglishonlinecourses.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://learnenglishonlinecourses.com/en/"/><xhtml:link rel="alternate" hreflang="de" href="https://learnenglishonlinecourses.com/de/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://learnenglishonlinecourses.com/"/></url>
+<url><loc>https://learnenglishonlinecourses.com/en/</loc><changefreq>monthly</changefreq><priority>0.9</priority><xhtml:link rel="alternate" hreflang="ka" href="https://learnenglishonlinecourses.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://learnenglishonlinecourses.com/en/"/><xhtml:link rel="alternate" hreflang="de" href="https://learnenglishonlinecourses.com/de/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://learnenglishonlinecourses.com/"/></url>
+<url><loc>https://learnenglishonlinecourses.com/de/</loc><changefreq>monthly</changefreq><priority>0.9</priority><xhtml:link rel="alternate" hreflang="ka" href="https://learnenglishonlinecourses.com/"/><xhtml:link rel="alternate" hreflang="en" href="https://learnenglishonlinecourses.com/en/"/><xhtml:link rel="alternate" hreflang="de" href="https://learnenglishonlinecourses.com/de/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://learnenglishonlinecourses.com/"/></url>
 </urlset>

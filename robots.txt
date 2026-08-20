@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /lessons/
 Disallow: /m/
-Sitemap: https://npkhakadze-hub.github.io/sitemap.xml
+Sitemap: https://learnenglishonlinecourses.com/sitemap.xml
