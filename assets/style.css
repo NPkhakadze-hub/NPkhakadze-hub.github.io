@@ -131,6 +131,14 @@ header{position:sticky;top:0;z-index:40;background:rgba(250,246,239,.92);backdro
 /* testimonials */
 .tcard{position:relative;background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:24px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:12px}
 .stars{color:var(--gold);letter-spacing:2px;font-size:16px}
+.revgrid{column-count:3;column-gap:18px}
+.revgrid .tcard{display:block;break-inside:avoid;margin:0 0 18px}
+.revgrid .tcard blockquote{margin:10px 0 14px}
+.revgrid .tcard .who{margin-top:0}
+.tcard.extra{display:none}
+.revgrid.open .tcard.extra{display:block}
+@media(max-width:900px){.revgrid{column-count:2}}
+@media(max-width:600px){.revgrid{column-count:1}}
 .tcard blockquote{margin:0;font-size:16px;color:var(--ink);font-style:italic}
 .tcard .who{display:flex;align-items:center;gap:10px;margin-top:auto}
 .tcard .av{width:40px;height:40px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-weight:800;display:grid;place-items:center}
