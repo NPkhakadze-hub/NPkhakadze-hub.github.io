@@ -161,6 +161,35 @@ header{position:sticky;top:0;z-index:40;background:rgba(250,246,239,.92);backdro
 .vcard figcaption{padding:14px 16px}
 .vcard figcaption b{display:block;font-size:15px}
 .vcard figcaption span{font-size:13px;color:var(--sub)}
+/* ── ბლოგი ── */
+.bcard{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:24px;
+  text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:8px;
+  box-shadow:var(--shadow);transition:transform .18s,box-shadow .18s,border-color .18s}
+.bcard:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(60,45,20,.12);border-color:var(--accent)}
+.bemoji{font-size:30px;line-height:1}
+.btag{font-size:12.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--accent)}
+.bcard h3{margin:2px 0 0;font-size:19px;line-height:1.35}
+.bcard p{margin:0;color:var(--sub);font-size:15px;flex:1}
+.bcard .go{font-weight:700;color:var(--accent);font-size:15px}
+.blink{display:inline-block;margin-bottom:14px;color:var(--sub);text-decoration:none;font-size:15px;font-weight:600}
+.blink:hover{color:var(--accent)}
+.post{padding:44px 0 8px}
+.post h1{font-size:clamp(26px,3.6vw,36px);margin:6px 0 22px}
+.post p{font-size:17.5px;line-height:1.75}
+.post .ex{background:var(--bg);border-left:4px solid var(--accent);border-radius:10px;
+  padding:14px 16px;margin:0 0 14px;font-size:16.5px;line-height:1.7}
+.post .ex .ka{color:var(--sub);font-size:15px}
+.post b{color:var(--ink)}
+
+/* ── ენის შეთავაზების ზოლი ── */
+.langbar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--ink);color:#f4ece0;
+  padding:13px 18px;display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap;
+  font-size:15px;box-shadow:0 -4px 18px rgba(0,0,0,.18)}
+.langbar a{background:var(--accent);color:#fff;text-decoration:none;font-weight:700;
+  padding:8px 16px;border-radius:999px;font-size:14px}
+.langbar button{background:none;border:none;color:#bcae9c;cursor:pointer;font-family:inherit;font-size:14px}
+@media(max-width:600px){.langbar{font-size:14px;padding:11px 14px}}
+
 .revgrid{column-count:3;column-gap:18px}
 .revgrid .tcard{display:block;break-inside:avoid;margin:0 0 18px}
 .revgrid .tcard blockquote{margin:10px 0 14px}
