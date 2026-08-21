@@ -204,6 +204,9 @@ header{position:sticky;top:0;z-index:40;background:rgba(250,246,239,.92);backdro
 .post{padding:44px 0 8px}
 .post h1{font-size:clamp(26px,3.6vw,36px);margin:6px 0 22px}
 .post p{font-size:17.5px;line-height:1.75}
+.post .quiz{background:var(--green-soft);border-left:4px solid var(--green);border-radius:10px;
+  padding:15px 17px;margin:22px 0;font-size:16.5px;line-height:1.7}
+.post .quiz .ka{color:var(--sub);font-size:15px}
 .post .ex{background:var(--bg);border-left:4px solid var(--accent);border-radius:10px;
   padding:14px 16px;margin:0 0 14px;font-size:16.5px;line-height:1.7}
 .post .ex .ka{color:var(--sub);font-size:15px}
