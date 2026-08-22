@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /lessons/
 Disallow: /m/
 Sitemap: https://learnenglishonlinecourses.com/sitemap.xml

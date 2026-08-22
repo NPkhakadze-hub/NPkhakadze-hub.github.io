@@ -1,4 +1,5 @@
 (function(){
+  document.documentElement.className=document.documentElement.className.replace(/\bno-js\b/,"js");
   /* ─── ენის ავტომატური ამორჩევა ───────────────────────────────
      ქართველი → / · გერმანელი → /de/ · სხვა → ზოლი „English?"
      ⚠️ ინგლისურზე განზრახ არ ვამისამართებთ: Googlebot en-US-ით დადის და

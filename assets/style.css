@@ -283,8 +283,8 @@ footer a:hover{color:var(--accent)}
 @media(max-width:600px){.float-wa span{display:none}.float-wa{padding:14px}}
 
 /* reveal */
-.reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
-.reveal.in{opacity:1;transform:none}
+.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.js .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 
 /* lessons library */
