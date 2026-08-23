@@ -18,10 +18,10 @@
 > 2. **Hi Anna,** / Hello Anna, — ნეიტრალური; კოლეგებთან და ნაცნობ პარტნიორებთან.
 > 3. **I hope you're well.** — იმედია, კარგად ხართ. ნეიტრალური; ოფიციალური ვარიანტი: *I hope this email finds you well.*
 > 4. **Thank you for your email.** / Thanks for getting back to me. — მადლობა წერილისთვის / პასუხისთვის.
-> 5. **I'm writing to** ask about… / confirm… — გწერთ, რათა ვიკითხო… / დავადასტურო… — ოფიციალური დასაწყისი.
+> 5. **I'm writing to** ask about… / confirm… — გწერთ, რომ ვიკითხო… / დავადასტურო… — ოფიციალური დასაწყისი.
 > 6. **Please find attached** the invoice. — დანართში იხილეთ… — ოფიციალური; ნეიტრალური: *I've attached the invoice.*
 > 7. **Please let me know if you have any questions.** — თუ კითხვები გაქვთ, შემატყობინეთ.
-> 8. **I look forward to hearing from you.** — ველი თქვენს პასუხს. ოფიციალური; *to*-ს შემდეგ -ing!
+> 8. **I look forward to hearing from you.** — ველოდები თქვენს პასუხს. ოფიციალური; *to*-ს შემდეგ -ing!
 > 9. **Kind regards,** / Best regards, — პატივისცემით. უნივერსალური დამშვიდობება; კოლეგებთან საკმარისია *Best,*
 
 ## ელფოსტა — თხოვნა, შეხსენება, ბოდიში
@@ -30,11 +30,11 @@
 
 > 10. **Could you please** send me the updated file? — შეგიძლიათ გამომიგზავნოთ…? ნეიტრალური.
 > 11. **I would be grateful if you could** confirm the dates. — მადლობელი ვიქნები, თუ… — ოფიციალური თხოვნა.
-> 12. **Would it be possible to** move the deadline? — შესაძლებელი იქნება…? — როცა ბევრს ითხოვ.
+> 12. **Would it be possible to** move the deadline? — შესაძლებელი იქნებოდა…? — როცა ბევრს ითხოვ.
 > 13. **I'm just following up on** my email from last week. — ჩემს წინა წერილს ვუბრუნდები — ნეიტრალური; *Did you get my email?!* ზეწოლასავით ჟღერს.
 > 14. **Just a quick reminder that** the deadline is Friday. — მოკლე შეხსენება: ვადა პარასკევია.
 > 15. **Sorry for the late reply.** / Apologies for the delay. — ბოდიში დაგვიანებული პასუხისთვის — ნეიტრალური / ოფიციალური.
-> 16. **I'm afraid** I can't make it on Monday. — სამწუხაროდ, ორშაბათს ვერ შევძლებ. *I'm afraid* აქ „სამწუხაროდ“-ია, არა „მეშინია“.
+> 16. **I'm afraid** I can't make it on Monday. — სამწუხაროდ, ორშაბათს ვერ მოვახერხებ. *I'm afraid* აქ „სამწუხაროდ“-ია, არა „მეშინია“.
 
 ## შეხვედრა და ზარი
 
@@ -67,9 +67,9 @@
 
 ## Small talk — შეხვედრამდე ორი წუთი
 
-ინგლისურენოვან გარემოში შეხვედრა პირდაპირ საქმით იშვიათად იწყება. ორი-სამი მსუბუქი ფრაზა საკმარისია — და ერთიც, რომლითაც საქმეზე გადახვალ.
+ბრიტანულ-ამერიკულ გარემოში შეხვედრა პირდაპირ საქმით იშვიათად იწყება. ორი-სამი მსუბუქი ფრაზა საკმარისია — და ერთიც, რომლითაც საქმეზე გადახვალ.
 
-> 36. **How was your weekend?** — შაბათ-კვირა როგორ გაატარე? — ორშაბათის კლასიკა.
+> 36. **How was your weekend?** — შაბათ-კვირა როგორ გაატარეთ? — ორშაბათის კლასიკა.
 > 37. **How was your trip?** / Did you have a good flight? — მგზავრობა როგორ იყო?
 > 38. **How are things at your end?** — თქვენთან რა ამბავია? — ნეიტრალური.
 > 39. **Good to see you again.** / Nice to meet you. — მოხარული ვარ, რომ კვლავ გხედავთ / სასიამოვნოა გაცნობა (პირველად).
@@ -102,7 +102,7 @@
 > 5. I look forward to ___ (hear) from you.
 
 **პასუხები:** 1. (ბ) — უცნობთან ოფიციალური მიმართვა გვარით.
-2. *I agree with your plan.* 3. (ბ) — *Could you please* თხოვნაა, *Send me* — ბრძანება. 4. *I will inform you tomorrow.* 5. *hearing* — *look forward to*-ს შემდეგ -ing.
+2. *I agree with your plan.* 3. (ბ) — *Could you please* თხოვნაა, *Send me* — ბრძანება. 4. *I will inform you tomorrow.* (ან: *I'll let you know tomorrow.*) 5. *hearing* — *look forward to*-ს შემდეგ -ing.
 
 ჩემი რჩევა: ამ 40 ფრაზიდან ის ათი აირჩიე, რომელიც შენს სამსახურში მართლა გჭირდება, და უახლოეს წერილსა და შეხვედრაში შეგნებულად ჩასვი — რეალურ სიტუაციაში გამოყენებული ფრაზა ბევრად უკეთ რჩება მეხსიერებაში.
 თუ გინდა, ერთად გავიაროთ შენი მიმოწერა ან მომავალი პრეზენტაცია — [ინგლისურის ინდივიდუალური ონლაინ გაკვეთილები](https://learnenglishonlinecourses.com/) სწორედ ამისთვისაა, დაწყება კი შეიძლება უფასო 20-წუთიანი გაცნობითი შეხვედრით Google Meet-ში.
@@ -115,7 +115,7 @@
 
 **რა ვთქვა, როცა შეხვედრაზე ვერ გავიგე ნათქვამი?**
 
-„Sorry, could you repeat that?“ ან „Sorry, I didn't catch that.“ დასაზუსტებლად — „So, if I understand correctly, you mean…?“. ჩუმად დარჩენაზე კითხვა ყოველთვის სჯობს.
+„Sorry, could you repeat that?“ ან „Sorry, I didn't catch that.“ დასაზუსტებლად — „So, if I understand correctly, you mean…?“. ჩუმად დარჩენაზე კითხვა თითქმის ყოველთვის სჯობს.
 
 **„I'm agree“ სწორია?**
 
