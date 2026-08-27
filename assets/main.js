@@ -1,11 +1,13 @@
 (function(){
   document.documentElement.className=document.documentElement.className.replace(/\bno-js\b/,"js");
-  /* ─── ენის ავტომატური ამორჩევა ───────────────────────────────
-     ქართველი → / · გერმანელი → /de/ · სხვა → ზოლი „English?"
-     ⚠️ ინგლისურზე განზრახ არ ვამისამართებთ: Googlebot en-US-ით დადის და
-     ავტომატური გადამისამართება ქართულ მთავარ გვერდს ინდექსაციიდან გაიყვანდა. */
-  var KEY='lng';                       // მომხმარებლის ხელით არჩევანი
+  /* ─── ენის შეთავაზება — ზოლით, არა გადამისამართებით ──────────────
+     Google: „Avoid automatically redirecting users from one language version
+     to another." ავტომატური redirect ამოღებულია. რჩება: (1) hreflang,
+     (2) ხილული გადამრთველი, (3) ეს ზოლი — შეთავაზება, არჩევანი მომხმარებლისაა. */
+  var KEY='lng';                       // ხელით არჩეული ენა (localStorage)
+  var OFF='langbar-off';               // „აქ დავრჩები" — ამ სესიაზე აღარ ვაჩვენოთ
   var chosen=null; try{chosen=localStorage.getItem(KEY);}catch(e){}
+  var off=null;    try{off=sessionStorage.getItem(OFF);}catch(e){}
   var path=location.pathname.replace(/index\.html$/,'');
   var cur = path==='/de/'?'de' : path==='/en/'?'en' : path==='/'?'ka' : null;
 
@@ -14,30 +16,35 @@
     if(a){try{localStorage.setItem(KEY,a.getAttribute('hreflang')||a.dataset.l||'');}catch(err){}}
   });
 
-  if(cur && !chosen){
+  if(cur && !chosen && !off){
     var L=(navigator.languages||[navigator.language||'']).join(',').toLowerCase();
     var tz=''; try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||'';}catch(e){}
-    var want='en';
-    if(/(^|,)ka\b|ka-ge/.test(L) || tz==='Asia/Tbilisi') want='ka';
-    else if(/(^|,)de\b|de-/.test(L) || /Berlin|Vienna|Zurich|Busingen/.test(tz)) want='de';
-    if(want!==cur){
-      if(want==='en'){ showBar('en'); }
-      else { try{sessionStorage.setItem('auto','1');}catch(e){}
-             location.replace((want==='ka'?'/':'/'+want+'/')+location.hash); return; }
-    }
+    // ქართველების უმეტესობას ინგლისურენოვანი ტელეფონი აქვს — ინგლისურს
+    // მხოლოდ მაშინ ვთავაზობთ, თუ ka არსად ჩანს და დრო თბილისისა არ არის.
+    var isKa = /(^|,)ka\b|ka-ge/.test(L) || tz==='Asia/Tbilisi';
+    // გერმანულს მხოლოდ ძირითად ენაზე ვთავაზობთ (navigator.language), არა სიაში
+    // მოხვედრაზე — ქართველ ემიგრანტს გერმანიაში de-DE მეორე ენად უწერია.
+    var isDe = /^de\b/.test((navigator.language||'').toLowerCase());
+    if(isDe && cur!=='de')       showBar('de');
+    else if(!isKa && !isDe && cur!=='en') showBar('en');
   }
 
   function showBar(l){
-    var TXT={en:['This page is also available in English.','Read in English','Stay here']};
-    var t=TXT[l]; if(!t) return;
+    var TXT={
+      en:['This page is also available in English.','Read in English','Stay here'],
+      de:['Diese Seite gibt es auch auf Deutsch.','Auf Deutsch lesen','Hier bleiben']
+    };
+    var t=TXT[l]; if(!t || !document.body) return;
     var bar=document.createElement('div'); bar.className='langbar';
-    bar.innerHTML='<span></span><a href="/'+l+'/" data-l="'+l+'"></a><button type="button"></button>';
+    bar.innerHTML='<span></span><a href="/'+l+'/" hreflang="'+l+'" data-l="'+l+'"></a><button type="button"></button>';
     bar.children[0].textContent=t[0]; bar.children[1].textContent=t[1]; bar.children[2].textContent=t[2];
     bar.children[2].addEventListener('click',function(){
-      try{localStorage.setItem(KEY,'ka');}catch(e){} bar.remove();
+      try{sessionStorage.setItem(OFF,'1');}catch(e){}
+      bar.parentNode&&bar.parentNode.removeChild(bar);
+      document.body.classList.remove('has-langbar');
     });
-    document.addEventListener('DOMContentLoaded',function(){document.body.appendChild(bar);});
-    if(document.body) document.body.appendChild(bar);
+    document.body.appendChild(bar);
+    document.body.classList.add('has-langbar');   // sticky CTA ზემოთ აიწევს
   }
 })();
 
@@ -58,4 +65,25 @@
     rg.querySelectorAll('.tcard.extra').forEach(function(e){e.classList.add('in');});
   });}
   var y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();
+
+  /* sticky CTA — ჩნდება, როცა hero-ს ღილაკები ეკრანს ზემოთ გავა.
+     IntersectionObserver აქ არ გამოდგება: მობილურზე ღილაკები ჩატვირთვისასვე
+     ეკრანს ქვემოთაა (≈1100px), ანუ „არ იკვეთება" — ზოლი მაშინვე გამოჩნდებოდა.
+     ადგილი CSS-ითაა დაცული (padding-bottom), ამიტომ CLS არ იზრდება. */
+  var sticky=document.querySelector('.stickycta');
+  if(sticky){
+    var anchor=document.querySelector('.hero .actions')||document.querySelector('.hero');
+    if(!anchor){ sticky.classList.add('on'); }        // ბლოგი/ქვეგვერდები — hero არ აქვთ
+    else {
+      var tick=false;
+      var upd=function(){
+        tick=false;
+        sticky.classList.toggle('on', anchor.getBoundingClientRect().bottom < 0);
+      };
+      var onScroll=function(){ if(!tick){ tick=true; requestAnimationFrame(upd); } };
+      addEventListener('scroll', onScroll, {passive:true});
+      addEventListener('resize', onScroll, {passive:true});
+      upd();
+    }
+  }
 })();
