@@ -79,6 +79,13 @@
     gtag("event", name, p);
   }
 
+  /* სერვისის (კომერციული) გვერდის ნახვა — ცალკე მოვლენა კონვერსიის ძაბრისთვის.
+     body-ს კლასი: "service service-<slug>" (build.py → services.py). */
+  (function () {
+    var m = (document.body.className || "").match(/service-([a-z0-9-]+)/);
+    if (m) gtag("event", "view_service", { service: m[1], page_location: location.href });
+  })();
+
   document.addEventListener("click", function (e) {
     var a = e.target && e.target.closest ? e.target.closest("a[href]") : null;
     if (!a) return;

@@ -87,3 +87,43 @@
     }
   }
 })();
+
+/* ── საკონტაქტო ფორმა ────────────────────────────────────────────────
+   GitHub Pages-ს სერვერი არ აქვს. ამიტომ ფორმა შევსებულ ტექსტს WhatsApp-ში
+   ან ელფოსტაში გადააქვს — მუშაობს დღესვე, backend-ის გარეშე.
+   თუ ოდესმე Formspree/Getform ჩაირთვება (build.py → FORM_ENDPOINT),
+   ფორმას data-endpoint გაუჩნდება და ჩვეულებრივ POST-ს გააკეთებს. */
+(function(){
+  var f=document.getElementById('lead-form');
+  if(!f) return;
+  function compose(){
+    var g=function(n){var el=f.elements[n];return el?String(el.value||'').trim():'';};
+    var L=['გამარჯობა, ნოდარ! საიტიდან გწერ.'];
+    if(g('name'))    L.push('სახელი: '+g('name'));
+    if(g('goal'))    L.push('რისთვის: '+g('goal'));
+    if(g('phone'))   L.push('ტელეფონი: '+g('phone'));
+    if(g('message')) L.push('დამატებით: '+g('message'));
+    return L.join('\n');
+  }
+  function track(method){
+    try{ if(window.gtag) window.gtag('event','generate_lead',{method:method,
+      goal:(f.elements['goal']?f.elements['goal'].value:'')}); }catch(e){}
+  }
+  f.addEventListener('submit', function(e){
+    if(f.dataset.endpoint){ track('form'); return; }   // რეალური backend — ჩვეულებრივი POST
+    e.preventDefault();
+    if(!f.reportValidity()) return;
+    track('whatsapp');
+    var url=f.dataset.wa+'?text='+encodeURIComponent(compose());
+    window.open(url,'_blank','noopener');
+  });
+  var mail=document.getElementById('lead-mail');
+  if(mail) mail.addEventListener('click', function(e){
+    e.preventDefault();
+    if(!f.reportValidity()) return;
+    track('email');
+    location.href='mailto:'+mail.dataset.email+
+      '?subject='+encodeURIComponent('ინგლისურის გაკვეთილები — საიტიდან')+
+      '&body='+encodeURIComponent(compose());
+  });
+})();
