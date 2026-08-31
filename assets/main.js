@@ -127,3 +127,45 @@
       '&body='+encodeURIComponent(compose());
   });
 })();
+
+/* ── მოსწავლის შეფასების ფორმა (#reviews) ──────────────────────────
+   იგივე ლოგიკა, რაც კონტაქტის ფორმას: ტექსტი WhatsApp-ში ან ელფოსტაში
+   გადადის. საიტზე შეფასება მხოლოდ ნოდარის დადასტურების შემდეგ ჩნდება. */
+(function(){
+  var f=document.getElementById('review-form');
+  if(!f) return;
+  function val(n){var el=f.elements[n];return el?String(el.value||'').trim():'';}
+  function stars(){
+    var r=f.querySelector('input[name="stars"]:checked');
+    return r?parseInt(r.value,10):5;
+  }
+  function compose(){
+    var n=stars();
+    var L=[f.dataset.intro];
+    if(val('name'))    L.push('სახელი / Name: '+val('name'));
+    if(val('goal'))    L.push('მიმართულება / Course: '+val('goal'));
+    L.push('შეფასება / Rating: '+n+'/5 '+Array(n+1).join('\u2605'));
+    if(val('message')) L.push('');
+    if(val('message')) L.push(val('message'));
+    return L.join('\n');
+  }
+  function track(method){
+    try{ if(window.gtag) window.gtag('event','submit_review',
+      {method:method, rating:stars(), goal:val('goal')}); }catch(e){}
+  }
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!f.reportValidity()) return;
+    track('whatsapp');
+    window.open(f.dataset.wa+'?text='+encodeURIComponent(compose()),'_blank','noopener');
+  });
+  var mail=document.getElementById('review-mail');
+  if(mail) mail.addEventListener('click', function(e){
+    e.preventDefault();
+    if(!f.reportValidity()) return;
+    track('email');
+    location.href='mailto:'+mail.dataset.email+
+      '?subject='+encodeURIComponent(f.dataset.subject)+
+      '&body='+encodeURIComponent(compose());
+  });
+})();

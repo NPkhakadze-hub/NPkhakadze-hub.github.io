@@ -68,6 +68,28 @@ header{position:sticky;top:0;z-index:40;background:rgba(250,246,239,.92);backdro
 .lead-form input:focus,.lead-form select:focus,.lead-form textarea:focus{
   outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(192,86,33,.14)}
 .lead-form button{cursor:pointer;border:none;font-family:inherit;min-height:48px}
+/* ── შეფასების ფორმა (#reviews) ── */
+.revbox{max-width:640px;margin:30px auto 0;background:var(--card);border:1px solid var(--border);
+  border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
+.revbox>summary{list-style:none;cursor:pointer;padding:16px 22px;font-weight:700;
+  text-align:center;color:var(--accent);min-height:44px;display:flex;
+  align-items:center;justify-content:center;gap:8px}
+.revbox>summary::-webkit-details-marker{display:none}
+.revbox>summary:hover{background:var(--accent-soft)}
+.revbox[open]>summary{border-bottom:1px solid var(--border)}
+.revbox-in{padding:22px}
+.revbox-in h3{margin:0 0 6px}
+.revbox .lead-form{border:none;box-shadow:none;background:none;padding:0;margin:14px 0 0}
+/* ვარსკვლავების ასარჩევი — რადიოღილაკები, JS-ის გარეშეც მუშაობს */
+.starpick{display:flex;flex-direction:row-reverse;justify-content:flex-end;gap:2px;margin:2px 0 4px}
+.starpick input{position:absolute;opacity:0;width:0;height:0}
+.starpick label{display:grid;place-items:center;min-width:44px;min-height:44px;
+  font-size:30px;line-height:1;color:#d9cfc0;cursor:pointer;margin:0;
+  transition:color .12s;user-select:none}
+.starpick label:hover,.starpick label:hover ~ label,
+.starpick input:checked ~ label{color:var(--gold)}
+.starpick input:focus-visible + label{outline:2px solid var(--accent);outline-offset:2px;border-radius:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 /* header-ის CTA ერთ სტრიქონში — ორსტრიქონიანი ღილაკი header-ს ჭიმავდა */
 .nav > .right > .btn{white-space:nowrap}
 .logo{min-height:44px}
