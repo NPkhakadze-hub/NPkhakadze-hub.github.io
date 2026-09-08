@@ -49,9 +49,34 @@
 })();
 
 (function(){
-  var b=document.querySelector('.burger'),ul=document.querySelector('.nav ul');
-  if(b&&ul){b.addEventListener('click',function(){ul.classList.toggle('open');b.setAttribute('aria-expanded',ul.classList.contains('open'));});
-    ul.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){ul.classList.remove('open');});});}
+  /* მენიუ ყველა ეკრანზე ხილულია (☰ აღარ არის). მიმდინარე გვერდს ვნიშნავთ. */
+  var here=location.pathname.replace(/index\.html$/,'');
+  document.querySelectorAll('.nav ul a').forEach(function(a){
+    var p=a.pathname.replace(/index\.html$/,'');
+    if(a.hash) return;                                   // #programs და მსგავსი — არა
+    if(p===here || (p==='/blog/' && here.indexOf('/blog/')===0)) a.setAttribute('aria-current','page');
+  });
+  /* ვიწრო ეკრანზე მენიუ ჰორიზონტალურად სრიალებს: „›“ მინიშნება, სანამ მარჯვნივ კიდევ არის;
+     მიმდინარე გვერდის ღილაკი ჩატვირთვისას ეკრანზე შემოდის; ღუზების ოფსეტი = header-ის სიმაღლე. */
+  var mnav=document.querySelector('.nav nav[aria-label=Main]'), mul=mnav&&mnav.querySelector('ul'), hdr=document.querySelector('header');
+  if(mnav&&mul){
+    var hint=function(){
+      mnav.classList.toggle('can-right', mul.scrollWidth-mul.clientWidth-mul.scrollLeft>4);
+      mnav.classList.toggle('can-left', mul.scrollLeft>4);
+    };
+    mnav.addEventListener('click',function(e){          // „›“-ზე შეხება — შემდეგი სათაურებისკენ
+      if(e.target.closest('a')) return;
+      if(mnav.classList.contains('can-right') && e.clientX>mnav.getBoundingClientRect().right-48)
+        mul.scrollBy({left:Math.round(mul.clientWidth*.6),behavior:'smooth'});
+    });
+    var pad=function(){ if(hdr) document.documentElement.style.scrollPaddingTop=(hdr.offsetHeight+10)+'px'; };
+    mul.addEventListener('scroll',hint,{passive:true});
+    addEventListener('resize',function(){hint();pad();},{passive:true});
+    var cur=mul.querySelector('a[aria-current]');
+    if(cur && mul.scrollWidth>mul.clientWidth){ var x=cur.offsetLeft-22; if(x>0) mul.scrollLeft=x; }
+    hint(); pad();
+    if(document.fonts&&document.fonts.ready) document.fonts.ready.then(function(){hint();pad();});
+  }
   var els=document.querySelectorAll('.reveal');
   if('IntersectionObserver' in window){
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08});
