@@ -303,6 +303,10 @@ html[lang=de] .card h3,html[lang=de] .stat span,html[lang=de] .lvl span,html[lan
 .post .ex{background:var(--bg);border-left:4px solid var(--accent);border-radius:10px;
   padding:14px 16px;margin:0 0 14px;font-size:16.5px;line-height:1.7}
 .post .ex .ka{color:var(--sub);font-size:15px}
+.post .tbl{overflow-x:auto;margin:0 0 14px}
+.post table{border-collapse:collapse;width:100%;font-size:15.5px;line-height:1.5}
+.post th,.post td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+.post th{background:var(--bg);font-weight:700}
 .post b{color:var(--ink)}
 /* ── სარჩევი გრძელ სტატიებში ── */
 .toc{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:14px 18px 12px;margin:22px 0 28px;font-size:15px;line-height:1.5}
