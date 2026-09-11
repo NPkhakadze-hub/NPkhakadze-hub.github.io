@@ -25,7 +25,7 @@ Site languages: Georgian (default, /), English (/en/), German (/de/). The blog i
 
 ## Articles (Georgian; Markdown versions)
 
-- [Conditionals ქართულად — პირობითი წინადადებები ინგლისურში ერთ ცხრილში](https://learnenglishonlinecourses.com/blog/conditionals-0-3.md): Zero, first, second და third conditional — ფორმულა, გამოყენება, ქართულენოვანთა ტიპური შეცდომები („If I will…“, „If I would…“) და შედარება ქართულ „რომ“-თან.
+- [Conditionals ქართულად — პირობითი წინადადებები ინგლისურში ერთ გვერდზე](https://learnenglishonlinecourses.com/blog/conditionals-0-3.md): Zero, first, second და third conditional — ფორმულა, გამოყენება, ქართულენოვანთა ტიპური შეცდომები („If I will…“, „If I would…“) და შედარება ქართულ „რომ“-თან.
 - [He თუ she? რატომ ურევენ ქართულენოვანი მოსწავლეები სქესს ინგლისურში](https://learnenglishonlinecourses.com/blog/he-she-inglisurshi.md): he/she, his/her და it — რატომ ერევათ ქართულენოვან მოსწავლეებს ინგლისურში, ყველაზე ხშირი შეცდომები და ვარჯიშის მეთოდი, რომელიც საუბარშიც მუშაობს.
 - [Phrasal verbs ქართულად — 25 ფრაზული ზმნა სამსახურისა და საუბრისთვის](https://learnenglishonlinecourses.com/blog/phrasal-verbs-samsakhuristvis.md): 25 ყველაზე საჭირო phrasal verb სამსახურისა და ყოველდღიური საუბრისთვის — ქართული მნიშვნელობით, მაგალითებით და ტიპური შეცდომებით. ბოლოს მოკლე ტესტი.
 - [ინგლისური 40 წლის შემდეგ — გვიან ხომ არ არის? გულახდილი პასუხი](https://learnenglishonlinecourses.com/blog/inglisuri-40-tslis-shemdeg.md): ინგლისურის სწავლა ზრდასრულ ასაკში: რა იცვლება მართლა 40-ის შემდეგ (აქცენტი, დაღლილობა, მორიდება), რა უმჯობესდება და რა გეგმა უხდება ზრდასრულს.
@@ -78,7 +78,7 @@ Site languages: Georgian (default, /), English (/en/), German (/de/). The blog i
 
 ---
 
-# Conditionals ქართულად — პირობითი წინადადებები ინგლისურში ერთ ცხრილში
+# Conditionals ქართულად — პირობითი წინადადებები ინგლისურში ერთ გვერდზე
 
 > Zero, first, second და third conditional — ფორმულა, გამოყენება, ქართულენოვანთა ტიპური შეცდომები („If I will…“, „If I would…“) და შედარება ქართულ „რომ“-თან.
 
@@ -91,7 +91,7 @@ Site languages: Georgian (default, /), English (/en/), German (/de/). The blog i
 და სწორედ ამიტომაა პირობითი წინადადებები ერთ-ერთი ყველაზე დამაბნეველი თემა.
 
 სინამდვილეში ოთხივე ტიპი ერთ ლოგიკას ემორჩილება: რამდენად რეალურია პირობა და რომელ დროს ეხება.
-ქვემოთ თითოეულს ცალ-ცალკე განვიხილავთ, ბოლოს კი ერთ ცხრილში მოვუყრით თავს, რომ ერთი შეხედვით გაარჩიო.
+ქვემოთ თითოეულს ცალ-ცალკე განვიხილავთ, ბოლოს კი ერთ სიაში მოვუყრით თავს, რომ ერთი შეხედვით გაარჩიო.
 
 ## რისგან შედგება პირობითი წინადადება
 
@@ -177,15 +177,17 @@ Site languages: Georgian (default, /), English (/en/), German (/de/). The blog i
 სასაუბროდ *had* და *would* ორივე *'d*-ად იკუმშება: *If I'd known, I'd have come.*
 ყური შეაჩვიე, ეს ორი *'d* ერთმანეთში რომ არ აგერიოს — პირველი *had*-ია, მეორე *would*.
 
-## ოთხივე ერთ ცხრილში
+## ოთხივე ერთ სიაში
 
-ტიპიფორმულაროდისმაგალითი
-**Zero**If + Present Simple, Present Simpleფაქტი, კანონი, ჩვევა*If you heat ice, it melts.*
-**First**If + Present Simple, will + ზმნარეალური მომავალი*If it rains, we'll stay at home.*
-**Second**If + Past Simple, would + ზმნაწარმოსახვითი აწმყო / მომავალი*If I had more time, I'd learn Spanish.*
-**Third**If + Past Perfect, would have + V3არარეალური წარსული*If I had known, I'd have come.*
+- **Zero** — If + Present Simple, Present Simple. ფაქტი, კანონი, ჩვევა. *If you heat ice, it melts.*
 
-მთელი ცხრილი ერთ წესამდე დაიყვანება: ***if*-ის შემდეგ, როგორც წესი, არც *will* დგას, არც *would*.**
+- **First** — If + Present Simple, will + ზმნა. რეალური მომავალი. *If it rains, we'll stay at home.*
+
+- **Second** — If + Past Simple, would + ზმნა. წარმოსახვითი აწმყო / მომავალი. *If I had more time, I'd learn Spanish.*
+
+- **Third** — If + Past Perfect, would have + V3. არარეალური წარსული. *If I had known, I'd have come.*
+
+მთელი სია ერთ წესამდე დაიყვანება: ***if*-ის შემდეგ, როგორც წესი, არც *will* დგას, არც *would*.**
 თუ ეს ერთი რამ დაიმახსოვრე, ზემოთ ჩამოთვლილი შეცდომების უმეტესობა თავისით ქრება.
 
 ## რას გვეუბნება ქართული — და სად გვატყუებს
@@ -211,7 +213,7 @@ Site languages: Georgian (default, /), English (/en/), German (/de/). The blog i
 > ✅ If she **weren't** so shy, she **would have asked** him. — ასეთი მორცხვი რომ არ იყოს, ჰკითხავდა. (მუდმივი თვისება → წარსულის შედეგი)
 
 ეს კომბინაცია მაშინ გამოგდის ბუნებრივად, როცა ოთხივე ძირითადი ტიპი უკვე ავტომატურად გაქვს —
-ამიტომ ჯერ ცხრილს დაუბრუნდი, mixed conditional-ს კი B2 დონეზე მიხედე.
+ამიტომ ჯერ ამ სიას დაუბრუნდი, mixed conditional-ს კი B2 დონეზე მიხედე.
 
 ## შეამოწმე თავი
 
@@ -232,7 +234,7 @@ Site languages: Georgian (default, /), English (/en/), German (/de/). The blog i
 თუ *if*-ის შემდეგ *will*-ის ცდუნება არ გტოვებს, [მომავალი დროის სამ ფორმაზე](https://learnenglishonlinecourses.com/blog/will-vs-going-to.html)
 სტატიაში ეს წესი სხვა კუთხითაა ახსნილი; Past Perfect-ის მესამე ფორმა (V3) კი იგივეა, რაც Present Perfect-ში —
 თუ ის ჯერ განმტკიცებული არ გაქვს, [Present Perfect-ისა და Past Simple-ის](https://learnenglishonlinecourses.com/blog/present-perfect-vs-past-simple.html) სტატიით დაიწყე.
-და თუ გინდა, რომ ამ ცხრილზე შენივე წინადადებებით ვივარჯიშოთ, სწორედ ამისთვისაა [ინგლისურის ინდივიდუალური ონლაინ გაკვეთილები](https://learnenglishonlinecourses.com/).
+და თუ გინდა, რომ ამ სიაზე შენივე წინადადებებით ვივარჯიშოთ, სწორედ ამისთვისაა [ინგლისურის ინდივიდუალური ონლაინ გაკვეთილები](https://learnenglishonlinecourses.com/).
 
 ## ხშირი კითხვები
 
@@ -1946,6 +1948,8 @@ B1 საკმარისია დასაწყებად: standup-ზე
 
 და მთავარი: ფორმატის არჩევას ბევრად ნაკლები მნიშვნელობა აქვს, ვიდრე იმას, თუ როგორ მიდის თავად გაკვეთილი.
 
+და თუ ონლაინ ფორმატზე შეჩერდი, შემდეგი კითხვა ჯგუფური თუ ინდივიდუალურია — ამაზე ცალკე სტატიაა: [ინგლისურის კურსები ონლაინ — ჯგუფური თუ ინდივიდუალური](https://learnenglishonlinecourses.com/blog/inglisuris-kursebi-onlain.html).
+
 ## ხშირი კითხვები
 
 **ონლაინ გაკვეთილი ისეთივე ეფექტურია, როგორც ცოცხალი?**
@@ -2343,6 +2347,8 @@ Reading და Listening — დიახ, პასუხების გას
 სანამ გადაიხდი, ითხოვე გაცნობითი შეხვედრა — ბევრ მასწავლებელს აქვს და ჩვეულებრივ უფასოა. ოცი წუთი საკმარისია იმისთვის, რომ გაიგო, გესმის თუ არა ერთმანეთის და პასუხობს თუ არა კონკრეტულად შენს კითხვებს.
 
 ფული, რომელიც არასწორ მასწავლებელთან სამ თვეში დაიხარჯა, ბევრად მეტია, ვიდრე სხვაობა ორი ტარიფის შორის.
+
+თუ ჯერ ის გაქვს გადასაწყვეტი, ჯგუფური კურსი გინდა თუ ინდივიდუალური, ცალკე სტატიაში ვადარებ, [რა ღირს ინგლისურის კურსები ონლაინ და როგორ აირჩიო](https://learnenglishonlinecourses.com/blog/inglisuris-kursebi-onlain.html).
 
 ## ხშირი კითხვები
 

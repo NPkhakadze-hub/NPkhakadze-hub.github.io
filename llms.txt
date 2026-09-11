@@ -25,7 +25,7 @@ Site languages: Georgian (default, /), English (/en/), German (/de/). The blog i
 
 ## Articles (Georgian; Markdown versions)
 
-- [Conditionals ქართულად — პირობითი წინადადებები ინგლისურში ერთ ცხრილში](https://learnenglishonlinecourses.com/blog/conditionals-0-3.md): Zero, first, second და third conditional — ფორმულა, გამოყენება, ქართულენოვანთა ტიპური შეცდომები („If I will…“, „If I would…“) და შედარება ქართულ „რომ“-თან.
+- [Conditionals ქართულად — პირობითი წინადადებები ინგლისურში ერთ გვერდზე](https://learnenglishonlinecourses.com/blog/conditionals-0-3.md): Zero, first, second და third conditional — ფორმულა, გამოყენება, ქართულენოვანთა ტიპური შეცდომები („If I will…“, „If I would…“) და შედარება ქართულ „რომ“-თან.
 - [He თუ she? რატომ ურევენ ქართულენოვანი მოსწავლეები სქესს ინგლისურში](https://learnenglishonlinecourses.com/blog/he-she-inglisurshi.md): he/she, his/her და it — რატომ ერევათ ქართულენოვან მოსწავლეებს ინგლისურში, ყველაზე ხშირი შეცდომები და ვარჯიშის მეთოდი, რომელიც საუბარშიც მუშაობს.
 - [Phrasal verbs ქართულად — 25 ფრაზული ზმნა სამსახურისა და საუბრისთვის](https://learnenglishonlinecourses.com/blog/phrasal-verbs-samsakhuristvis.md): 25 ყველაზე საჭირო phrasal verb სამსახურისა და ყოველდღიური საუბრისთვის — ქართული მნიშვნელობით, მაგალითებით და ტიპური შეცდომებით. ბოლოს მოკლე ტესტი.
 - [ინგლისური 40 წლის შემდეგ — გვიან ხომ არ არის? გულახდილი პასუხი](https://learnenglishonlinecourses.com/blog/inglisuri-40-tslis-shemdeg.md): ინგლისურის სწავლა ზრდასრულ ასაკში: რა იცვლება მართლა 40-ის შემდეგ (აქცენტი, დაღლილობა, მორიდება), რა უმჯობესდება და რა გეგმა უხდება ზრდასრულს.
