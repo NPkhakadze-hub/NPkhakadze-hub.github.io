@@ -25,6 +25,10 @@ Site languages: Georgian (default, /), English (/en/), German (/de/). The blog i
 
 ## Articles (Georgian; Markdown versions)
 
+- [IELTS, TOEFL თუ Duolingo — რომელი ავირჩიო და რომელი ქვეყნისთვის](https://learnenglishonlinecourses.com/blog/ielts-toefl-tu-duolingo.md): IELTS, TOEFL iBT და Duolingo English Test — ხანგრძლივობა, ქულების სკალა, შედეგის ვადა და ვინ რას იღებს გერმანიაში, აშშ-ში, კანადასა და დიდ ბრიტანეთში.
+- [ინგლისურის სწავლა ფილმებით და სერიალებით — მეთოდი, რომელიც მუშაობს](https://learnenglishonlinecourses.com/blog/inglisuri-filmebit-serialebit.md): როგორ ვისწავლოთ ინგლისური ფილმებითა და სერიალებით: ტიტრების სამი ეტაპი, 2-წუთიანი სცენის გამეორება, ფრაზების ბარათები და რატომ არ მუშაობს უბრალოდ ყურება.
+- [Passive Voice ქართულად — ვნებითი გვარი ინგლისურში მარტივად](https://learnenglishonlinecourses.com/blog/passive-voice-kartulad.md): Passive Voice ინგლისურში: ფორმულა be + V3 ყველა ძირითად დროში, როდის გამოიყენება, by-ფრაზა, ქართულენოვანთა ტიპური შეცდომები და შედარება ქართულ ვნებითთან.
+- [Borrow თუ lend, teach თუ learn — ერთი ქართული სიტყვა, ორი ინგლისური](https://learnenglishonlinecourses.com/blog/borrow-lend-teach-learn.md): borrow/lend, teach/learn, bring/take, come/go, lose/miss, watch/see/look — რატომ ერევათ ქართულენოვან მოსწავლეებს ეს წყვილები და როგორ გავარჩიოთ.
 - [Conditionals ქართულად — პირობითი წინადადებები ინგლისურში ერთ გვერდზე](https://learnenglishonlinecourses.com/blog/conditionals-0-3.md): Zero, first, second და third conditional — ფორმულა, გამოყენება, ქართულენოვანთა ტიპური შეცდომები („If I will…“, „If I would…“) და შედარება ქართულ „რომ“-თან.
 - [He თუ she? რატომ ურევენ ქართულენოვანი მოსწავლეები სქესს ინგლისურში](https://learnenglishonlinecourses.com/blog/he-she-inglisurshi.md): he/she, his/her და it — რატომ ერევათ ქართულენოვან მოსწავლეებს ინგლისურში, ყველაზე ხშირი შეცდომები და ვარჯიშის მეთოდი, რომელიც საუბარშიც მუშაობს.
 - [Phrasal verbs ქართულად — 25 ფრაზული ზმნა სამსახურისა და საუბრისთვის](https://learnenglishonlinecourses.com/blog/phrasal-verbs-samsakhuristvis.md): 25 ყველაზე საჭირო phrasal verb სამსახურისა და ყოველდღიური საუბრისთვის — ქართული მნიშვნელობით, მაგალითებით და ტიპური შეცდომებით. ბოლოს მოკლე ტესტი.
