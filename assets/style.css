@@ -458,3 +458,7 @@ footer a:hover{color:var(--accent)}
 .toplist a{display:flex;gap:10px;align-items:center;min-height:48px;padding:10px 14px;background:var(--card);border:1px solid var(--border);border-radius:12px;color:var(--ink);font-weight:600;font-size:15.5px;line-height:1.35;text-decoration:none}
 .toplist a:hover{border-color:var(--accent);color:var(--accent)}
 @media(max-width:700px){.toplist{grid-template-columns:1fr}}
+/* ვიდეოს გვერდი (watch page) */
+.vwatch{margin:24px auto;max-width:420px}
+.vwatch video{width:100%;aspect-ratio:9/16;background:#000;border-radius:var(--r);display:block}
+.vcard .vlink{display:block;margin-top:6px;font-size:14px;font-weight:700;color:var(--accent);text-decoration:none}
