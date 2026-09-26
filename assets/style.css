@@ -462,3 +462,27 @@ footer a:hover{color:var(--accent)}
 .vwatch{margin:24px auto;max-width:420px}
 .vwatch video{width:100%;aspect-ratio:9/16;background:#000;border-radius:var(--r);display:block}
 .vcard .vlink{display:block;margin-top:6px;font-size:14px;font-weight:700;color:var(--accent);text-decoration:none}
+/* დონის ტესტი */
+.lvltest{margin:22px 0}
+.lvltest .lq{border:1px solid var(--border);border-radius:14px;background:var(--card);padding:14px 16px 10px;margin:0 0 12px}
+.lvltest legend{font-weight:700;padding:0 4px;font-size:17px}
+.lvltest label{display:inline-flex;align-items:center;gap:7px;min-height:44px;margin:2px 16px 2px 0;cursor:pointer;font-size:16.5px}
+.lvltest input{width:18px;height:18px;accent-color:var(--accent)}
+.lvltest .lexp{display:none;margin:6px 0 4px;font-size:15px;color:var(--sub)}
+.lvltest.done .lexp{display:block}
+.lvltest .lq.ok{border-color:var(--green);background:var(--green-soft)}
+.lvltest .lq.bad,.lvltest .lq.skip{border-color:var(--accent);background:var(--accent-soft)}
+.lvltest .lq.ok legend::after{content:" ✅"}
+.lvltest .lq.bad legend::after{content:" ❌"}
+.lvltest .lq.skip legend::after{content:" —"}
+.lvltest .lcheck{background:var(--accent);color:#fff;border:0;font-size:17px;padding:14px 26px;cursor:pointer}
+.lvltest .lnote{text-align:center;font-weight:700;margin:14px 0 6px}
+.lvltest .lres{border:2px solid var(--accent);border-radius:var(--r);background:var(--accent-soft);padding:18px 20px;margin:16px 0}
+.lvltest .lres h3{margin:0 0 8px}
+/* ცხრილი სტატიაში */
+.post .tbl{overflow-x:auto;margin:18px 0}
+.post table{border-collapse:collapse;width:100%;font-size:15.5px;background:var(--card)}
+.post th,.post td{border:1px solid var(--border);padding:9px 11px;text-align:left;vertical-align:top}
+.post th{background:var(--accent-soft);font-weight:700}
+.lvltest .lsmall{font-size:14px;color:var(--sub);margin:8px 0 0}
+.lvltest .lres:focus{outline:none}

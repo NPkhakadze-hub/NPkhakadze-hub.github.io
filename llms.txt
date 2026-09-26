@@ -25,6 +25,10 @@ Site languages: Georgian (default, /), English (/en/), German (/de/). The blog i
 
 ## Articles (Georgian; Markdown versions)
 
+- [ინგლისურის დონის ტესტი ონლაინ — 20 კითხვა, A1-დან B2-მდე](https://learnenglishonlinecourses.com/blog/inglisuris-donis-testi.md): უფასო ონლაინ ტესტი: 20 კითხვა, დაახლოებით 5 წუთი. გაიგე მიახლოებით, რა დონეზე ხარ ინგლისურის გრამატიკაში (A1–B2), და ნახე ახსნა ყოველ კითხვასთან.
+- [IELTS Speaking — სამი ნაწილი, კითხვები და პასუხის ნიმუშები](https://learnenglishonlinecourses.com/blog/ielts-speaking-kitkhvebi.md): IELTS Speaking-ის სამი ნაწილი, ოთხი კრიტერიუმი, ტიპური კითხვები პასუხის ნიმუშებით, cue card-ის მაგალითი და ხუთი ხშირი შეცდომა.
+- [ცრუ მეგობრები ინგლისურში: magazine არ არის მაღაზია, fabric — ფაბრიკა](https://learnenglishonlinecourses.com/blog/tsru-megobrebi-inglisurshi.md): magazine მაღაზია არ არის, fabric — ფაბრიკა, actual — აქტუალური: 18 ცრუ მეგობარი ინგლისურში, სწორი შესატყვისებით, ცხრილითა და ტესტით.
+- [Used to, be used to, get used to — განსხვავება ქართულად](https://learnenglishonlinecourses.com/blog/used-to-be-used-to.md): used to, be used to და get used to — მნიშვნელობა, didn't use to, used to თუ would, -ing ფორმა be used to-ს შემდეგ და ტიპური შეცდომები.
 - [სიტყვა დამავიწყდა — 15 ფრაზა, რომ ინგლისურად საუბარი არ შეწყდეს](https://learnenglishonlinecourses.com/blog/sitkva-damavitsyda.md): რა გააკეთო, როცა ინგლისურად ლაპარაკისას სიტყვა გავიწყდება: 15 მზა ფრაზა, ოთხი ხერხი და თამაში, რომლითაც ამ უნარს გაივარჯიშებ.
 - [Small talk ინგლისურად — როგორ დავიწყოთ, გავაგრძელოთ და დავასრულოთ საუბარი](https://learnenglishonlinecourses.com/blog/small-talk-inglisurad.md): მოკლე საუბარი უცნობთან, კოლეგასთან თუ ონლაინ შეხვედრაზე: ფრაზები დასაწყებად და დასასრულებლად, ფორმულა, რომ საუბარი არ გაწყდეს, და ხაფანგი „I'm normal“.
 - [IELTS Writing Task 2 — სტრუქტურა და 5 შეცდომა, რომელიც ქულას აკლებს](https://learnenglishonlinecourses.com/blog/ielts-writing-task-2.md): IELTS Writing Task 2: ოთხი კრიტერიუმი, ოთხაბზაციანი სტრუქტურა, 40 წუთის განაწილება და ხუთი შეცდომა, რომელიც ქულას ყველაზე ხშირად აკლებს.

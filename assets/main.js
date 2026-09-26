@@ -194,3 +194,36 @@
       '&body='+encodeURIComponent(compose());
   });
 })();
+
+/* ინგლისურის დონის ტესტი (/blog/inglisuris-donis-testi.html) — პასუხები data-a-შია.
+   4 ბლოკი × 5 კითხვა (A1, A2, B1, B2). დონე ჩაითვლება, თუ ბლოკში ≥4/5 სწორია
+   და ყველა ქვედა ბლოკიც ჩათვლილია — ასე შემთხვევითი გამოცნობა შედეგს ვერ ზრდის. */
+(function(){
+  var t=document.getElementById('lvltest'); if(!t) return;
+  var btn=t.querySelector('.lcheck'), note=t.querySelector('.lnote');
+  btn.addEventListener('click', function(){
+    var qs=t.querySelectorAll('.lq'), ok=0, empty=0, band=[0,0,0,0];
+    qs.forEach(function(q,i){
+      var c=q.querySelector('input:checked');
+      q.classList.remove('ok','bad','skip');
+      if(!c){ empty++; q.classList.add('skip'); return; }
+      if(c.value===q.dataset.a){ ok++; band[Math.floor(i/5)]++; q.classList.add('ok'); }
+      else q.classList.add('bad');
+    });
+    t.querySelectorAll('.lres').forEach(function(r){ r.hidden=true; });
+    note.hidden=false;
+    if(empty>5){
+      t.classList.remove('done');
+      note.textContent='შედეგის სანახავად მინიმუმ 15 კითხვას უპასუხე. ახლა გამოტოვებულია: '+empty+'.';
+      return;
+    }
+    var lvl=0; while(lvl<4 && band[lvl]>=4) lvl++;
+    t.classList.add('done');
+    note.textContent='სწორი პასუხი: '+ok+' / '+qs.length+(empty?' · გამოტოვებული: '+empty:'')+
+      '. ზემოთ, თითოეულ კითხვასთან, ახსნა გამოჩნდა.';
+    var r=t.querySelector('.lres[data-lvl="'+lvl+'"]');
+    btn.textContent='ხელახლა შემოწმება';
+    try{ if(window.gtag) window.gtag('event','level_test',{score:ok, level:lvl}); }catch(e){}
+    if(r){ r.hidden=false; r.scrollIntoView({behavior:'smooth',block:'center'}); r.focus({preventScroll:true}); }
+  });
+})();
