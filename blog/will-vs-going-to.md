@@ -60,6 +60,8 @@
 
 ერთი გამონაკლისი: როცა *when* „როდის“-ს ნიშნავს და ირიბ კითხვას იწყებს, *will* რჩება — *I don't know **when he will arrive**.*
 
+როცა მომავალზე ვარაუდს გამოთქვამ და დარწმუნებული არ ხარ, will-ის ნაცვლად ხშირად might ან may უფრო ზუსტია: *It might rain tomorrow*. ამ ზმნებზე დაწვრილებით — [მოდალური ზმნების სტატიაში](https://learnenglishonlinecourses.com/blog/modal-verbs-kartulad.html).
+
 ## შეამოწმე თავი
 
 > 1. — I'm cold. — I ___ (close) the window.

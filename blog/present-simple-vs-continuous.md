@@ -101,6 +101,8 @@
 და კიდევ ერთი, რომელიც ამ თემას ჰგავს, მაგრამ სხვა ამბავია: *I am agree*. ეს დროის არჩევის შეცდომა კი არა, ზმნისა და ზედსართავის აღრევაა —
 მასზე [ცალკე სტატია](https://learnenglishonlinecourses.com/blog/im-agree.html) გვაქვს.
 
+თუ ჩვევა წარსულშია და ახლა აღარ არსებობს, Present Simple-ის ნაცვლად used to გჭირდება: *I used to smoke*. ამაზე — [used to და be used to — განსხვავება](https://learnenglishonlinecourses.com/blog/used-to-be-used-to.html).
+
 ## შეამოწმე თავი
 
 ჩასვი ზმნა სწორ ფორმაში. პასუხები ქვემოთ.
