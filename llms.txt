@@ -25,6 +25,10 @@ Site languages: Georgian (default, /), English (/en/), German (/de/). The blog i
 
 ## Articles (Georgian; Markdown versions)
 
+- [ინგლისური მოგზაურობისთვის — 38 ფრაზა აეროპორტიდან რესტორნამდე](https://learnenglishonlinecourses.com/blog/inglisuri-mogzaurobistvis.md): ფრაზები მოგზაურობისთვის: საპასპორტო კონტროლი, სასტუმრო, რესტორანი, ტრანსპორტი, მაღაზია — თარგმანით, ტიპური შეცდომებით და ბრიტანული/ამერიკული სიტყვებით.
+- [ინგლისური გამოთქმა — რთული ბგერები, მახვილი და ვარჯიშის ხერხები](https://learnenglishonlinecourses.com/blog/inglisuri-gamotkma.md): ინგლისური გამოთქმა ქართულად: th, w/v, p/t/k, გრძელი და მოკლე ხმოვნები, შვა, მუნჯი ასოები, სიტყვის მახვილი, -ed დაბოლოება და ვარჯიშის ხერხები.
+- [Gerund თუ Infinitive — to do თუ doing: რომელ ზმნას რა მოსდევს](https://learnenglishonlinecourses.com/blog/gerund-tu-infinitive.md): enjoy doing თუ enjoy to do? რომელ ზმნებს მოსდევს -ing და რომლებს to + V1, როდის იცვლება აზრი (stop, remember, try), make/let და ტიპური შეცდომები.
+- [Past Simple თუ Past Continuous — როგორ მოვყვეთ წარსულის ამბავი](https://learnenglishonlinecourses.com/blog/past-simple-vs-past-continuous.md): Past Simple თუ Past Continuous: როდის გჭირდება was/were + -ing, როგორ გამოიყენო when/while და რატომ არ ითქმის „I was knowing“. მაგალითები და ტესტი.
 - [ინგლისურის დონის ტესტი ონლაინ — 20 კითხვა, A1-დან B2-მდე](https://learnenglishonlinecourses.com/blog/inglisuris-donis-testi.md): უფასო ონლაინ ტესტი: 20 კითხვა, დაახლოებით 5 წუთი. გაიგე მიახლოებით, რა დონეზე ხარ ინგლისურის გრამატიკაში (A1–B2), და ნახე ახსნა ყოველ კითხვასთან.
 - [IELTS Speaking — სამი ნაწილი, კითხვები და პასუხის ნიმუშები](https://learnenglishonlinecourses.com/blog/ielts-speaking-kitkhvebi.md): IELTS Speaking-ის სამი ნაწილი, ოთხი კრიტერიუმი, ტიპური კითხვები პასუხის ნიმუშებით, cue card-ის მაგალითი და ხუთი ხშირი შეცდომა.
 - [ცრუ მეგობრები ინგლისურში: magazine არ არის მაღაზია, fabric — ფაბრიკა](https://learnenglishonlinecourses.com/blog/tsru-megobrebi-inglisurshi.md): magazine მაღაზია არ არის, fabric — ფაბრიკა, actual — აქტუალური: 18 ცრუ მეგობარი ინგლისურში, სწორი შესატყვისებით, ცხრილითა და ტესტით.
