@@ -25,6 +25,10 @@ Site languages: Georgian (default, /), English (/en/), German (/de/). The blog i
 
 ## Articles (Georgian; Markdown versions)
 
+- [Very good ყველგან? 20 სიტყვა და ფრაზა ბუნებრივი ინგლისურისთვის](https://learnenglishonlinecourses.com/blog/very-good-alternativebi.md): რატომ ჟღერს very good ყველგან ერთფეროვნად და რა უნდა თქვა მის ნაცვლად: საჭმელზე, ადამიანზე, სამუშაოზე და საუბარში — მაგალითებით.
+- [Reported Speech ქართულად — როგორ გადმოვცეთ სხვისი ნათქვამი](https://learnenglishonlinecourses.com/blog/reported-speech-kartulad.md): Reported speech ქართულად: როდის იცვლება დრო, როგორ გადმოვცეთ კითხვა და ბრძანება და რატომ ვამბობთ told me და არა said me — მაგალითებით.
+- [Cambridge B2 First და C1 Advanced — რა არის და ვის სჭირდება](https://learnenglishonlinecourses.com/blog/cambridge-b2-first-c1-advanced.md): Cambridge B2 First (FCE) და C1 Advanced (CAE): გამოცდის ნაწილები, შეფასება, ვის სჭირდება და რით განსხვავდება IELTS-ისგან — მარტივად.
+- [ინგლისური 15 წუთი დღეში — რეალური გეგმა დატვირთული ადამიანისთვის](https://learnenglishonlinecourses.com/blog/inglisuri-15-tsuti-dgeshi.md): ინგლისურისთვის დღეში მხოლოდ 15 წუთი გაქვს? კვირის გეგმა, რას მოგცემს ეს დრო და რას ვერა, და როდის გჭირდება მეტი დრო და მასწავლებელი.
 - [ინგლისური მოგზაურობისთვის — 38 ფრაზა აეროპორტიდან რესტორნამდე](https://learnenglishonlinecourses.com/blog/inglisuri-mogzaurobistvis.md): ფრაზები მოგზაურობისთვის: საპასპორტო კონტროლი, სასტუმრო, რესტორანი, ტრანსპორტი, მაღაზია — თარგმანით, ტიპური შეცდომებით და ბრიტანული/ამერიკული სიტყვებით.
 - [ინგლისური გამოთქმა — რთული ბგერები, მახვილი და ვარჯიშის ხერხები](https://learnenglishonlinecourses.com/blog/inglisuri-gamotkma.md): ინგლისური გამოთქმა ქართულად: th, w/v, p/t/k, გრძელი და მოკლე ხმოვნები, შვა, მუნჯი ასოები, სიტყვის მახვილი, -ed დაბოლოება და ვარჯიშის ხერხები.
 - [Gerund თუ Infinitive — to do თუ doing: რომელ ზმნას რა მოსდევს](https://learnenglishonlinecourses.com/blog/gerund-tu-infinitive.md): enjoy doing თუ enjoy to do? რომელ ზმნებს მოსდევს -ing და რომლებს to + V1, როდის იცვლება აზრი (stop, remember, try), make/let და ტიპური შეცდომები.
