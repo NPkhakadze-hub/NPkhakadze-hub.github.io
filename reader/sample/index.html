@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#c05621">
+<title>A Change of Plan — B1 Reading 01</title>
+<meta property="og:title" content="A Change of Plan — B1 Reading 01">
+<meta property="og:description" content="A Change of Plan — B1 ინტერაქტიული საკითხავი: სადგური, გაუქმებული მატარებელი და Present Perfect.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%86%3C/text%3E%3C/svg%3E">
+<style>
+
+  :root{
+    --bg:#faf6ef; --card:#ffffff; --ink:#2b2620; --sub:#6b6156;
+    --accent:#c05621; --accent-soft:#fdebd9; --green:#2f855a; --green-soft:#e6f4ea;
+    --red:#c53030; --red-soft:#fdecea; --blue:#2b6cb0; --blue-soft:#e8f0fa;
+    --gold:#b7791f; --border:#e8e0d4;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  html,body{margin:0; padding:0;}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:"Noto Sans Georgian","Sylfaen","Segoe UI",system-ui,sans-serif;
+    font-size:18px; line-height:1.65; min-height:100vh;
+  }
+  .slide{display:none; max-width:860px; margin:0 auto; padding:28px 22px 130px;}
+  .slide.active{display:block; animation:fadein .35s ease;}
+  @keyframes fadein{from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:none;}}
+
+  .kicker{color:var(--accent); font-weight:700; letter-spacing:.06em; font-size:14px; text-transform:uppercase;}
+  h1{font-size:clamp(30px,6vw,44px); line-height:1.2; margin:8px 0 6px;}
+  h2{font-size:clamp(24px,5vw,32px); margin:6px 0 4px;}
+  .sub{color:var(--sub); font-size:16px; margin-bottom:18px;}
+  .emoji-big{font-size:52px; line-height:1;}
+
+  .card{background:var(--card); border:1px solid var(--border); border-radius:18px; padding:20px 22px; margin:14px 0; box-shadow:0 2px 10px rgba(60,45,20,.05);}
+  .hint{background:var(--accent-soft); border:1px solid #f3d3ae; border-radius:14px; padding:12px 16px; font-size:16px; margin:12px 0;}
+
+  .reading{font-family:Georgia,"Times New Roman",serif; font-size:20px; line-height:1.9;}
+  .reading p{margin:0 0 10px;}
+  .reading p:last-child{margin-bottom:0;}
+  .reading p.a{color:#3d3630;}
+  .reading .lbl{font-weight:700; color:var(--accent);}
+
+  .v{
+    color:var(--accent); font-weight:600; cursor:pointer; border-bottom:2px dotted var(--accent);
+    border-radius:4px; padding:0 2px; margin:0 -2px; transition:background .15s;
+  }
+  .v:hover{background:var(--accent-soft);}
+  .v.seen{color:var(--green); border-bottom-color:var(--green); background:var(--green-soft);}
+
+  #popup{
+    position:fixed; left:50%; transform:translateX(-50%); bottom:86px; z-index:50;
+    width:min(560px,calc(100% - 24px));
+    background:#fff; border:2px solid var(--accent); border-radius:18px;
+    padding:16px 20px; box-shadow:0 10px 30px rgba(60,30,0,.18); display:none;
+    max-height:calc(100vh - 200px); overflow-y:auto;
+  }
+  #popup.show{display:block; animation:popin .2s ease;}
+  @keyframes popin{from{opacity:0; transform:translateX(-50%) translateY(8px);} to{opacity:1; transform:translateX(-50%);}}
+  #popup .pw{font-family:Georgia,serif; font-size:26px; font-weight:700;}
+  #popup .pipa{color:var(--blue); font-size:18px; margin-left:0; display:block; margin-top:2px; overflow-wrap:anywhere;}
+  #popup .pka{font-size:20px; margin-top:4px;}
+  #popup .pclose{position:absolute; top:8px; right:14px; border:none; background:none; font-size:22px; color:var(--sub); cursor:pointer;}
+  .speak{border:none; background:var(--blue-soft); color:var(--blue); border-radius:999px; font-size:16px; padding:6px 14px; cursor:pointer; margin-left:10px; font-family:inherit;}
+  .speak:active{transform:scale(.96);}
+
+  .counter{font-size:14px; color:var(--sub); margin-top:10px;}
+  .counter b{color:var(--green);}
+
+  .citymeta{display:flex; gap:10px; flex-wrap:wrap; margin:10px 0 4px;}
+  .chip{background:var(--blue-soft); color:var(--blue); border-radius:999px; padding:4px 12px; font-size:14px; font-weight:600;}
+
+  .vlist{padding-left:0; list-style:none; counter-reset:vnum; margin:0;}
+  .vlist li{padding:9px 4px; border-bottom:1px dashed var(--border); display:flex; align-items:baseline; gap:8px; flex-wrap:wrap;}
+  .vlist li::before{counter-increment:vnum; content:counter(vnum) "."; color:var(--sub); min-width:34px; font-size:15px;}
+  .vlist .en{font-family:Georgia,serif; font-weight:700; font-size:19px;}
+  .vlist .ipa{color:var(--blue); font-size:15px;}
+  .vlist .ka{color:var(--ink); font-size:17px;}
+  .vlist .eq{color:var(--sub);}
+  .sect{margin:22px 0 6px; font-size:20px; font-weight:800; color:var(--accent);}
+
+  table.irr{width:100%; border-collapse:collapse;}
+  table.irr td{padding:9px 6px; border-bottom:1px dashed var(--border); font-size:17px; vertical-align:top;}
+  table.irr td.inf{font-family:Georgia,serif; font-weight:700;}
+  table.irr td.ka{color:var(--sub); font-size:16px;}
+  table.irr td.btn{text-align:right; width:60px;}
+  .formula{background:var(--blue-soft); border:1px solid #cddff2; border-radius:14px; padding:14px 16px; font-size:19px; text-align:center; font-family:Georgia,serif; color:var(--blue); font-weight:700;}
+
+  .qitem{margin:14px 0; padding:14px 16px; background:#fff; border:1px solid var(--border); border-radius:14px;}
+  .qtext{font-size:18px; margin-bottom:10px;}
+  .qtext .num{color:var(--sub); margin-right:6px;}
+  .opts{display:flex; gap:8px; flex-wrap:wrap;}
+  .opt{
+    border:2px solid var(--border); background:#fff; border-radius:12px; padding:8px 16px;
+    font-size:16px; cursor:pointer; font-family:inherit; transition:all .15s;
+  }
+  .opt:hover{border-color:var(--accent);}
+  .opt.correct{background:var(--green-soft); border-color:var(--green); color:var(--green); font-weight:700;}
+  .opt.wrong{background:var(--red-soft); border-color:var(--red); color:var(--red);}
+  .opt:disabled{cursor:default; opacity:.75;}
+  .opt.correct:disabled,.opt.wrong:disabled{opacity:1;}
+
+  .match-grid{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+  .mbtn{
+    border:2px solid var(--border); background:#fff; border-radius:12px; padding:12px 10px;
+    font-size:17px; cursor:pointer; font-family:inherit; transition:all .15s; min-height:54px;
+  }
+  .mbtn.en-side{font-family:Georgia,serif; font-weight:700;}
+  .mbtn.sel{border-color:var(--gold); background:#fdf6e3;}
+  .mbtn.done{background:var(--green-soft); border-color:var(--green); color:var(--green); cursor:default;}
+  .mbtn:disabled{opacity:1;}
+  .mbtn.shake{animation:shake .3s;}
+  @keyframes shake{0%,100%{transform:none;}25%{transform:translateX(-5px);}75%{transform:translateX(5px);}}
+
+  .score{font-size:18px; font-weight:700; color:var(--green); margin-top:12px; min-height:26px;}
+
+  .gap-sel{
+    font-family:Georgia,serif; font-size:17px; padding:6px 10px; border-radius:10px;
+    border:2px solid var(--border); background:#fff; color:var(--ink); margin:0 0 0 4px;
+  }
+  .gap-sel.correct{border-color:var(--green); background:var(--green-soft); color:var(--green); font-weight:700;}
+  .gap-sel.wrong{border-color:var(--red); background:var(--red-soft); color:var(--red);}
+  .checkbtn{
+    border:none; background:var(--accent); color:#fff; font-size:17px; font-weight:700;
+    border-radius:12px; padding:12px 26px; cursor:pointer; font-family:inherit; margin-top:14px;
+  }
+  .checkbtn:active{transform:scale(.98);}
+
+  #nav{
+    position:fixed; bottom:0; left:0; right:0; z-index:40;
+    background:rgba(250,246,239,.95); backdrop-filter:blur(6px);
+    border-top:1px solid var(--border); padding:12px 16px;
+    display:flex; align-items:center; justify-content:space-between; gap:10px;
+  }
+  .navbtn{
+    border:none; background:var(--accent); color:#fff; font-size:16px; font-weight:700;
+    border-radius:12px; padding:11px 22px; cursor:pointer; font-family:inherit;
+  }
+  .navbtn:disabled{opacity:.35; cursor:default;}
+  #dots{display:flex; gap:2px; flex-wrap:wrap; justify-content:center;}
+  .dot{width:22px; height:24px; border-radius:4px; background:none; cursor:pointer; border:none; padding:0; position:relative; -webkit-appearance:none; appearance:none;}
+  .dot::before{content:""; position:absolute; left:6px; top:7px; width:10px; height:10px; border-radius:50%; background:#ddd2c2; transition:transform .15s;}
+  .dot:focus-visible{outline:2px solid var(--accent); outline-offset:-2px;}
+  .dot.on::before{background:var(--accent); transform:scale(1.25);}
+
+  @media (max-width:600px){
+    #nav{flex-wrap:wrap;}
+    #dots{order:3; flex-basis:100%; margin-top:2px;}
+    .dot{width:21px;}
+    .dot::before{left:5px;}
+  }
+  @media (max-width:360px){
+    .dot{width:18px;}
+    .dot::before{left:4px;}
+  }
+
+  .bigfinish{text-align:center; padding-top:40px;}
+  .bigfinish .emoji-big{font-size:72px;}
+  table.results{width:100%; border-collapse:collapse; margin-top:16px;}
+  table.results td{padding:10px 8px; border-bottom:1px solid var(--border); font-size:17px;}
+  table.results td:last-child{text-align:right; font-weight:800; color:var(--green);}
+
+  .talkq{font-family:Georgia,serif; font-size:19px; margin:0 0 4px;}
+  .talkka{color:var(--sub); font-size:16px; margin:0 0 14px;}
+
+  @media (max-width:600px){
+    table.irr, table.irr tbody, table.irr tr, table.irr td{display:block; width:auto;}
+    table.irr td{border-bottom:none; padding:2px 0;}
+    table.irr td.btn{text-align:left; width:auto; padding-top:6px;}
+    table.irr tr{border-bottom:1px dashed var(--border); padding:10px 0;}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important;}
+  }
+
+  .numbers{display:flex; gap:10px; flex-wrap:wrap; margin-top:6px;}
+  .numbox{background:var(--accent-soft); border:1px solid #f3d3ae; border-radius:14px; padding:10px 16px; text-align:center; flex:1 1 120px;}
+  .numbox b{display:block; font-size:26px; font-family:Georgia,serif; color:var(--accent);}
+  .numbox span{font-size:14px; color:var(--sub);}
+
+  .why{color:var(--sub); font-size:16px; margin-top:8px; line-height:1.55;}
+</style>
+<meta name="robots" content="noindex, follow"><link rel="canonical" href="https://learnenglishonlinecourses.com/reader/sample/"></head>
+<body><style>#rd-banner{background:#2b2620;color:#fff;font:600 14px/1.35 "Noto Sans Georgian",Sylfaen,system-ui,sans-serif;text-align:center;padding:9px 14px}#rd-banner a{color:#f6c27a;margin-left:6px;white-space:nowrap}#rd-cta{margin:26px 0 0;padding:22px 18px;border:2px solid #c05621;border-radius:20px;background:#fff7ef;text-align:center;font-family:"Noto Sans Georgian",Sylfaen,system-ui,sans-serif}#rd-cta h3{margin:0 0 8px;font-size:20px;line-height:1.35}#rd-cta .p{font-size:28px;font-weight:800;color:#c05621;margin:6px 0 14px}#rd-cta .p s{font-size:18px;color:#7a6e60;font-weight:600;margin-right:8px}#rd-cta a{display:inline-block;background:#c05621;color:#fff;text-decoration:none;font-weight:700;padding:12px 22px;border-radius:14px}</style><div id="rd-banner">ეს უფასო საცდელი გაკვეთილია — სრულ პაკეტში 186 ასეთი ტექსტია<a href="/reader/">გაიგე მეტი →</a></div>
+
+<section class="slide">
+  <div class="kicker">Reading · B1 ✦ · Text 01 / 76</div>
+  <h1 lang="en">A Change of Plan 🚆</h1>
+  <p class="sub">დიალოგი სადგურზე — გაუქმებული მატარებელი, ახალი გეგმა და ერთი მნიშვნელოვანი გასაუბრება</p>
+
+  <div class="card">
+    <div class="emoji-big">🚆 ⏱️ 🎟️ 💼</div>
+    <p style="margin-top:10px;"><b>სანამ წავიკითხავთ — მოდი, ვიფიქროთ:</b></p>
+    <p class="reading" style="font-size:19px;"><span lang="en">What do you do when your plans suddenly change?</span> <button class="speak jsq" data-say="What do you do when your plans suddenly change?" aria-label="მოსმენა">🔊</button></p>
+    <p style="color:var(--sub); font-size:16px;">უპასუხე ინგლისურად: <i lang="en">„When my plans change, I usually … because …“</i></p>
+    <p style="color:var(--sub); font-size:16px;">უპასუხე ხმამაღლა, სრული წინადადებით — ჯერ თქვი, რას აკეთებ, მერე კი რატომ.</p>
+  </div>
+
+  <div class="hint">
+    💡 <b>როგორ ვიმუშაოთ:</b> ტექსტში <span class="v" style="cursor:default;">ნარინჯისფრად</span> მონიშნულია ახალი სიტყვები და ფრაზები.
+    დააჭირე — გამოჩნდება გამოთქმა და ქართული თარგმანი, 🔊 ღილაკით კი მოისმენ, როგორ ჟღერს.
+    ნანახი სიტყვები <span class="v seen" style="cursor:default;">გამწვანდება</span>.
+  </div>
+
+  <div class="hint">📖 <b>რაზეა ტექსტი:</b> ეს არის მოკლე დიალოგი სადგურზე. ერთი მგზავრი გაიგებს, რომ მისი მატარებელი გააუქმეს, და ღელავს, რადგან შუადღისას გასაუბრება აქვს. მეორე ადამიანი, გამოცდილი მგზავრი, უხსნის, რა გააკეთოს: სხვა მატარებელი, ბილეთის საკითხი და ერთი სატელეფონო ზარი.</div>
+  <div class="hint">🔤 <b>ამ ტექსტის გრამატიკა:</b> <i>Present Perfect</i> — <i>have / has</i> + ზმნის მესამე ფორმა, როცა მოქმედება წარსულში მოხდა, შედეგი კი ახლა გვაინტერესებს (<i>The train has been cancelled</i>). ასევე მისი განსხვავება <i>Past Simple</i>-ისგან და სიტყვები <i>already</i>, <i>just</i>, <i>yet</i>.</div>
+</section>
+<section class="slide">
+  <div class="kicker">ნაწილი 1 · ცუდი ამბავი ბაქანზე</div>
+  <h2 lang="en">🚆 The train has been cancelled</h2>
+  <div class="citymeta"><span class="chip" lang="en">🚆 the 9:40 to Bristol</span><span class="chip" lang="en">📢 the announcement</span><span class="chip" lang="en">💼 an interview at half past twelve</span></div>
+  <div class="card reading" lang="en">
+    <p class="a">"<span class="v" data-i="p_excuseme">Excuse me</span>, is this <span class="v" data-i="p_rightplatform">the right platform</span> for <span class="v" data-i="p_940bristol">the 9:40 to Bristol</span>?"</p>
+    <p class="a">"It was. <span class="v" data-i="p_theresbeenadelay">There's been a delay</span>. Didn't you <span class="v" data-i="w_hear">hear</span> the <span class="v" data-i="w_announcement">announcement</span>?"</p>
+    <p class="a">"No, I <span class="v" data-i="p_wasbuying">was buying</span> a coffee. What did they say?"</p>
+    <p class="a">"The train <span class="v" data-i="p_hasbeencancelled">has been cancelled</span>. <span class="v" data-i="w_apparently">Apparently</span> there's a <span class="v" data-i="w_problem">problem</span> <span class="v" data-i="p_ontheline">on the line</span>."</p>
+    <p class="a">"That's <span class="v" data-i="w_terrible">terrible</span>. <span class="v" data-i="p_ivegot">I've got</span> an <span class="v" data-i="w_interview">interview</span> <span class="v" data-i="p_athalfpasttwelve">at half past twelve</span>."</p>
+  </div>
+  <div class="numbers"><div class="numbox"><b>9:40</b><span lang="en">the train to Bristol</span></div><div class="numbox"><b>12:30</b><span lang="en">the interview</span></div></div>
+  <div class="hint">💡 <b>რატომ <i>has been cancelled</i>, და არა <i>was cancelled</i>?</b> იმიტომ, რომ ახლა მთავარია <b>შედეგი</b> — მატარებელი აღარ მიდის. როცა კონკრეტულ წარსულ დროს ვასახელებთ, <i>Past Simple</i> გვჭირდება: <i>the last train was cancelled on Friday</i>.</div>
+  <div class="counter">👀 ნანახი სიტყვები: <b class="seencount">0</b> / <span class="seentotal"></span></div>
+</section>
+<section class="slide">
+  <div class="kicker">ნაწილი 2 · სხვა გზა და ბილეთის საკითხი</div>
+  <h2 lang="en">🎟️ Another option — and the ticket</h2>
+  <div class="citymeta"><span class="chip" lang="en">🚉 the 10:05 to Bath</span><span class="chip" lang="en">⏱️ fifteen minutes</span><span class="chip" lang="en">💷 a refund</span></div>
+  <div class="card reading" lang="en">
+    <p class="a">"<span class="v" data-i="p_dontpanic">Don't panic</span>. There's another <span class="v" data-i="w_option">option</span>. You can take <span class="v" data-i="p_1005tobath">the 10:05 to Bath</span> and <span class="v" data-i="w_change">change</span> there."</p>
+    <p class="a">"Will I <span class="v" data-i="w_arrive">arrive</span> <span class="v" data-i="p_intime">in time</span>?"</p>
+    <p class="a">"You should. It isn't <span class="v" data-i="w_direct">direct</span>, but the <span class="v" data-i="w_connection">connection</span> is <span class="v" data-i="p_onlyfifteenminutes">only fifteen minutes</span>."</p>
+    <p class="a">"And <span class="v" data-i="p_whatabout">what about</span> my <span class="v" data-i="w_ticket">ticket</span>? I <span class="v" data-i="p_paidfor">paid for</span> <span class="v" data-i="p_fasttrain">the fast train</span>."</p>
+    <p class="a">"Go to the <span class="v" data-i="w_desk">desk</span> over there. They'll <span class="v" data-i="w_either">either</span> give you a <span class="v" data-i="w_refund">refund</span> or <span class="v" data-i="p_sortitout">sort it out</span> <span class="v" data-i="p_forfree">for free</span>. <span class="v" data-i="w_passengers">Passengers</span> always get something when the <span class="v" data-i="w_delay">delay</span> is this long."</p>
+  </div>
+  <div class="numbers"><div class="numbox"><b>10:05</b><span lang="en">the train to Bath</span></div><div class="numbox"><b>15</b><span lang="en">minutes to change</span></div></div>
+  <div class="hint">💡 <b><i>either … or</i> — ორი ვარიანტიდან ერთი:</b> <i>They'll either give you a refund or sort it out for free.</i> ფრაზული ზმნა <i>sort something out</i> ნიშნავს საკითხის მოგვარებას. ნაცვალსახელი ობიექტი აუცილებლად ზმნის შუაში დგება: <i>sort it out</i>, არა <i>sort out it</i>; არსებითი სახელი კი ორივე ადგილას შეიძლება: <i>sort out the problem</i> ან <i>sort the problem out</i>.</div>
+  <div class="counter">👀 ნანახი სიტყვები: <b class="seencount">0</b> / <span class="seentotal"></span></div>
+</section>
+<section class="slide">
+  <div class="kicker">ნაწილი 3 · ზარი და კარგი შთაბეჭდილება</div>
+  <h2 lang="en">📞 Ring them and warn them</h2>
+  <div class="citymeta"><span class="chip" lang="en">📞 the phone call</span><span class="chip" lang="en">🙂 a much better impression</span><span class="chip" lang="en">👍 Good luck</span></div>
+  <div class="card reading" lang="en">
+    <p class="a">"Thank you. <span class="v" data-i="p_idhavestood">I'd have stood</span> here for an hour."</p>
+    <p class="a">"<span class="v" data-i="p_noproblem">No problem</span>. I <span class="v" data-i="w_travel">travel</span> on this <span class="v" data-i="w_line">line</span> <span class="v" data-i="p_everyweek">every week</span>, so I know the <span class="v" data-i="w_system">system</span> <span class="v" data-i="p_quitewell">quite well</span>."</p>
+    <p class="a">"I <span class="v" data-i="w_suppose">suppose</span> I should <span class="v" data-i="w_ring">ring</span> the <span class="v" data-i="w_company">company</span> and <span class="v" data-i="w_warn">warn</span> them too."</p>
+    <p class="a">"<span class="v" data-i="w_definitely">Definitely</span>. <span class="v" data-i="p_nobodyminds">Nobody minds</span> a delay if you <span class="v" data-i="w_explain">explain</span> it <span class="v" data-i="w_early">early</span>. It creates a <span class="v" data-i="p_muchbetter">much better</span> <span class="v" data-i="w_impression">impression</span> than <span class="v" data-i="p_arrivinglate">arriving late</span> with no <span class="v" data-i="w_excuse">excuse</span>."</p>
+    <p class="a">"Right. The desk first, then <span class="v" data-i="p_phonecall">the phone call</span>. <span class="v" data-i="p_thanksforyourhelp">Thanks for your help</span>."</p>
+    <p class="a">"<span class="v" data-i="p_goodluck">Good luck</span> with the <span class="v" data-i="w_interview">interview</span>. <span class="v" data-i="p_youllbefine">You'll be fine</span>."</p>
+  </div>
+  
+  <div class="hint">💡 <b>ზმნა <i>mind</i>:</b> <i>Nobody minds a delay…</i> ნიშნავს „არავის აწუხებს“. კითხვაში იგივე ზმნა ზრდილობიან თხოვნას ქმნის: <i>Do you mind if I sit here?</i> — „ხომ არ გეწყინებათ, აქ რომ დავჯდე?“</div>
+  <div class="counter">👀 ნანახი სიტყვები: <b class="seencount">0</b> / <span class="seentotal"></span></div>
+</section>
+<section class="slide">
+  <div class="kicker">ლექსიკა</div>
+  <h2>📒 ახალი სიტყვები და ფრაზები</h2>
+  <p class="sub">დააჭირე 🔊-ს, მოისმინე და გაიმეორე ხმამაღლა — ასე უკეთ დაიმახსოვრებ!</p>
+  <div class="card">
+    <div class="sect">სიტყვები (Words)</div>
+    <ol class="vlist" id="wordlist"></ol>
+    <div class="sect">ფრაზები (Phrases)</div>
+    <ol class="vlist" id="phraselist"></ol>
+  </div>
+</section>
+<section class="slide">
+  <div class="kicker">გრამატიკა</div>
+  <h2>🎯 Present Perfect — შედეგი, რომელიც ახლა ჩანს</h2>
+  <p class="sub">ამ დიალოგში ცუდი ამბავი Present Perfect-ით ითქვა, რადგან მთავარი ისაა, რა ხდება ახლა.</p>
+  <div class="formula" lang="en">have / has + V3 · already · just · yet · Past Simple: yesterday, ago, last week</div>
+  <div class="card">
+    <p style="margin-top:0;"><b>1. Present Perfect — have / has + ზმნის მესამე ფორმა</b></p>
+    <p style="margin:6px 0;">🔹 <b>have / has + V3</b> ვიხმაროთ მაშინ, როცა მოქმედება წარსულში მოხდა, მაგრამ ახლა მისი <b>შედეგი</b> გვაინტერესებს, და არა ის, ზუსტად როდის მოხდა.</p>
+    <p style="margin:6px 0;">🔹 <b>უარყოფა და კითხვა:</b> <i>has not (hasn't) landed</i> · <i>Have you checked …?</i> ზმნის მესამე ფორმა არ იცვლება.</p>
+    <p style="margin:6px 0;">⚠️ ხშირი შეცდომა: <s>The station has closed yesterday.</s> (სწორია: <i>The station closed yesterday</i> — სიტყვა <i>yesterday</i> დამთავრებულ დროს ასახელებს და Present Perfect-თან არ დგება.)</p>
+    <table class="irr" id="gtable0"></table>
+  </div>
+  <div class="card">
+    <p style="margin-top:0;"><b>2. Present Perfect თუ Past Simple?</b></p>
+    <p style="margin:6px 0;">🔹 <b>Past Simple</b> გვჭირდება, როცა ვამბობთ, <b>როდის</b> მოხდა: <i>yesterday</i>, <i>last Friday</i>, <i>in 2015</i>, <i>three days ago</i>.</p>
+    <p style="margin:6px 0;">🔹 <b>Present Perfect</b> გვჭირდება, როცა დრო არ ვთქვით ან პერიოდი ჯერ არ დასრულებულა: <i>today</i>, <i>this week</i>, <i>since then</i>.</p>
+    <p style="margin:6px 0;">⚠️ ხშირი შეცდომა: <s>I have booked this seat three days ago.</s> (სწორია: <i>I booked this seat three days ago</i> — <i>ago</i> ყოველთვის Past Simple-ს მოითხოვს.)</p>
+    <table class="irr" id="gtable1"></table>
+  </div>
+  <div class="card">
+    <p style="margin-top:0;"><b>3. already · just · yet — სად დგას ეს სიტყვები</b></p>
+    <p style="margin:6px 0;">🔹 <b>already</b> („უკვე“) და <b>just</b> („ახლახან“) დგება <i>have / has</i>-სა და ზმნის მესამე ფორმას შორის.</p>
+    <p style="margin:6px 0;">🔹 <b>yet</b> („ჯერ“) დგება წინადადების ბოლოს და მხოლოდ უარყოფასა და კითხვაში, Present Perfect-თან: <i>He hasn't packed his bag yet.</i></p>
+    <p style="margin:6px 0;">⚠️ ხშირი შეცდომა: <s>I have yet not signed the form.</s> (სწორია: <i>I haven't signed the form yet</i> — <i>yet</i> ბოლოში მიდის.)</p>
+    <table class="irr" id="gtable2"></table>
+  </div>
+  <div class="hint">🗣️ <b>სცადე ახლავე:</b> თქვი სამი წინადადება იმაზე, რაც <b>დღეს უკვე</b> გააკეთე (<i>I have already …</i>), და სამიც იმაზე, რაც <b>გუშინ</b> გააკეთე (<i>I … yesterday</i>).</div>
+</section>
+<section class="slide">
+  <div class="kicker">ვარჯიში 1</div>
+  <h2>🧩 დააკავშირე წყვილები</h2>
+  <p class="sub">დააჭირე ინგლისურ სიტყვას, შემდეგ — მის ქართულ თარგმანს.</p>
+  <div class="card">
+    <div class="match-grid" id="matchgrid"></div>
+    <div class="score" id="matchscore" role="status" aria-live="polite"></div>
+  </div>
+</section>
+<section class="slide">
+  <div class="kicker">ვარჯიში 2</div>
+  <h2>✏️ ჩასვი სწორი სიტყვა</h2>
+  <p class="sub">აირჩიე სწორი სიტყვა თითოეულ წინადადებაში, ბოლოს დააჭირე „შემოწმებას“.</p>
+  <div id="gapbox"></div>
+  <button class="checkbtn" id="gapcheck">შემოწმება ✓</button>
+  <div class="score" id="gapscore" role="status" aria-live="polite"></div>
+</section>
+<section class="slide">
+  <div class="kicker">ვარჯიში 3</div>
+  <h2>🎯 აირჩიე სწორი ფორმა</h2>
+  <p class="sub">აირჩიე სწორი ფორმა: Present Perfect თუ Past Simple? ყურადღება მიაქციე დროის სიტყვებს.</p>
+  <div id="verbbox"></div>
+  <div class="score" id="verbscore" role="status" aria-live="polite"></div>
+</section>
+<section class="slide">
+  <div class="kicker">ვარჯიში 4</div>
+  <h2>✅❌ სწორია თუ არასწორი?</h2>
+  <p class="sub">წაიკითხე წინადადება და გადაწყვიტე — ემთხვევა თუ არა ტექსტს.</p>
+  <div id="tfbox"></div>
+  <div class="score" id="tfscore" role="status" aria-live="polite"></div>
+</section>
+<section class="slide">
+  <div class="kicker">საუბარი</div>
+  <h2 lang="en">💬 Now you! Travel, delays and plans that change</h2>
+  <p class="sub">უპასუხე ხმამაღლა — სრული წინადადებებით. დააჭირე 🔊-ს, თუ გინდა კითხვის მოსმენა.</p>
+  <div class="card" id="talkbox"></div>
+  <div class="hint">🗣️ <b>სასარგებლო ფრაზები:</b> <i lang="en">I usually … · In my experience … · The first thing I do is … · It depends on … · Once, when I was … · That has never happened to me</i></div>
+</section>
+<section class="slide">
+  <div class="bigfinish">
+    <div class="emoji-big">🎉</div>
+    <h1 lang="en">Well done!</h1>
+    <p class="sub">ყოჩაღ — გაკვეთილი დასრულებულია!</p>
+  </div>
+  <div class="card">
+    <table class="results">
+      <tr><td>👀 ნანახი ახალი სიტყვები ტექსტში</td><td id="r_seen">—</td></tr>
+      <tr><td>🧩 წყვილების დაკავშირება</td><td id="r_match">—</td></tr>
+      <tr><td>✏️ სიტყვის ჩასმა</td><td id="r_gap">—</td></tr>
+      <tr><td>🎯 სწორი ფორმა</td><td id="r_verb">—</td></tr>
+      <tr><td>✅❌ სწორი თუ არასწორი</td><td id="r_tf">—</td></tr>
+    </table>
+  </div>
+  <div class="hint">🏠 <b>საშინაო დავალება:</b> ხვალ ისევ გახსენი ეს გაკვეთილი და დიალოგი ხმამაღლა წაიკითხე ორივე როლში. შემდეგ ლექსიკის სლაიდზე გადადი და ხმამაღლა წაიკითხე ორივე სია — სულ <span id="hwcount"></span> ერთეული — და მონიშნე ის ხუთი, რომელიც ყველაზე ძნელი აღმოჩნდა. ბოლოს დაწერე 6–10 წინადადება იმაზე, როგორ შეიცვალა შენი გეგმა ბოლო დროს: სამი წინადადება <i>Present Perfect</i>-ით (<i>My train has been cancelled</i>) და სამი <i>Past Simple</i>-ით, დროის მითითებით (<i>I bought a new ticket yesterday</i>).</div>
+  <div class="hint">📚 <a href="/reader/" style="color:var(--accent); font-weight:700;">← English Reader — სრული პაკეტი</a></div>
+</section>
+
+<div id="popup" role="status" aria-live="polite">
+  <button class="pclose" onclick="closePopup(true)" aria-label="დახურვა">✕</button>
+  <span class="pw" id="pw"></span><span class="pipa" id="pipa"></span>
+  <button class="speak" id="pspeak" aria-label="მოსმენა">🔊 მოსმენა</button>
+  <div class="pka" id="pka"></div>
+</div>
+
+<nav id="nav">
+  <button class="navbtn" id="prev">← უკან</button>
+  <div id="dots"></div>
+  <button class="navbtn" id="next">შემდეგი →</button>
+</nav>
+
+<script>
+const DATA = {
+ "WORDS": [
+  [
+   "w_hear",
+   "hear",
+   "hɪr",
+   "გაიგოს, მოისმინოს"
+  ],
+  [
+   "w_announcement",
+   "announcement",
+   "əˈnaʊnsmənt",
+   "განცხადება"
+  ],
+  [
+   "w_apparently",
+   "apparently",
+   "əˈpærəntli",
+   "როგორც ჩანს"
+  ],
+  [
+   "w_problem",
+   "problem",
+   "ˈprɑːbləm",
+   "პრობლემა, ხარვეზი"
+  ],
+  [
+   "w_terrible",
+   "terrible",
+   "ˈterəbl",
+   "საშინელი"
+  ],
+  [
+   "w_interview",
+   "interview",
+   "ˈɪntərvjuː",
+   "გასაუბრება"
+  ],
+  [
+   "w_option",
+   "option",
+   "ˈɑːpʃn",
+   "ვარიანტი, არჩევანი"
+  ],
+  [
+   "w_change",
+   "change",
+   "tʃeɪndʒ",
+   "გადაჯდეს სხვა მატარებელში"
+  ],
+  [
+   "w_arrive",
+   "arrive",
+   "əˈraɪv",
+   "ჩავიდეს, მივიდეს"
+  ],
+  [
+   "w_direct",
+   "direct",
+   "dəˈrekt",
+   "პირდაპირი, გადაჯდომის გარეშე"
+  ],
+  [
+   "w_connection",
+   "connection",
+   "kəˈnekʃn",
+   "გადაჯდომა ერთი მატარებლიდან მეორეზე"
+  ],
+  [
+   "w_ticket",
+   "ticket",
+   "ˈtɪkɪt",
+   "ბილეთი"
+  ],
+  [
+   "w_desk",
+   "desk",
+   "desk",
+   "სარკმელი, მისაღები"
+  ],
+  [
+   "w_either",
+   "either",
+   "ˈiːðər",
+   "ან — either … or კონსტრუქციაში"
+  ],
+  [
+   "w_refund",
+   "refund",
+   "ˈriːfʌnd",
+   "თანხის დაბრუნება"
+  ],
+  [
+   "w_passengers",
+   "passengers",
+   "ˈpæsɪndʒərz",
+   "მგზავრები"
+  ],
+  [
+   "w_delay",
+   "delay",
+   "dɪˈleɪ",
+   "დაგვიანება"
+  ],
+  [
+   "w_travel",
+   "travel",
+   "ˈtrævl",
+   "იმგზავროს"
+  ],
+  [
+   "w_line",
+   "line",
+   "laɪn",
+   "ხაზი, რკინიგზის მიმართულება"
+  ],
+  [
+   "w_system",
+   "system",
+   "ˈsɪstəm",
+   "სისტემა, დადგენილი წესები"
+  ],
+  [
+   "w_suppose",
+   "suppose",
+   "səˈpoʊz",
+   "იფიქროს, ჩათვალოს"
+  ],
+  [
+   "w_ring",
+   "ring",
+   "rɪŋ",
+   "დაურეკოს"
+  ],
+  [
+   "w_company",
+   "company",
+   "ˈkʌmpəni",
+   "კომპანია, ფირმა"
+  ],
+  [
+   "w_warn",
+   "warn",
+   "wɔːrn",
+   "გააფრთხილოს"
+  ],
+  [
+   "w_definitely",
+   "definitely",
+   "ˈdefɪnətli",
+   "აუცილებლად, უთუოდ"
+  ],
+  [
+   "w_explain",
+   "explain",
+   "ɪkˈspleɪn",
+   "ახსნას"
+  ],
+  [
+   "w_early",
+   "early",
+   "ˈɜːrli",
+   "ადრე"
+  ],
+  [
+   "w_impression",
+   "impression",
+   "ɪmˈpreʃn",
+   "შთაბეჭდილება"
+  ],
+  [
+   "w_excuse",
+   "excuse",
+   "ɪkˈskjuːs",
+   "მიზეზი, გამართლება"
+  ]
+ ],
+ "PHRASES": [
+  [
+   "p_excuseme",
+   "Excuse me",
+   "ɪkˈskjuːz mi",
+   "მაპატიეთ, უკაცრავად"
+  ],
+  [
+   "p_rightplatform",
+   "the right platform",
+   "ðə ˈraɪt ˈplætfɔːrm",
+   "საჭირო ბაქანი"
+  ],
+  [
+   "p_940bristol",
+   "the 9:40 to Bristol",
+   "ðə ˈnaɪn ˈfɔːrti tə ˈbrɪstl",
+   "ბრისტოლის 9:40-ის მატარებელი"
+  ],
+  [
+   "p_theresbeenadelay",
+   "There's been a delay",
+   "ðerz bɪn ə dɪˈleɪ",
+   "დაგვიანება მოხდა"
+  ],
+  [
+   "p_wasbuying",
+   "was buying",
+   "wəz ˈbaɪɪŋ",
+   "ვყიდულობდი იმ მომენტში"
+  ],
+  [
+   "p_hasbeencancelled",
+   "has been cancelled",
+   "həz bɪn ˈkænsld",
+   "გააუქმეს და ახლა აღარ მიდის"
+  ],
+  [
+   "p_ontheline",
+   "on the line",
+   "ɑːn ðə ˈlaɪn",
+   "ხაზზე, მიმართულებაზე"
+  ],
+  [
+   "p_ivegot",
+   "I've got",
+   "aɪv ˈɡɑːt",
+   "მაქვს, დანიშნული მაქვს"
+  ],
+  [
+   "p_athalfpasttwelve",
+   "at half past twelve",
+   "ət ˈhæf ˈpæst ˈtwelv",
+   "თორმეტ საათსა და ნახევარზე"
+  ],
+  [
+   "p_dontpanic",
+   "Don't panic",
+   "ˈdoʊnt ˈpænɪk",
+   "ნუ პანიკობ"
+  ],
+  [
+   "p_1005tobath",
+   "the 10:05 to Bath",
+   "ðə ˈten ˈoʊ ˈfaɪv tə ˈbæθ",
+   "ბათის 10:05-ის მატარებელი"
+  ],
+  [
+   "p_intime",
+   "in time",
+   "ɪn ˈtaɪm",
+   "დროზე, დაგვიანების გარეშე"
+  ],
+  [
+   "p_onlyfifteenminutes",
+   "only fifteen minutes",
+   "ˈoʊnli ˈfɪftiːn ˈmɪnɪts",
+   "სულ თხუთმეტი წუთი"
+  ],
+  [
+   "p_whatabout",
+   "what about",
+   "ˈwʌt əˈbaʊt",
+   "და … რაღა იქნება?"
+  ],
+  [
+   "p_paidfor",
+   "paid for",
+   "ˈpeɪd fər",
+   "გადაიხადა ფასი — pay for ზმნის წარსული ფორმა"
+  ],
+  [
+   "p_fasttrain",
+   "the fast train",
+   "ðə ˈfæst ˈtreɪn",
+   "სწრაფი მატარებელი"
+  ],
+  [
+   "p_sortitout",
+   "sort it out",
+   "ˈsɔːrt ɪt ˈaʊt",
+   "მოაგვაროს, გაარკვიოს საკითხი"
+  ],
+  [
+   "p_forfree",
+   "for free",
+   "fər ˈfriː",
+   "უფასოდ"
+  ],
+  [
+   "p_idhavestood",
+   "I'd have stood",
+   "aɪd həv ˈstʊd",
+   "ვიდგებოდი — და ასე დავრჩებოდი"
+  ],
+  [
+   "p_noproblem",
+   "No problem",
+   "ˈnoʊ ˈprɑːbləm",
+   "არაფერს, პრობლემა არაა"
+  ],
+  [
+   "p_everyweek",
+   "every week",
+   "ˈevri ˈwiːk",
+   "ყოველ კვირას"
+  ],
+  [
+   "p_quitewell",
+   "quite well",
+   "ˈkwaɪt ˈwel",
+   "საკმაოდ კარგად"
+  ],
+  [
+   "p_nobodyminds",
+   "Nobody minds",
+   "ˈnoʊbədi ˈmaɪndz",
+   "არავის აწუხებს"
+  ],
+  [
+   "p_muchbetter",
+   "much better",
+   "ˈmʌtʃ ˈbetər",
+   "ბევრად უკეთესი"
+  ],
+  [
+   "p_arrivinglate",
+   "arriving late",
+   "əˈraɪvɪŋ ˈleɪt",
+   "დაგვიანებით მისვლა"
+  ],
+  [
+   "p_phonecall",
+   "the phone call",
+   "ðə ˈfoʊn ˈkɔːl",
+   "სატელეფონო ზარი"
+  ],
+  [
+   "p_thanksforyourhelp",
+   "Thanks for your help",
+   "ˈθæŋks fər jər ˈhelp",
+   "მადლობა დახმარებისთვის"
+  ],
+  [
+   "p_goodluck",
+   "Good luck",
+   "ˈɡʊd ˈlʌk",
+   "წარმატებები"
+  ],
+  [
+   "p_youllbefine",
+   "You'll be fine",
+   "jul bi ˈfaɪn",
+   "ყველაფერი კარგად იქნება"
+  ]
+ ],
+ "GTABLES": [
+  [
+   [
+    "My sister <b>has lost</b> her passport.",
+    "ჩემს დას პასპორტი დაუკარგავს — ახლა პასპორტი არ აქვს.",
+    "My sister has lost her passport"
+   ],
+   [
+    "The ticket office <b>has opened</b> at last.",
+    "სალარო ბოლოს და ბოლოს გაიხსნა — ახლა ღიაა.",
+    "The ticket office has opened at last"
+   ],
+   [
+    "<b>Have</b> you <b>checked</b> the timetable?",
+    "განრიგი შეამოწმე?",
+    "Have you checked the timetable?"
+   ],
+   [
+    "Our flight <b>hasn't landed</b>.",
+    "ჩვენი რეისი ჯერ არ დამჯდარა — ჯერ კიდევ ჰაერშია.",
+    "Our flight has not landed"
+   ],
+   [
+    "The airline <b>has raised</b> its prices.",
+    "ავიაკომპანიას ფასები აუწევია — ახლა უფრო ძვირია.",
+    "The airline has raised its prices"
+   ]
+  ],
+  [
+   [
+    "We <b>bought</b> our tickets last Friday.",
+    "ბილეთები გასულ პარასკევს ვიყიდეთ.",
+    "We bought our tickets last Friday"
+   ],
+   [
+    "We <b>have already bought</b> our tickets.",
+    "ბილეთები უკვე გვიყიდია — ხელში გვაქვს.",
+    "We have already bought our tickets"
+   ],
+   [
+    "The café <b>opened</b> in 2015.",
+    "კაფე 2015 წელს გაიხსნა.",
+    "The café opened in 2015"
+   ],
+   [
+    "The café <b>has changed</b> a lot since then.",
+    "მას შემდეგ კაფე ბევრად შეცვლილა.",
+    "The café has changed a lot since then"
+   ],
+   [
+    "<b>Did</b> the shop <b>open</b> on Sunday?",
+    "მაღაზია კვირას გაიხსნა?",
+    "Did the shop open on Sunday?"
+   ]
+  ],
+  [
+   [
+    "The bus <b>has just left</b> the stop.",
+    "ავტობუსი ახლახან წავიდა გაჩერებიდან.",
+    "The bus has just left the stop"
+   ],
+   [
+    "I <b>have already paid</b> the driver.",
+    "მძღოლისთვის უკვე გადამიხდია — ქვითარი თან მაქვს.",
+    "I have already paid the driver"
+   ],
+   [
+    "My friend <b>hasn't replied</b> to my message <b>yet</b>.",
+    "მეგობარს ჩემს შეტყობინებაზე ჯერ არ უპასუხია.",
+    "My friend has not replied to my message yet"
+   ],
+   [
+    "I <b>have never travelled</b> by night train.",
+    "ღამის მატარებლით არასდროს მიმგზავრია.",
+    "I have never travelled by night train"
+   ]
+  ]
+ ],
+ "PAIRS": [
+  [
+   "announcement",
+   "განცხადება"
+  ],
+  [
+   "terrible",
+   "საშინელი"
+  ],
+  [
+   "refund",
+   "თანხის დაბრუნება"
+  ],
+  [
+   "delay",
+   "დაგვიანება"
+  ],
+  [
+   "warn",
+   "გააფრთხილოს"
+  ],
+  [
+   "impression",
+   "შთაბეჭდილება"
+  ],
+  [
+   "passengers",
+   "მგზავრები"
+  ],
+  [
+   "definitely",
+   "აუცილებლად, უთუოდ"
+  ]
+ ],
+ "GAPS": [
+  [
+   "We could not hear the",
+   " because the hall was so noisy.",
+   "announcement"
+  ],
+  [
+   "The shoes fell apart after a week, so I asked for a full",
+   ".",
+   "refund"
+  ],
+  [
+   "He was very nervous before his first job",
+   ", but in the end it went well.",
+   "interview"
+  ],
+  [
+   "The coach was full and some",
+   " had to stand all the way.",
+   "passengers"
+  ],
+  [
+   "Her calm answers made a very good",
+   " on the committee.",
+   "impression"
+  ],
+  [
+   "She has worked for the same",
+   " for eleven years.",
+   "company"
+  ],
+  [
+   "The new booking",
+   " is easy to use: you choose your seat on the screen.",
+   "system"
+  ],
+  [
+   "We missed our",
+   " in Munich and had to wait three hours.",
+   "connection"
+  ]
+ ],
+ "VERBS": [
+  [
+   "My alarm ___ at six o'clock yesterday morning.",
+   [
+    "has rung",
+    "have rung",
+    "rang"
+   ],
+   2,
+   "სიტყვები yesterday morning დამთავრებულ წარსულ დროს ასახელებს, ამიტომ Past Simple: rang. ფორმა has rung ასეთ დროსთან არ დგება, have rung კი მრავლობითი ქვემდებარისთვისაა — my alarm მხოლობითია."
+  ],
+  [
+   "Look — somebody ___ my umbrella, and now I am getting wet.",
+   [
+    "have taken",
+    "has taken",
+    "took"
+   ],
+   1,
+   "შედეგი ახლა ჩანს — ქოლგა აღარ არის, ამიტომ Present Perfect: has taken. ფორმა took მხოლოდ იმას იტყოდა, რომ ეს ოდესღაც მოხდა, have taken კი somebody-სთან არ ჯდება, რადგან somebody მხოლობითია."
+  ],
+  [
+   "My parents ___ to Bath three times last year.",
+   [
+    "went",
+    "have gone",
+    "have been going"
+   ],
+   0,
+   "სიტყვები last year დასრულებულ პერიოდს ნიშნავს, ამიტომ Past Simple: went. ფორმა have gone იმას იტყოდა, რომ ისინი წავიდნენ და ახლაც ბათში არიან, have been going კი ჯერ კიდევ მიმდინარე, განმეორებად მოქმედებას აღწერდა."
+  ],
+  [
+   "___ you spoken to the manager yet?",
+   [
+    "Did",
+    "Are",
+    "Have"
+   ],
+   2,
+   "სიტყვა yet Present Perfect-თან დგება, ამიტომ Have you spoken …? ფორმა Did-ის შემდეგ ზმნის პირველი ფორმა უნდა მოდიოდეს (Did you speak …?), Are კი ვნებით გვარს ქმნიდა და აქ აზრი არ აქვს."
+  ],
+  [
+   "My brother ___ in that bakery in 2019, but he doesn't work there now.",
+   [
+    "has been working",
+    "worked",
+    "has worked"
+   ],
+   1,
+   "თარიღი in 2019 დამთავრებული დროა და ის იქ აღარ მუშაობს, ამიტომ Past Simple: worked. ფორმები has worked და has been working იმას ნიშნავდა, რომ სამსახური დღემდე გრძელდება."
+  ],
+  [
+   "The lift ___ since Monday, so we use the stairs.",
+   [
+    "has been broken",
+    "was broken",
+    "is breaking"
+   ],
+   0,
+   "სიტყვა since დღემდე გაგრძელებულ მდგომარეობას ნიშნავს, ამიტომ Present Perfect: has been broken. ფორმა was broken since ორშაბათიდან დღემდე პერიოდს ვერ დაფარავს, is breaking კი იმას იტყოდა, რომ ლიფტი სწორედ ახლა ფუჭდება."
+  ],
+  [
+   "I ___ that film last week and I loved it.",
+   [
+    "have seen",
+    "have saw",
+    "saw"
+   ],
+   2,
+   "სიტყვები last week დამთავრებულ დროს ასახელებს, ამიტომ Past Simple: saw. ფორმა have seen ასეთ დროსთან არ დგება, have saw კი საერთოდ არ არსებობს — see ზმნის მესამე ფორმა seen არის."
+  ],
+  [
+   "Wait a moment — I ___ my coat.",
+   [
+    "have found just",
+    "have just found",
+    "just have found"
+   ],
+   1,
+   "სიტყვა just დგება have-სა და ზმნის მესამე ფორმას შორის: have just found. ფორმები just have found და have found just სიტყვას არასწორ ადგილას სვამს."
+  ]
+ ],
+ "TF": [
+  [
+   "The 9:40 train to Bristol has been cancelled.",
+   0,
+   "სწორია — ტექსტში წერია: The train has been cancelled, და საუბარია ბრისტოლის 9:40-ის მატარებელზე."
+  ],
+  [
+   "The traveller missed the announcement while buying a coffee.",
+   0,
+   "სწორია — ის ამბობს: No, I was buying a coffee, ამიტომ განცხადება ვერ გაიგო."
+  ],
+  [
+   "The interview starts at half past two.",
+   1,
+   "არასწორია — ტექსტში წერია: I've got an interview at half past twelve."
+  ],
+  [
+   "The connection in Bath lasts about an hour.",
+   1,
+   "არასწორია — ტექსტში წერია: the connection is only fifteen minutes."
+  ],
+  [
+   "The helper says that the journey through Bath is direct.",
+   1,
+   "არასწორია — ტექსტში წერია: It isn't direct — ბათში გადაჯდომა სჭირდება."
+  ],
+  [
+   "At the desk the passenger can get the money back or have the problem solved for free.",
+   0,
+   "სწორია — ტექსტში წერია: They'll either give you a refund or sort it out for free."
+  ],
+  [
+   "The helper travels on this line once a month.",
+   1,
+   "არასწორია — ის ამბობს: I travel on this line every week."
+  ],
+  [
+   "The helper thinks it is better to explain a delay early than to arrive late with no excuse.",
+   0,
+   "სწორია — ტექსტში წერია: Nobody minds a delay if you explain it early. It creates a much better impression than arriving late with no excuse."
+  ]
+ ],
+ "TALK": [
+  [
+   "Have you ever had a long delay on a train, a bus or a plane? What happened?",
+   "გქონია ოდესმე დიდი დაგვიანება მატარებელში, ავტობუსში ან თვითმფრინავში? რა მოხდა?"
+  ],
+  [
+   "What do you usually do when you have to wait a long time at a station or an airport?",
+   "რას აკეთებ ჩვეულებრივ, როცა სადგურზე ან აეროპორტში დიდხანს ლოდინი გიწევს?"
+  ],
+  [
+   "Do you prefer to travel by train, by bus or by car? Why?",
+   "მატარებლით, ავტობუსით თუ მანქანით მგზავრობა გირჩევნია? რატომ?"
+  ],
+  [
+   "If you are going to be late for something important, who do you ring first?",
+   "თუ რამე მნიშვნელოვანზე დაგვიანება გელოდება, პირველად ვის დაურეკავ?"
+  ],
+  [
+   "Has a stranger ever helped you when you were in trouble? Tell the story.",
+   "დაგხმარებია ოდესმე უცნობი ადამიანი გასაჭირში? მოჰყევი ეს ამბავი."
+  ],
+  [
+   "In your opinion, what makes a good impression at a job interview?",
+   "შენი აზრით, რა ტოვებს კარგ შთაბეჭდილებას სამსახურის გასაუბრებაზე?"
+  ]
+ ]
+};
+const WORDS = DATA.WORDS, PHRASES = DATA.PHRASES, PAIRS = DATA.PAIRS,
+      GAPS = DATA.GAPS, VERBS = DATA.VERBS, TF = DATA.TF, TALK = DATA.TALK;
+const DICT = {};
+[...WORDS, ...PHRASES].forEach(([id,en,ipa,ka]) => DICT[id] = {en, ipa, ka});
+
+/* ─────────── SPEECH ─────────── */
+function speak(text){
+  try{
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(String(text).replace(/…|\.\.\./g,"").replace(/\(|\)|\?|\//g," "));
+    u.lang = "en-US"; u.rate = 0.85;
+    speechSynthesis.speak(u);
+  }catch(e){}
+}
+document.querySelectorAll(".jsq[data-say]").forEach(b => b.addEventListener("click", () => speak(b.dataset.say)));
+
+/* ─────────── VOCAB POPUP + SEEN COUNTER ─────────── */
+const popup = document.getElementById("popup");
+const seen = new Set();
+let currentWord = "";
+let lastSpan = null;
+function positionPopup(){
+  const nav = document.getElementById("nav");
+  if(nav) popup.style.bottom = Math.round(nav.getBoundingClientRect().height + 12) + "px";
+}
+window.addEventListener("resize", positionPopup);
+positionPopup();
+function updateCounters(){
+  document.querySelectorAll(".seencount").forEach(el => el.textContent = seen.size);
+}
+const totalSpans = new Set([...document.querySelectorAll(".v[data-i]")].map(s => s.dataset.i)).size;
+document.querySelectorAll(".seentotal").forEach(el => el.textContent = totalSpans);
+const hw = document.getElementById("hwcount");
+if(hw) hw.textContent = WORDS.length + PHRASES.length;
+
+document.querySelectorAll(".v[data-i]").forEach(sp => {
+  sp.setAttribute("tabindex","0");
+  sp.setAttribute("role","button");
+  sp.addEventListener("keydown", ev => {
+    if(ev.key==="Enter" || ev.key===" "){ ev.preventDefault(); sp.click(); }
+  });
+  sp.addEventListener("click", () => {
+    const d = DICT[sp.dataset.i];
+    if(!d) return;
+    const pw = document.getElementById("pw"), pipa = document.getElementById("pipa");
+    pw.textContent = d.en; pw.lang = "en";
+    pipa.textContent = "/" + d.ipa + "/"; pipa.lang = "en";
+    document.getElementById("pka").textContent = "🇬🇪 " + d.ka;
+    currentWord = d.en;
+    lastSpan = sp;
+    positionPopup();
+    popup.classList.add("show");
+    seen.add(sp.dataset.i);
+    document.querySelectorAll('.v[data-i="' + sp.dataset.i + '"]').forEach(x => x.classList.add("seen"));
+    updateCounters();
+    speak(d.en);
+  });
+});
+document.getElementById("pspeak").addEventListener("click", () => speak(currentWord));
+function closePopup(restore){
+  const wasOpen = popup.classList.contains("show");
+  popup.classList.remove("show");
+  if(wasOpen && restore && lastSpan) lastSpan.focus({preventScroll:true});
+}
+
+/* ─────────── VOCAB LIST SLIDE ─────────── */
+function fillList(elId, arr){
+  const ol = document.getElementById(elId);
+  arr.forEach(([id,en,ipa,ka]) => {
+    const li = document.createElement("li");
+    const enEsc = en.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/'/g,"&#39;");
+    li.innerHTML = '<span class="en" lang="en">' + enEsc + '</span> <span class="ipa" lang="en">(' + ipa + ')</span>' +
+      ' <span class="eq">=</span> <span class="ka">' + ka + '</span>' +
+      ' <button class="speak" aria-label="მოსმენა">🔊</button>';
+    li.querySelector("button.speak").addEventListener("click", () => speak(en));
+    ol.appendChild(li);
+  });
+}
+fillList("wordlist", WORDS);
+fillList("phraselist", PHRASES);
+document.getElementById("phraselist").style.counterReset = "vnum " + WORDS.length;
+
+/* ─────────── GRAMMAR TABLES ─────────── */
+DATA.GTABLES.forEach((rows, i) => {
+  const t = document.getElementById("gtable" + i);
+  if(!t || !rows || !rows.length) return;
+  rows.forEach(([en,ka,plain]) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = '<td class="inf" lang="en"></td><td class="ka"></td>' +
+      '<td class="btn"><button class="speak" aria-label="მოსმენა">🔊</button></td>';
+    tr.children[0].innerHTML = en;
+    tr.children[1].textContent = ka;
+    tr.querySelector("button.speak").addEventListener("click", () => speak(plain));
+    t.appendChild(tr);
+  });
+});
+
+/* ─────────── QUIZ 1 · MATCHING ─────────── */
+let matchDone = 0, matchErrors = 0, selEn = null;
+(function buildMatch(){
+  const grid = document.getElementById("matchgrid");
+  const shuffle = a => a.map(x=>[Math.random(),x]).sort((p,q)=>p[0]-q[0]).map(p=>p[1]);
+  const left = PAIRS.map(p=>p[0]);
+  const right = shuffle(PAIRS.map(p=>p[1]));
+  for(let i=0;i<PAIRS.length;i++){
+    const bEn = document.createElement("button");
+    bEn.className = "mbtn en-side"; bEn.lang = "en"; bEn.textContent = left[i]; bEn.dataset.en = left[i];
+    const bKa = document.createElement("button");
+    bKa.className = "mbtn"; bKa.textContent = right[i]; bKa.dataset.ka = right[i];
+    grid.appendChild(bEn); grid.appendChild(bKa);
+  }
+  grid.addEventListener("click", e => {
+    const b = e.target.closest(".mbtn");
+    if(!b || b.classList.contains("done")) return;
+    const score = document.getElementById("matchscore");
+    if(b.dataset.en){
+      grid.querySelectorAll(".en-side").forEach(x=>x.classList.remove("sel"));
+      b.classList.add("sel"); selEn = b;
+      if(matchDone < PAIRS.length) score.textContent = "";
+      speak(b.dataset.en);
+    } else if(selEn){
+      const pair = PAIRS.find(p => p[0] === selEn.dataset.en);
+      if(pair && pair[1] === b.dataset.ka){
+        selEn.classList.remove("sel");
+        selEn.classList.add("done"); b.classList.add("done");
+        selEn.disabled = true; b.disabled = true;
+        selEn = null; matchDone++;
+        score.textContent = "✅ სწორია!";
+        if(matchDone === PAIRS.length){
+          score.textContent = matchErrors === 0
+            ? "🌟 ყოჩაღ! ყველა წყვილი უშეცდომოდ დააკავშირე!"
+            : "✅ დასრულდა! (შეცდომა: " + matchErrors + ")";
+        }
+        updateResults();
+      } else {
+        matchErrors++;
+        b.classList.add("shake");
+        setTimeout(()=>b.classList.remove("shake"), 350);
+        score.textContent = "❌ ეს წყვილი არ ემთხვევა — სცადე სხვა თარგმანი.";
+      }
+    } else {
+      b.classList.add("shake");
+      setTimeout(()=>b.classList.remove("shake"), 350);
+      score.textContent = "👈 ჯერ ინგლისურ სიტყვას დააჭირე, მერე — ქართულ თარგმანს.";
+    }
+  });
+})();
+
+/* ─────────── QUIZ 2 · GAP-FILL ─────────── */
+let gapResult = "—", gapFirst = null;
+(function buildGaps(){
+  const bank = GAPS.map(g=>g[2]).slice().sort((a,b)=>a.localeCompare(b));
+  const box = document.getElementById("gapbox");
+  GAPS.forEach((g,i) => {
+    const div = document.createElement("div");
+    div.className = "qitem";
+    const opts = bank.map(w=>'<option value="' + w + '">' + w + '</option>').join("");
+    div.innerHTML = '<div class="qtext" style="font-family:Georgia,serif;">' +
+      '<span class="num">' + (i+1) + '.</span><span lang="en">' + g[0] + '</span>' +
+      '<select class="gap-sel" aria-label="წინადადება ' + (i+1) + '" data-a="' + g[2] + '">' +
+      '<option value="">— აირჩიე —</option>' + opts + '</select><span lang="en">' + g[1] + '</span></div>' +
+      '<div class="why" style="display:none;">✔ სწორი პასუხია: <b lang="en" style="font-family:Georgia,serif;">' + g[2] + '</b></div>';
+    box.appendChild(div);
+  });
+  document.querySelectorAll(".gap-sel").forEach(s => {
+    s.addEventListener("change", () => {
+      s.classList.remove("correct","wrong");
+      const w = s.closest(".qitem").querySelector(".why");
+      if(w) w.style.display = "none";
+      document.getElementById("gapscore").textContent = "🔄 პასუხი შეცვალე — ისევ დააჭირე შემოწმებას.";
+    });
+  });
+  document.getElementById("gapcheck").addEventListener("click", () => {
+    const items = [...document.querySelectorAll("#gapbox .qitem")];
+    let ok = 0, empty = 0;
+    items.forEach(item => {
+      const s = item.querySelector(".gap-sel");
+      s.classList.remove("correct","wrong");
+      item.querySelector(".why").style.display = "none";
+      if(!s.value) empty++;
+    });
+    if(empty > 0){
+      document.getElementById("gapscore").textContent = empty === GAPS.length
+        ? "👆 ჯერ აირჩიე სიტყვები წინადადებებში, მერე დააჭირე შემოწმების ღილაკს."
+        : "👆 ჯერ კიდევ " + empty + " წინადადებაა ცარიელი — შეავსე ყველა და ისევ დააჭირე შემოწმებას.";
+      return;
+    }
+    items.forEach(item => {
+      const s = item.querySelector(".gap-sel");
+      if(s.value === s.dataset.a){ s.classList.add("correct"); ok++; }
+      else { s.classList.add("wrong"); item.querySelector(".why").style.display = "block"; }
+    });
+    if(gapFirst === null) gapFirst = ok;
+    gapResult = gapFirst + " / " + GAPS.length;
+    let msg;
+    if(ok === GAPS.length){
+      msg = gapFirst === GAPS.length ? "🌟 შესანიშნავია! " + ok + " / " + GAPS.length
+          : "✅ ახლა ყველა სწორია! ცხრილში პირველი სრული შემოწმების შედეგია: " + gapFirst + " / " + GAPS.length + ".";
+    } else {
+      msg = "შედეგი: " + ok + " / " + GAPS.length + " — წითლად მონიშნულების ქვემოთ სწორი პასუხი წერია.";
+      if(gapFirst !== ok) msg += " ცხრილში ჩაწერილი შედეგია: " + gapFirst + " / " + GAPS.length + ".";
+    }
+    document.getElementById("gapscore").textContent = msg;
+    updateResults();
+  });
+})();
+
+/* ─────────── QUIZ 3 · FORM CHOICE ─────────── */
+let verbOk = 0, verbAnswered = 0;
+(function buildVerbs(){
+  const box = document.getElementById("verbbox");
+  VERBS.forEach((q,i) => {
+    const div = document.createElement("div");
+    div.className = "qitem";
+    const btns = q[1].map((o,j)=>'<button class="opt" data-j="' + j + '">' + o + '</button>').join("");
+    div.innerHTML = '<div class="qtext"><span class="num">' + (i+1) + '.</span> ' +
+      '<span lang="en" style="font-family:Georgia,serif;">' + q[0] + '</span></div>' +
+      '<div class="opts" lang="en">' + btns + '</div>' +
+      '<div class="why" style="display:none;"></div>';
+    div.querySelector(".why").textContent = q[3];
+    div.querySelectorAll(".opt").forEach(b => {
+      b.addEventListener("click", () => {
+        if(div.dataset.done) return;
+        div.dataset.done = "1"; verbAnswered++;
+        if(Number(b.dataset.j) === q[2]){ b.classList.add("correct"); verbOk++; }
+        else {
+          b.classList.add("wrong");
+          div.querySelector('.opt[data-j="' + q[2] + '"]').classList.add("correct");
+        }
+        div.querySelectorAll(".opt").forEach(x=>x.disabled = true);
+        div.querySelector(".why").style.display = "block";
+        speak(q[0].replace("___", q[1][q[2]]));
+        if(verbAnswered === VERBS.length){
+          document.getElementById("verbscore").textContent =
+            verbOk === VERBS.length ? "🌟 იდეალურია! " + verbOk + " / " + VERBS.length
+                                    : "შედეგი: " + verbOk + " / " + VERBS.length;
+        }
+        updateResults();
+      });
+    });
+    box.appendChild(div);
+  });
+})();
+
+/* ─────────── QUIZ 4 · TRUE / FALSE ─────────── */
+let tfOk = 0, tfAnswered = 0;
+(function buildTF(){
+  const box = document.getElementById("tfbox");
+  const labels = ["True ✅","False ❌"];
+  TF.forEach((q,i) => {
+    const div = document.createElement("div");
+    div.className = "qitem";
+    const btns = labels.map((o,j)=>'<button class="opt" data-j="' + j + '">' + o + '</button>').join("");
+    div.innerHTML = '<div class="qtext"><span class="num">' + (i+1) + '.</span> ' +
+      '<span lang="en" style="font-family:Georgia,serif;" class="tfs"></span> ' +
+      '<button class="speak" aria-label="მოსმენა">🔊</button></div>' +
+      '<div class="opts" lang="en">' + btns + '</div>' +
+      '<div class="why" style="display:none;"></div>';
+    div.querySelector(".tfs").textContent = q[0];
+    div.querySelector(".why").textContent = q[2];
+    div.querySelector("button.speak").addEventListener("click", () => speak(q[0]));
+    div.querySelectorAll(".opt").forEach(b => {
+      b.addEventListener("click", () => {
+        if(div.dataset.done) return;
+        div.dataset.done = "1"; tfAnswered++;
+        if(Number(b.dataset.j) === q[1]){ b.classList.add("correct"); tfOk++; }
+        else {
+          b.classList.add("wrong");
+          div.querySelector('.opt[data-j="' + q[1] + '"]').classList.add("correct");
+        }
+        div.querySelectorAll(".opt").forEach(x=>x.disabled = true);
+        div.querySelector(".why").style.display = "block";
+        if(tfAnswered === TF.length){
+          document.getElementById("tfscore").textContent =
+            tfOk === TF.length ? "🌟 იდეალურია! " + tfOk + " / " + TF.length
+                               : "შედეგი: " + tfOk + " / " + TF.length;
+        }
+        updateResults();
+      });
+    });
+    box.appendChild(div);
+  });
+})();
+
+/* ─────────── SPEAKING SLIDE ─────────── */
+(function buildTalk(){
+  const box = document.getElementById("talkbox");
+  TALK.forEach(([en,ka],i) => {
+    const d = document.createElement("div");
+    d.innerHTML = '<p class="talkq"><span lang="en"></span> <button class="speak" aria-label="მოსმენა">🔊</button></p>' +
+      '<p class="talkka">🇬🇪 <span class="tk"></span></p>';
+    d.querySelector(".talkq span").textContent = (i+1) + ". " + en;
+    d.querySelector(".tk").textContent = ka;
+    d.querySelector("button.speak").addEventListener("click", () => speak(en));
+    box.appendChild(d);
+  });
+})();
+
+/* ─────────── RESULTS ─────────── */
+function updateResults(){
+  document.getElementById("r_seen").textContent = seen.size + " / " + totalSpans;
+  document.getElementById("r_match").textContent =
+    matchDone === PAIRS.length
+      ? (matchErrors === 0 ? PAIRS.length + " / " + PAIRS.length + " 🌟"
+                           : PAIRS.length + " / " + PAIRS.length + " (" + matchErrors + " შეცდომა)")
+      : (matchDone ? matchDone + " / " + PAIRS.length + " (არასრული)" : "—");
+  document.getElementById("r_gap").textContent = gapResult;
+  document.getElementById("r_verb").textContent = verbAnswered === VERBS.length
+    ? verbOk + " / " + VERBS.length
+    : (verbAnswered ? verbOk + " / " + VERBS.length + " (არასრული)" : "—");
+  document.getElementById("r_tf").textContent = tfAnswered === TF.length
+    ? tfOk + " / " + TF.length
+    : (tfAnswered ? tfOk + " / " + TF.length + " (არასრული)" : "—");
+}
+
+/* ─────────── NAVIGATION ─────────── */
+const slides = [...document.querySelectorAll(".slide")];
+const dots = document.getElementById("dots");
+let cur = 0;
+slides.forEach((s,i) => {
+  const d = document.createElement("button");
+  d.className = "dot"; d.type = "button";
+  d.setAttribute("aria-label", "სლაიდი " + (i+1));
+  d.tabIndex = i === 0 ? 0 : -1;
+  d.addEventListener("click", ()=>go(i));
+  dots.appendChild(d);
+});
+function go(i){
+  cur = Math.max(0, Math.min(slides.length-1, i));
+  slides.forEach((s,j)=>s.classList.toggle("active", j===cur));
+  const ae = document.activeElement;
+  const dotFocused = ae && ae.classList && ae.classList.contains("dot");
+  const wasInSlide = ae && ae.closest && ae.closest(".slide") !== null;
+  [...dots.children].forEach((d,j)=>{
+    d.classList.toggle("on", j===cur);
+    d.setAttribute("aria-current", j===cur ? "true" : "false");
+    d.tabIndex = j===cur ? 0 : -1;
+  });
+  if(dotFocused) dots.children[cur].focus({preventScroll:true});
+  else if(wasInSlide){ slides[cur].setAttribute("tabindex","-1"); slides[cur].focus({preventScroll:true}); }
+  document.getElementById("prev").disabled = cur===0;
+  document.getElementById("next").disabled = cur===slides.length-1;
+  closePopup();
+  if(cur === slides.length-1) updateResults();
+  window.scrollTo({top:0});
+}
+document.getElementById("prev").addEventListener("click", ()=>go(cur-1));
+document.getElementById("next").addEventListener("click", ()=>go(cur+1));
+document.addEventListener("keydown", e => {
+  if(e.target && e.target.closest && e.target.closest("select,input,textarea")){
+    if(e.key==="Escape") closePopup(true);
+    return;
+  }
+  if(e.key==="ArrowRight") go(cur+1);
+  if(e.key==="ArrowLeft") go(cur-1);
+  if(e.key==="Escape") closePopup(true);
+});
+go(0);
+</script>
+<script>(function(){var c="<div id=\"rd-cta\"><h3>სრული პაკეტი — A1 + A2 + B1, 186 ინტერაქტიული ტექსტი</h3><div class=\"p\"><s>210 ₾</s>100 ₾</div><a href=\"/reader/#buy\">შეძენა →</a></div>";function put(){var s=document.querySelectorAll('.slide');var t=s.length?s[s.length-1]:document.body;t.insertAdjacentHTML('beforeend',c);}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',put);else put();})();</script></body>
+</html>
