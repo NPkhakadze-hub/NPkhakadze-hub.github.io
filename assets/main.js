@@ -201,6 +201,11 @@
 (function(){
   var t=document.getElementById('lvltest'); if(!t) return;
   var btn=t.querySelector('.lcheck'), note=t.querySelector('.lnote');
+  var lg=(document.documentElement.lang||'ka').slice(0,2);
+  var MM={ka:['შედეგის სანახავად მინიმუმ 15 კითხვას უპასუხე. ახლა გამოტოვებულია: ','სწორი პასუხი: ',' · გამოტოვებული: ','. ზემოთ, თითოეულ კითხვასთან, ახსნა გამოჩნდა.','ხელახლა შემოწმება'],
+    en:['Answer at least 15 questions to see your result. Skipped right now: ','Correct answers: ',' · skipped: ','. An explanation has appeared next to each question above.','Check again'],
+    de:['Beantworte mindestens 15 Fragen, um dein Ergebnis zu sehen. Gerade übersprungen: ','Richtige Antworten: ',' · übersprungen: ','. Oben steht jetzt bei jeder Frage eine Erklärung.','Erneut prüfen']};
+  var M=MM[lg]||MM.ka;
   btn.addEventListener('click', function(){
     var qs=t.querySelectorAll('.lq'), ok=0, empty=0, band=[0,0,0,0];
     qs.forEach(function(q,i){
@@ -214,15 +219,14 @@
     note.hidden=false;
     if(empty>5){
       t.classList.remove('done');
-      note.textContent='შედეგის სანახავად მინიმუმ 15 კითხვას უპასუხე. ახლა გამოტოვებულია: '+empty+'.';
+      note.textContent=M[0]+empty+'.';
       return;
     }
     var lvl=0; while(lvl<4 && band[lvl]>=4) lvl++;
     t.classList.add('done');
-    note.textContent='სწორი პასუხი: '+ok+' / '+qs.length+(empty?' · გამოტოვებული: '+empty:'')+
-      '. ზემოთ, თითოეულ კითხვასთან, ახსნა გამოჩნდა.';
+    note.textContent=M[1]+ok+' / '+qs.length+(empty?M[2]+empty:'')+M[3];
     var r=t.querySelector('.lres[data-lvl="'+lvl+'"]');
-    btn.textContent='ხელახლა შემოწმება';
+    btn.textContent=M[4];
     try{ if(window.gtag) window.gtag('event','level_test',{score:ok, level:lvl}); }catch(e){}
     if(r){ r.hidden=false; r.scrollIntoView({behavior:'smooth',block:'center'}); r.focus({preventScroll:true}); }
   });
