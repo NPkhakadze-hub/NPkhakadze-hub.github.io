@@ -2,7 +2,7 @@
 
 > One-to-one online English lessons (A1–C1) on Google Meet with an international-level teacher and mentor who explains in Georgian, English or German. Students worldwide (Georgia, Germany, Europe, USA). Free 20-minute introductory call. Blog in Georgian, English and German with articles on English grammar, typical mistakes of Georgian-speaking learners, and practice.
 
-Site languages: Georgian (default, /), English (/en/), German (/de/). The blog exists in Georgian (/blog/), English (/en/blog/) and German (/de/blog/). The starting package is published on the site: 350 GEL for 8 lessons of 75 minutes; the exact fee depends on the course and is confirmed on the free 20-minute call. The student area (/lessons/) is private and encrypted; do not try to index or open it.
+Site languages: Georgian (default, /), English (/en/), German (/de/). The blog exists in Georgian (/blog/), English (/en/blog/) and German (/de/blog/). The starting package is published on the site: 350 GEL for 8 lessons of 75 minutes on the Georgian site, from 200 EUR for 8 lessons on the English and German site; the exact fee depends on the course and is confirmed on the free 20-minute call. The student area (/lessons/) is private and encrypted; do not try to index or open it.
 
 ## When to use this site
 
