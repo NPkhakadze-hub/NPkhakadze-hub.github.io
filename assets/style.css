@@ -317,6 +317,8 @@ html[lang=de] .card h3,html[lang=de] .stat span,html[lang=de] .lvl span,html[lan
 /* ── კონტექსტური შიდა ბმულები სტატიის შუაში ── */
 .seealso{background:var(--accent-soft);border:1px solid #f0c9aa;border-radius:12px;padding:12px 16px;margin:18px 0 26px;font-size:15.5px;line-height:1.6}
 .seealso a{font-weight:700}
+.seealso.lead{margin:6px 0 10px}
+.phero{margin:0 0 22px}.phero img{width:100%;height:auto;border-radius:14px;border:1px solid var(--border)}
 /* ── კატეგორიების ზოლი (ბლოგი) ── */
 .catnav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 26px}
 .catnav a{display:inline-flex;align-items:center;min-height:38px;padding:0 15px;border-radius:999px;background:#fff;border:1px solid var(--border);color:var(--ink);font-weight:700;font-size:14px;text-decoration:none}
