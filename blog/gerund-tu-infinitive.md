@@ -2,7 +2,7 @@
 
 > enjoy doing თუ enjoy to do? რომელ ზმნებს მოსდევს -ing და რომლებს to + V1, როდის იცვლება აზრი (stop, remember, try), make/let და ტიპური შეცდომები.
 
-- კატეგორია: გრამატიკა · წაკითხვა: 9 წუთი · გამოქვეყნდა: 15 ოქტომბერი, 2026
+- კატეგორია: გრამატიკა · წაკითხვა: 10 წუთი · გამოქვეყნდა: 15 ოქტომბერი, 2026
 - ავტორი: ნოდარი — საერთაშორისო დონის ინგლისურის მასწავლებელი და მენტორი
 - HTML ვერსია: https://learnenglishonlinecourses.com/blog/gerund-tu-infinitive.html
 
@@ -161,6 +161,17 @@
 
 > ❌ I would like visiting London.
 > ✅ I'**d like to visit** London. — ლონდონის ნახვა მინდა.
+
+მოკლედ, ერთ ცხრილში:
+
+ჯგუფიზმნებიფორმამაგალითი
+-ing მოსდევს*enjoy, avoid, mind, finish, suggest, consider, keep, miss, imagine, practise, give up, can't stand*ზმნა + **-ing**She **enjoys reading** before bed.
+*to* + V1 მოსდევს*want, would like, need, decide, hope, plan, agree, refuse, promise, expect, learn, manage, offer, afford*ზმნა + **to** + V1We've **decided to sell** the car.
+ზმნა + ადამიანი*want, ask, tell, expect, would like*ზმნა + ადამიანი + **to** + V1I **want you to come** with me.
+*make*, *let**make, let*ზმნა + ადამიანი + **V1** (*to*-ს გარეშე)She **made me wait** for an hour.
+ორივე — იგივე მნიშვნელობით*start, begin, continue, like, love, hate, prefer***-ing** ან **to** + V1It **started raining**. / It **started to rain**.
+ორივე — სხვადასხვა მნიშვნელობით*stop, remember, forget, try, regret***-ing** — ხშირად რაც უკვე მოხდა; **to** — რაც ჯერ მოსახდენია (ორიენტირი)I **stopped eating** sugar last year. / We **stopped to buy** some water.
+წინდებულის შემდეგ*in, at, of, for, about, before, after, without*; *look forward to, be used to, get used to, object to*წინდებული + **-ing**I'm **looking forward to hearing** from you.
 
 ## შეამოწმე თავი
 

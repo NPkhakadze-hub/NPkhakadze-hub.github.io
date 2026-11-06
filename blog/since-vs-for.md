@@ -2,7 +2,7 @@
 
 > since საწყის წერტილს აღნიშნავს, for — ხანგრძლივობას. რატომ არის „I live here for five years“ შეცდომა, „How long…?“ კითხვები, ago და სავარჯიშო პასუხებით.
 
-- კატეგორია: გრამატიკა · წაკითხვა: 6 წუთი · გამოქვეყნდა: 22 აგვისტო, 2026
+- კატეგორია: გრამატიკა · წაკითხვა: 7 წუთი · გამოქვეყნდა: 22 აგვისტო, 2026
 - ავტორი: ნოდარი — საერთაშორისო დონის ინგლისურის მასწავლებელი და მენტორი
 - HTML ვერსია: https://learnenglishonlinecourses.com/blog/since-vs-for.html
 
@@ -88,6 +88,18 @@ Present Perfect Simple თუ Continuous? *live*, *work*, *study* ტიპი�
 > 🔑 **ago** — როდის? („…-ის წინ“, Past Simple): five years **ago**
 > 🔑 **for** — რამდენ ხანს? (ხანგრძლივობა): **for** five years
 > 🔑 **since** — როდიდან? (საწყისი წერტილი): **since** 2021
+
+და მთლიანი სურათი ერთ ცხრილში:
+
+სიტყვაკითხვარა დგას მის შემდეგდრომაგალითი
+**since**როდიდან?საწყისი წერტილი: since 2019 · since Monday · since I was a childთითქმის ყოველთვის Present Perfect (ან Past Perfect)✅ I**'ve lived** here **since** 2019.
+❌ I lived here since 2019.
+**for**რამდენ ხანს?ხანგრძლივობა: for five years · for two hours · for agesPresent Perfect, თუ ახლაც გრძელდება; Past Simple, თუ დასრულდა✅ I**'ve lived** here **for** five years.
+✅ I **lived** in Batumi **for** five years.
+**ago**როდის?ხანგრძლივობა + ago: five years agoPast Simple✅ I **moved** here five years **ago**.
+❌ I've moved here five years ago.
+**How long…?**რამდენი ხანია?პასუხში — *for* ან *since*: *For three years.* / *Since 2023.*Present Perfect✅ How long **have** you **lived** here?
+❌ How long do you live here?
 
 ## შეამოწმე თავი
 

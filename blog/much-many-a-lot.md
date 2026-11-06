@@ -2,7 +2,7 @@
 
 > დათვლადი და უთვლადი არსებითი სახელები, a few-სა და few-ს შორის განსხვავება და სია სიტყვებისა, რომლებიც ინგლისურად მრავლობითში არ დგება.
 
-- კატეგორია: გრამატიკა · წაკითხვა: 3 წუთი · გამოქვეყნდა: 17 აგვისტო, 2026
+- კატეგორია: გრამატიკა · წაკითხვა: 4 წუთი · გამოქვეყნდა: 17 აგვისტო, 2026
 - ავტორი: ნოდარი — საერთაშორისო დონის ინგლისურის მასწავლებელი და მენტორი
 - HTML ვერსია: https://learnenglishonlinecourses.com/blog/much-many-a-lot.html
 
@@ -55,6 +55,19 @@
 > ✅ **How many** students are there? — რამდენი მოსწავლეა?
 > ✅ **How much** time do we have? — რამდენი დრო გვაქვს?
 > ✅ **How much** is it? — რა ღირს? (ფული უთვლადია)
+
+ყველაფერი ერთ ცხრილში:
+
+სიტყვარასთანროდის / რა განწყობითმაგალითი
+**many**დათვლადიკითხვა, უარყოფა — და მტკიცებაცmany book**s** · Many people came.
+**much**უთვლადიკითხვა და უარყოფა; მტკიცებაში უცნაურად ჟღერსDo you have **much** time? · I don't have **much** time.
+**a lot of**ორივემტკიცებაში *much*-ის ნაცვლადa lot of books · I have **a lot of** time.
+**a few**დათვლადიდადებითი: რამდენიმე, საკმარისიაI have **a few** friends here.
+**few**დათვლადიუარყოფითი: ძალიან ცოტაI have **few** friends here.
+**a little**უთვლადიდადებითი: ცოტა, კმარაThere's **a little** milk left.
+**little**უთვლადიუარყოფითი: თითქმის აღარააThere's **little** milk left.
+**how many**დათვლადიკითხვა რაოდენობაზე**How many** students are there?
+**how much**უთვლადიკითხვა რაოდენობაზე ან ფასზე**How much** time do we have? · **How much** is it?
 
 ## შეამოწმე თავი
 

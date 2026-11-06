@@ -146,6 +146,16 @@ Past Simple — **წყვეტილს** („გავაკეთე“, �
 ინგლისურად, როგორც წესი, *I've lost my keys* იქნება
 (ამერიკულ ინგლისურში აქაც ხშირად Past Simple-ს იყენებენ: *I lost my keys*) — ამაზე [Present Perfect-ისა და Past Simple-ის სტატიაში](https://learnenglishonlinecourses.com/blog/present-perfect-vs-past-simple.html) ვწერ.
 
+მოკლედ, ერთ ცხრილში:
+
+დროროდისმაგალითიქართულად
+Past Continuousპროცესი წარსულის კონკრეტულ მომენტშიAt 8 pm yesterday I **was having** dinner.გუშინ საღამოს რვა საათზე ვვახშმობდი.
+Past Continuous + Past Simpleფონი (გრძელი მოქმედება) და მოკლე მოქმედება, რომელიც მას წყვეტსI **was cooking** when the phone **rang**.საჭმელს ვამზადებდი, როცა ტელეფონმა დარეკა.
+Past Continuous + Past Continuousორი პარალელური პროცესი (*while*)While I **was working**, he **was watching** TV.მე ვმუშაობდი, ის კი ტელევიზორს უყურებდა.
+Past Simpleმოქმედებები ერთმანეთის მიყოლებითI **got up**, **had** a shower and **left** for work.ავდექი, შხაპი მივიღე და სამსახურში წავედი.
+Past Simple / *used to*წარსულის ჩვევა (არა Continuous)When I was a child, I **walked** to school every day.ბავშვობაში სკოლაში ყოველდღე ფეხით დავდიოდი.
+Past Simpleმდგომარეობის ზმნები (*know, want, belong*…) Continuous-ში არ დგას❌ I was knowing the answer. ✅ I **knew** the answer.პასუხი ვიცოდი.
+
 ## შეამოწმე თავი
 
 აირჩიე სწორი ვარიანტი ან ჩასვი ზმნა საჭირო ფორმით. ყოველ პუნქტს ერთი სწორი პასუხი აქვს.

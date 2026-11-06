@@ -2,7 +2,7 @@
 
 > Zero, first, second და third conditional — ფორმულა, გამოყენება, ქართულენოვანთა ტიპური შეცდომები („If I will…“, „If I would…“) და შედარება ქართულ „რომ“-თან.
 
-- კატეგორია: გრამატიკა · წაკითხვა: 8 წუთი · გამოქვეყნდა: 11 სექტემბერი, 2026
+- კატეგორია: გრამატიკა · წაკითხვა: 9 წუთი · გამოქვეყნდა: 11 სექტემბერი, 2026
 - ავტორი: ნოდარი — საერთაშორისო დონის ინგლისურის მასწავლებელი და მენტორი
 - HTML ვერსია: https://learnenglishonlinecourses.com/blog/conditionals-0-3.html
 
@@ -106,6 +106,14 @@
 - **Second** — If + Past Simple, would + ზმნა. წარმოსახვითი აწმყო / მომავალი. *If I had more time, I'd learn Spanish.*
 
 - **Third** — If + Past Perfect, would have + V3. არარეალური წარსული. *If I had known, I'd have come.*
+
+იგივე ერთ ცხრილში:
+
+ტიპი*if*-ნაწილიშედეგიმნიშვნელობა · ქართულადმაგალითი
+**Zero**If + Present SimplePresent Simpleფაქტი, კანონი, ჩვევა · „თუ“*If you heat ice, it melts.*
+**First**If + Present Simple*will* + ზმნარეალური მომავალი · „თუ“*If it rains, we'll stay at home.*
+**Second**If + Past Simple*would* + ზმნაწარმოსახვითი აწმყო / მომავალი · „რომ ვიცოდე“*If I had more time, I'd learn Spanish.*
+**Third**If + Past Perfect*would have* + V3არარეალური წარსული · „რომ მცოდნოდა“*If I had known, I'd have come.*
 
 მთელი სია ერთ წესამდე დაიყვანება: ***if*-ის შემდეგ, როგორც წესი, არც *will* დგას, არც *would*.**
 თუ ეს ერთი რამ დაიმახსოვრე, ზემოთ ჩამოთვლილი შეცდომების უმეტესობა თავისით ქრება.

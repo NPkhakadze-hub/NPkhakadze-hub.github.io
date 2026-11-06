@@ -2,7 +2,7 @@
 
 > ქართული „ვმუშაობ“ ორივეს ნიშნავს, ინგლისური კი ირჩევს. Present Simple და Present Continuous: წესი, სიგნალური სიტყვები, state verbs და სავარჯიშო პასუხებით.
 
-- კატეგორია: გრამატიკა · წაკითხვა: 5 წუთი · გამოქვეყნდა: 22 აგვისტო, 2026
+- კატეგორია: გრამატიკა · წაკითხვა: 6 წუთი · გამოქვეყნდა: 22 აგვისტო, 2026
 - ავტორი: ნოდარი — საერთაშორისო დონის ინგლისურის მასწავლებელი და მენტორი
 - HTML ვერსია: https://learnenglishonlinecourses.com/blog/present-simple-vs-continuous.html
 
@@ -102,6 +102,16 @@
 მასზე [ცალკე სტატია](https://learnenglishonlinecourses.com/blog/im-agree.html) გვაქვს.
 
 თუ ჩვევა წარსულშია და ახლა აღარ არსებობს, Present Simple-ის ნაცვლად used to გჭირდება: *I used to smoke*. ამაზე — [used to და be used to — განსხვავება](https://learnenglishonlinecourses.com/blog/used-to-be-used-to.html).
+
+მოკლედ, ერთ ცხრილში:
+
+რას ვადარებთPresent SimplePresent Continuous
+მთავარი კითხვაზოგადად ასეაახლა ხდება
+როდის იხმარებაჩვევა და რუტინა · ფაქტი, რომელიც არ იცვლება · განრიგიზუსტად ამ წუთში · დროებითი სიტუაცია · დანიშნული მომავალი
+ფორმის ნიშანიმესამე პირში -s: He **works**-ing: I**'m working**
+სიგნალური სიტყვებიalways · usually · often · sometimes · never · every day/week · on Mondays · once a weeknow · right now · at the moment · today · this week · these days · Look! · Listen!
+მდგომარეობის ზმნები (know, want, need…)✅ I **know** the answer.❌ I**'m knowing** the answer.
+მაგალითი✅ I **work** at a bank.✅ I**'m working** now.
 
 ## შეამოწმე თავი
 

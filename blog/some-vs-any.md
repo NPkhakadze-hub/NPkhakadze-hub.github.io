@@ -2,7 +2,7 @@
 
 > some მტკიცებითში, any უარყოფასა და კითხვაში — და ორი გამონაკლისი: შეთავაზება (Would you like some tea?) და any = „ნებისმიერი“. შედარება ქართულთან.
 
-- კატეგორია: გრამატიკა · წაკითხვა: 5 წუთი · გამოქვეყნდა: 22 აგვისტო, 2026
+- კატეგორია: გრამატიკა · წაკითხვა: 6 წუთი · გამოქვეყნდა: 22 აგვისტო, 2026
 - ავტორი: ნოდარი — საერთაშორისო დონის ინგლისურის მასწავლებელი და მენტორი
 - HTML ვერსია: https://learnenglishonlinecourses.com/blog/some-vs-any.html
 
@@ -94,6 +94,18 @@
 > ✅ I don't want **anything**. — არაფერი არ მინდა.
 > ❌ There isn't **some** milk in the fridge.
 > ✅ There isn't **any** milk in the fridge. — მაცივარში რძე არ არის.
+
+მოკლედ, ერთ ცხრილში:
+
+სიტუაციაsomeanyმაგალითი
+მტკიცებითი✅—I have **some** money.
+უარყოფა (not, never, hardly, without)❌✅ (ან *no*)I don't have **any** money. / I have **no** money.
+ნეიტრალური კითხვა⚠️ სხვა ელფერი: „კითხვები ნამდვილად გაქვს, ხომ?“✅ უსაფრთხო არჩევანიDo you have **any** questions?
+შეთავაზება და თხოვნა✅—Would you like **some** tea? / Can I have **some** water, please?
+*if*-ის შემდეგ—✅If you have **any** questions, just ask.
+„ნებისმიერი“ — მტკიცებითშიც—✅**Any** time is fine.
+ნაწარმოები სიტყვებიsomeone · something · somewhere (ვიღაც / რაღაც / სადღაც)anyone · anything · anywhere (ვინმე / რამე / სადმე)**Someone** called you. · Did **anyone** call?
+ორმაგი უარყოფა—ერთი უარყოფა კმარა: *not … any-* ან *no-*❌ I didn't see **nobody**. ✅ I didn't see **anybody**. / I saw **nobody**.
 
 ## შეამოწმე თავი
 

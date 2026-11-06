@@ -2,7 +2,7 @@
 
 > Reported speech ქართულად: როდის იცვლება დრო, როგორ გადმოვცეთ კითხვა და ბრძანება და რატომ ვამბობთ told me და არა said me — მაგალითებით.
 
-- კატეგორია: გრამატიკა · წაკითხვა: 6 წუთი · გამოქვეყნდა: 19 ოქტომბერი, 2026
+- კატეგორია: გრამატიკა · წაკითხვა: 8 წუთი · გამოქვეყნდა: 19 ოქტომბერი, 2026
 - ავტორი: ნოდარი — საერთაშორისო დონის ინგლისურის მასწავლებელი და მენტორი
 - HTML ვერსია: https://learnenglishonlinecourses.com/blog/reported-speech-kartulad.html
 
@@ -116,6 +116,17 @@ Backshift ჩვეულებრივი წესია, მაგრამ 
 > ✅ She **said** (that) she was busy. — თქვა, რომ დაკავებულია.
 
 ეს დაწვრილებით [say, tell, speak და talk-ის სტატიაში](https://learnenglishonlinecourses.com/blog/say-tell-speak-talk.html) ავხსენი.
+
+მოკლედ, ერთ ცხრილში:
+
+რა გადმოგაქვსწესიმაგალითი
+დრო (*said / told / asked*-ის შემდეგ)ერთი საფეხურით უკან — backshift"I **work** here." → She said she **worked** there.
+დრო არ იცვლებანათქვამი ახლაც მართალია; გადმომცემი ზმნა აწმყოშია (*says, tells, asks*)He said he **lives** in Batumi. · She **says** she'**s** running late.
+ნაცვალსახელი*I* → *he*/*she* · *you* → *I*/*me* · *my* → *his*/*her*Nino said, "I'm tired." → Nino said she was tired.
+დრო და ადგილი**tomorrow** → *the next day* · **yesterday** → *the day before* · **today** → *that day* · **next week** → *the following week* · **ago** → *before* · **here** → *there* · **this** → *that*"I'll send it **tomorrow**." → He said he would send it **the next day**.
+კითხვათხრობითი რიგი, *do/did* ქრება; „კი/არა“ კითხვაში — **if** / **whether**She asked me **where I lived**. · She asked **if** I was ready.
+თხოვნა, ბრძანება**tell / ask** + ადამიანი + **to** + V1; უარყოფა — *not to*He **told me to wait** there. · She **asked me not to call** after ten.
+said თუ told**tell**-ს ადამიანი პირდაპირ მოსდევს, **say**-ს — არაShe **told me** she was busy. · She **said** she was busy.
 
 ## შეამოწმე თავი
 

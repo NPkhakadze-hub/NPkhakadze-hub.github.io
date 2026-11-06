@@ -2,7 +2,7 @@
 
 > ქართულში არტიკლი არ არსებობს და სწორედ აქ ვუშვებთ ყველაზე მეტ შეცდომას. სამი კითხვა, რომელიც შემთხვევათა უმეტესობას წყვეტს.
 
-- კატეგორია: გრამატიკა · წაკითხვა: 3 წუთი · გამოქვეყნდა: 20 აგვისტო, 2026
+- კატეგორია: გრამატიკა · წაკითხვა: 4 წუთი · გამოქვეყნდა: 20 აგვისტო, 2026
 - ავტორი: ნოდარი — საერთაშორისო დონის ინგლისურის მასწავლებელი და მენტორი
 - HTML ვერსია: https://learnenglishonlinecourses.com/blog/articles-a-an-the.html
 
@@ -61,6 +61,18 @@
 > ✅ Georgia, France, Germany, Italy — არტიკლის გარეშე
 > ✅ Tbilisi, Paris, Berlin — ქალაქებიც არტიკლის გარეშე
 > ✅ **the** USA, **the** UK, **the** Netherlands, **the** Philippines — მრავლობითი ან „გაერთიანება“
+
+მოკლედ, ერთ ცხრილში:
+
+არტიკლიროდისმაგალითი
+**a / an**პირველად ვახსენებ ან მნიშვნელობა არ აქვს, რომელია; დათვლადი მხოლობითი; პროფესია მხოლობითშიI bought **a** book. · She is **a** teacher.
+**a** თუ **an**ბგერა წყვეტს, არა ასო**an** hour · **a** university · **an** MBA · **a** European country
+**the**ორივემ ვიცით, რომელზეა ლაპარაკი; ერთადერთია მსოფლიოშიI bought a book. **The** book was expensive. · Close **the** door. · **the** sun
+**the**აღმატებითი ხარისხი, რიგობითი რიცხვითი სახელი, მუსიკალური ინსტრუმენტი, ბევრი გეოგრაფიული სახელი*the best* · *the first* · *play the piano* · *the Black Sea*
+**—** (არაფერი)უთვლადი ან მრავლობითი ზოგადი მნიშვნელობითI like music. · Life is beautiful. · I like books.
+**—** (არაფერი)*go to school / hospital / church / bed / work* — დანიშნულება (*hospital*-ის შემთხვევაში — ბრიტანული წესი)I go to school every day. · My son is **in hospital**.
+**the**იგივე ადგილი, ოღონდ უბრალოდ როგორც შენობაI go to **the** school every day. · I'm **at the hospital** visiting a friend.
+**—** / **the**ქვეყნები და ქალაქები — არტიკლის გარეშე; მრავლობითი ან „გაერთიანება“ — *the*Georgia, Tbilisi · **the** USA, **the** UK, **the** Netherlands
 
 ## შეამოწმე თავი
 

@@ -2,7 +2,7 @@
 
 > used to, be used to და get used to — მნიშვნელობა, didn't use to, used to თუ would, -ing ფორმა be used to-ს შემდეგ და ტიპური შეცდომები.
 
-- კატეგორია: გრამატიკა · წაკითხვა: 7 წუთი · გამოქვეყნდა: 26 სექტემბერი, 2026
+- კატეგორია: გრამატიკა · წაკითხვა: 8 წუთი · გამოქვეყნდა: 26 სექტემბერი, 2026
 - ავტორი: ნოდარი — საერთაშორისო დონის ინგლისურის მასწავლებელი და მენტორი
 - HTML ვერსია: https://learnenglishonlinecourses.com/blog/used-to-be-used-to.html
 
@@ -102,6 +102,15 @@ when you called*. *used to*-ზე მიგანიშნებს „ად�
 > **be used to + -ing / არსებითი** — მიჩვეული ვარ: I'm **used to working** at night.
 > **get used to + -ing / არსებითი** — ვეჩვევი, მივეჩვიე: I'm **getting used to working** at night.
 > **would + V1** — წარსულის განმეორებადი მოქმედება (მდგომარეობაზე — არა): We **would play** outside for hours.
+
+იგივე ცხრილად:
+
+კონსტრუქციარა მოსდევსმნიშვნელობამაგალითი
+**used to**V1ადრე ასე იყო, ახლა აღარ (ჩვევა ან მდგომარეობა) — „ადრე/წინათ … ხოლმე“I **used to work** at night.
+**be used to**-ing / არსებითი სახელიმიჩვეული ვარ (მდგომარეობა)I'm **used to working** at night.
+**get used to**-ing / არსებითი სახელივეჩვევი (პროცესი), მივეჩვიე (შედეგი)I'm **getting used to working** at night.
+**would**V1წარსულის განმეორებადი მოქმედება; მდგომარეობის ზმნებთან — არაWe **would play** outside for hours.
+**Past Simple**—ერთჯერადი მოქმედება ან ზუსტი რაოდენობა („რამდენჯერ“)I **visited** London three times last year.
 
 ## ტიპური შეცდომები
 

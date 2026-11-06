@@ -2,7 +2,7 @@
 
 > can, could, may, might, must, should და have to — რომელი რას ნიშნავს, სამი საერთო წესი და განსხვავება mustn't-სა და don't have to-ს შორის.
 
-- კატეგორია: გრამატიკა · წაკითხვა: 6 წუთი · გამოქვეყნდა: 22 სექტემბერი, 2026
+- კატეგორია: გრამატიკა · წაკითხვა: 8 წუთი · გამოქვეყნდა: 22 სექტემბერი, 2026
 - ავტორი: ნოდარი — საერთაშორისო დონის ინგლისურის მასწავლებელი და მენტორი
 - HTML ვერსია: https://learnenglishonlinecourses.com/blog/modal-verbs-kartulad.html
 
@@ -138,6 +138,19 @@
 
 > ✅ **She isn't here — she must have left early.** — აქ არ არის, ალბათ ადრე წავიდა.
 > ✅ **I should have studied more.** — მეტი უნდა მესწავლა (და არ მესწავლა).
+
+მოკლედ, ერთ ცხრილში:
+
+ზმნამნიშვნელობამაგალითი
+**can**უნარი, შესაძლებლობა; ჩვეულებრივი თხოვნა ახლობელთან*She can drive.* · *Can you help me?*
+**could**წარსულში არსებული უნარი; თავაზიანი თხოვნა; ნაკლებად დარწმუნებული ვარაუდი*When I was a child, I could run for hours.* · *Could you open the window, please?*
+**may** / **might**ოფიციალური ნებართვა (*may*); ალბათობა — *might* ოდნავ ნაკლებ დარწმუნებას გამოხატავს*May I come in?* · *It may rain later.*
+**must**მოლაპარაკის საკუთარი „უნდა“; დარწმუნებული დასკვნა*I must call my mother tonight.* · *The lights are on, so she must be at home.*
+**have to**გარედან მოსული ვალდებულება (წესი, კანონი); ყველა დროში მუშაობს*I have to wear a uniform at work.* · *I had to leave early.*
+**mustn't** / **don't have to***mustn't* — აკრძალვა („არ შეიძლება“); *don't have to* — ვალდებულების არარსებობა („არ არის საჭირო“)*You mustn't take photos here.* · *You don't have to take photos — I'll send you mine.*
+**can't**დარწმუნებული დასკვნა, რომ არა („შეუძლებელია, ასე იყოს“)*He can't be at home — his car isn't here.*
+**should**რჩევა; მოსალოდნელი შედეგი*You should see a doctor.* · *The train should arrive at six.*
+**must have** / **should have**დარწმუნებული ვარაუდი წარსულზე; ის, რაც უნდა გაკეთებულიყო და არ გაკეთდა*She isn't here — she must have left early.* · *I should have studied more.*
 
 ## შეამოწმე თავი
 

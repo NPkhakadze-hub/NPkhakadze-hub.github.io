@@ -2,7 +2,7 @@
 
 > Passive Voice ინგლისურში: ფორმულა be + V3 ყველა ძირითად დროში, როდის გამოიყენება, by-ფრაზა, ქართულენოვანთა ტიპური შეცდომები და შედარება ქართულ ვნებითთან.
 
-- კატეგორია: გრამატიკა · წაკითხვა: 7 წუთი · გამოქვეყნდა: 17 სექტემბერი, 2026
+- კატეგორია: გრამატიკა · წაკითხვა: 8 წუთი · გამოქვეყნდა: 17 სექტემბერი, 2026
 - ავტორი: ნოდარი — საერთაშორისო დონის ინგლისურის მასწავლებელი და მენტორი
 - HTML ვერსია: https://learnenglishonlinecourses.com/blog/passive-voice-kartulad.html
 
@@ -97,6 +97,17 @@ by-ფრაზა მართლა მაშინაა საჭირო, 
 
 პასივი = **be** სწორ დროში + **V3**. გამოიყენე, როცა მოქმედი უცნობია, უმნიშვნელოა ან ობიექტი უფრო მთავარია; მოქმედი, თუ საჭიროა, *by*-თი დაამატე.
 ყველაზე ხშირი შეცდომა *be*-ს გამოტოვებაა, მეორე — V3-ის ნაცვლად V2. ამ ორს თუ დაიჭერ, პასივის შეცდომების დიდი ნაწილი უკვე მოგვარებულია.
+
+ყველა დრო ერთ ცხრილში:
+
+დრო*be* + V3მაგალითიქართულად
+Present Simple**is / are** + V3The office **is cleaned** every day.ოფისი ყოველდღე ილაგება.
+Past Simple**was / were** + V3The office **was cleaned** yesterday.ოფისი გუშინ დაილაგა.
+Future**will be** + V3The office **will be cleaned** tomorrow.ოფისი ხვალ დალაგდება.
+Present Perfect**has / have been** + V3The office **has been cleaned**.ოფისი (უკვე) დალაგებულია.
+Present Continuous**is / are being** + V3The office **is being cleaned** right now.ოფისი ახლა ლაგდება.
+Past Continuous**was / were being** + V3The office **was being cleaned** when I arrived.როცა მივედი, ოფისი ლაგდებოდა.
+მოდალური**must be** + V3The office **must be cleaned** before Monday.ოფისი ორშაბათამდე უნდა დალაგდეს.
 
 ყურადღება: *be used to* ყოველთვის ვნებითი გვარი არ არის — *I'm used to it* „მიჩვეული ვარ“-ს ნიშნავს. განსხვავება [used to-ს სტატიაში](https://learnenglishonlinecourses.com/blog/used-to-be-used-to.html) ავხსენი.
 
