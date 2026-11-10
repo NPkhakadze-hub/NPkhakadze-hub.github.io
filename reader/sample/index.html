@@ -181,6 +181,14 @@
   .numbox span{font-size:14px; color:var(--sub);}
 
   .why{color:var(--sub); font-size:16px; margin-top:8px; line-height:1.55;}
+/* FULLREAD v1 */
+  .fullread{display:flex; justify-content:center; margin:14px 0 6px;}
+  .fullread button{border:none; background:var(--accent); color:#fff; border-radius:999px; font-size:17px; font-weight:700; padding:11px 22px; min-height:44px; cursor:pointer; font-family:inherit; box-shadow:0 2px 6px rgba(192,86,33,.25);}
+  .fullread button:hover{background:#9c4221;}
+  .fullread button:focus-visible{outline:3px solid #2b6cb0; outline-offset:2px;}
+  .fullread button.playing{background:#9c4221;}
+  .reading p.reading-now{background:#fff4e6; border-radius:8px; box-shadow:0 0 0 4px #fff4e6;}
+  @media (prefers-reduced-motion: reduce){ .reading p.reading-now{transition:none;} }
 </style>
 <meta name="robots" content="noindex, follow"><link rel="canonical" href="https://learnenglishonlinecourses.com/reader/sample/"></head>
 <body><style>#rd-banner{background:#2b2620;color:#fff;font:600 14px/1.35 "Noto Sans Georgian",Sylfaen,system-ui,sans-serif;text-align:center;padding:9px 14px}#rd-banner a{color:#f6c27a;margin-left:6px;white-space:nowrap}#rd-cta{margin:26px 0 0;padding:22px 18px;border:2px solid #c05621;border-radius:20px;background:#fff7ef;text-align:center;font-family:"Noto Sans Georgian",Sylfaen,system-ui,sans-serif}#rd-cta h3{margin:0 0 8px;font-size:20px;line-height:1.35}#rd-cta .p{font-size:28px;font-weight:800;color:#c05621;margin:6px 0 14px}#rd-cta .p s{font-size:18px;color:#7a6e60;font-weight:600;margin-right:8px}#rd-cta a{display:inline-block;background:#c05621;color:#fff;text-decoration:none;font-weight:700;padding:12px 22px;border-radius:14px}</style><div id="rd-banner">ეს უფასო საცდელი გაკვეთილია — სრულ პაკეტში 186 ასეთი ტექსტია<a href="/reader/">გაიგე მეტი →</a></div>
@@ -1379,6 +1387,86 @@ document.addEventListener("keydown", e => {
   if(e.key==="Escape") closePopup(true);
 });
 go(0);
+</script>
+<script>
+/* FULLREAD v1 — full listening of each reading slide's whole text (en-US) */
+(function(){
+  if(!("speechSynthesis" in window)) return;
+  const LABEL = "🔊 მთელი ნაწილის მოსმენა", STOP = "⏹ გაჩერება";
+  let token = 0, activeBtn = null;
+  function pickVoice(){
+    const vs = speechSynthesis.getVoices() || [];
+    return vs.find(v => v.lang === "en-US" && /Samantha|Google US English|Aria|Jenny|Ava|Allison/i.test(v.name))
+        || vs.find(v => v.lang === "en-US")
+        || vs.find(v => /^en[-_]US/i.test(v.lang)) || null;
+  }
+  function reset(){
+    if(activeBtn){ activeBtn.textContent = LABEL; activeBtn.classList.remove("playing"); activeBtn.setAttribute("aria-pressed","false"); }
+    document.querySelectorAll(".reading p.reading-now").forEach(p => p.classList.remove("reading-now"));
+    activeBtn = null;
+  }
+  function stop(){ token++; try{ speechSynthesis.cancel(); }catch(e){} reset(); }
+  function cleanText(el){
+    const c = el.cloneNode(true);
+    c.querySelectorAll("button").forEach(b => b.remove());
+    return c.textContent.replace(/\s+/g," ").trim();
+  }
+  function play(btn, card){
+    stop();
+    const my = token;
+    let paras = [...card.querySelectorAll("p")];
+    if(!paras.length) paras = [card];
+    const voice = pickVoice();
+    const check = () => setTimeout(() => {
+      if(my === token && !speechSynthesis.speaking && !speechSynthesis.pending) reset();
+    }, 150);
+    activeBtn = btn; btn.textContent = STOP; btn.classList.add("playing"); btn.setAttribute("aria-pressed","true");
+    let queued = 0;
+    paras.forEach(p => {
+      const text = cleanText(p);
+      if(!text) return;
+      const parts = text.match(/[^.!?]+[.!?]+["”’)]*|[^.!?]+$/g) || [text];
+      parts.forEach(part => {
+        part = part.trim(); if(!part) return;
+        const u = new SpeechSynthesisUtterance(part);
+        u.lang = "en-US"; u.rate = 0.85; if(voice) u.voice = voice;
+        u.onstart = () => {
+          if(my !== token) return;
+          document.querySelectorAll(".reading p.reading-now").forEach(x => { if(x !== p) x.classList.remove("reading-now"); });
+          if(p.tagName === "P") p.classList.add("reading-now");
+        };
+        u.onend = check;
+        u.onerror = () => { if(my === token){ token++; reset(); } };
+        speechSynthesis.speak(u); queued++;
+      });
+    });
+    if(!queued) reset();
+  }
+  document.querySelectorAll(".slide .card.reading").forEach(card => {
+    const wrap = document.createElement("div");
+    wrap.className = "fullread";
+    const btn = document.createElement("button");
+    btn.type = "button"; btn.textContent = LABEL; btn.setAttribute("aria-pressed","false");
+    btn.addEventListener("click", e => {
+      e.stopPropagation();
+      if(activeBtn === btn) stop(); else play(btn, card);
+    });
+    wrap.appendChild(btn);
+    card.insertAdjacentElement("afterend", wrap);
+  });
+  /* a tap on a single word (or any other 🔊) interrupts the passage — reset the button */
+  if(typeof window.speak === "function"){
+    const orig = window.speak;
+    window.speak = function(){ if(activeBtn){ token++; reset(); } return orig.apply(this, arguments); };
+  }
+  /* stop when the student leaves the slide */
+  const mo = new MutationObserver(() => {
+    if(activeBtn){ const s = activeBtn.closest(".slide"); if(s && !s.classList.contains("active")) stop(); }
+  });
+  document.querySelectorAll(".slide").forEach(s => mo.observe(s, {attributes:true, attributeFilter:["class"]}));
+  if(speechSynthesis.onvoiceschanged !== undefined) speechSynthesis.onvoiceschanged = () => {};
+  window.addEventListener("pagehide", stop);
+})();
 </script>
 <script>(function(){var c="<div id=\"rd-cta\"><h3>სრული პაკეტი — A1 + A2 + B1, 186 ინტერაქტიული ტექსტი</h3><div class=\"p\"><s>210 ₾</s>100 ₾</div><a href=\"/reader/#buy\">შეძენა →</a></div>";function put(){var s=document.querySelectorAll('.slide');var t=s.length?s[s.length-1]:document.body;t.insertAdjacentHTML('beforeend',c);}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',put);else put();})();</script></body>
 </html>
